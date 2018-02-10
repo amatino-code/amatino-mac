@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF276202EA0A200E43756 /* AppDelegate.swift */; };
+		1EDAF279202EA0A200E43756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF278202EA0A200E43756 /* ViewController.swift */; };
+		1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27A202EA0A200E43756 /* Assets.xcassets */; };
+		1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Main.storyboard */; };
+		1EDAF28A202EA0A200E43756 /* AmatinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF289202EA0A200E43756 /* AmatinoTests.swift */; };
+		1EDAF295202EA0A200E43756 /* AmatinoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1EDAF286202EA0A200E43756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EDAF26B202EA0A200E43756 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EDAF272202EA0A200E43756;
+			remoteInfo = Amatino;
+		};
+		1EDAF291202EA0A200E43756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EDAF26B202EA0A200E43756 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1EDAF272202EA0A200E43756;
+			remoteInfo = Amatino;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EDAF273202EA0A200E43756 /* Amatino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amatino.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EDAF276202EA0A200E43756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1EDAF278202EA0A200E43756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EDAF27A202EA0A200E43756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1EDAF27D202EA0A200E43756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EDAF27F202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EDAF280202EA0A200E43756 /* Amatino.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Amatino.entitlements; sourceTree = "<group>"; };
+		1EDAF285202EA0A200E43756 /* AmatinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmatinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EDAF289202EA0A200E43756 /* AmatinoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmatinoTests.swift; sourceTree = "<group>"; };
+		1EDAF28B202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EDAF290202EA0A200E43756 /* AmatinoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmatinoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmatinoUITests.swift; sourceTree = "<group>"; };
+		1EDAF296202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EDAF270202EA0A200E43756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EDAF282202EA0A200E43756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EDAF28D202EA0A200E43756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EDAF26A202EA0A200E43756 = {
+			isa = PBXGroup;
+			children = (
+				1EDAF275202EA0A200E43756 /* Amatino */,
+				1EDAF288202EA0A200E43756 /* AmatinoTests */,
+				1EDAF293202EA0A200E43756 /* AmatinoUITests */,
+				1EDAF274202EA0A200E43756 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EDAF274202EA0A200E43756 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAF273202EA0A200E43756 /* Amatino.app */,
+				1EDAF285202EA0A200E43756 /* AmatinoTests.xctest */,
+				1EDAF290202EA0A200E43756 /* AmatinoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EDAF275202EA0A200E43756 /* Amatino */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAF276202EA0A200E43756 /* AppDelegate.swift */,
+				1EDAF278202EA0A200E43756 /* ViewController.swift */,
+				1EDAF27A202EA0A200E43756 /* Assets.xcassets */,
+				1EDAF27C202EA0A200E43756 /* Main.storyboard */,
+				1EDAF27F202EA0A200E43756 /* Info.plist */,
+				1EDAF280202EA0A200E43756 /* Amatino.entitlements */,
+			);
+			path = Amatino;
+			sourceTree = "<group>";
+		};
+		1EDAF288202EA0A200E43756 /* AmatinoTests */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAF289202EA0A200E43756 /* AmatinoTests.swift */,
+				1EDAF28B202EA0A200E43756 /* Info.plist */,
+			);
+			path = AmatinoTests;
+			sourceTree = "<group>";
+		};
+		1EDAF293202EA0A200E43756 /* AmatinoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */,
+				1EDAF296202EA0A200E43756 /* Info.plist */,
+			);
+			path = AmatinoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1EDAF272202EA0A200E43756 /* Amatino */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EDAF299202EA0A200E43756 /* Build configuration list for PBXNativeTarget "Amatino" */;
+			buildPhases = (
+				1EDAF26F202EA0A200E43756 /* Sources */,
+				1EDAF270202EA0A200E43756 /* Frameworks */,
+				1EDAF271202EA0A200E43756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Amatino;
+			productName = Amatino;
+			productReference = 1EDAF273202EA0A200E43756 /* Amatino.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1EDAF284202EA0A200E43756 /* AmatinoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EDAF29C202EA0A200E43756 /* Build configuration list for PBXNativeTarget "AmatinoTests" */;
+			buildPhases = (
+				1EDAF281202EA0A200E43756 /* Sources */,
+				1EDAF282202EA0A200E43756 /* Frameworks */,
+				1EDAF283202EA0A200E43756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EDAF287202EA0A200E43756 /* PBXTargetDependency */,
+			);
+			name = AmatinoTests;
+			productName = AmatinoTests;
+			productReference = 1EDAF285202EA0A200E43756 /* AmatinoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1EDAF28F202EA0A200E43756 /* AmatinoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EDAF29F202EA0A200E43756 /* Build configuration list for PBXNativeTarget "AmatinoUITests" */;
+			buildPhases = (
+				1EDAF28C202EA0A200E43756 /* Sources */,
+				1EDAF28D202EA0A200E43756 /* Frameworks */,
+				1EDAF28E202EA0A200E43756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1EDAF292202EA0A200E43756 /* PBXTargetDependency */,
+			);
+			name = AmatinoUITests;
+			productName = AmatinoUITests;
+			productReference = 1EDAF290202EA0A200E43756 /* AmatinoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EDAF26B202EA0A200E43756 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Amatino Pty Ltd";
+				TargetAttributes = {
+					1EDAF272202EA0A200E43756 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					1EDAF284202EA0A200E43756 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1EDAF272202EA0A200E43756;
+					};
+					1EDAF28F202EA0A200E43756 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1EDAF272202EA0A200E43756;
+					};
+				};
+			};
+			buildConfigurationList = 1EDAF26E202EA0A200E43756 /* Build configuration list for PBXProject "Amatino" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EDAF26A202EA0A200E43756;
+			productRefGroup = 1EDAF274202EA0A200E43756 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EDAF272202EA0A200E43756 /* Amatino */,
+				1EDAF284202EA0A200E43756 /* AmatinoTests */,
+				1EDAF28F202EA0A200E43756 /* AmatinoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EDAF271202EA0A200E43756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */,
+				1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EDAF283202EA0A200E43756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EDAF28E202EA0A200E43756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EDAF26F202EA0A200E43756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDAF279202EA0A200E43756 /* ViewController.swift in Sources */,
+				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EDAF281202EA0A200E43756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDAF28A202EA0A200E43756 /* AmatinoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EDAF28C202EA0A200E43756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDAF295202EA0A200E43756 /* AmatinoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1EDAF287202EA0A200E43756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EDAF272202EA0A200E43756 /* Amatino */;
+			targetProxy = 1EDAF286202EA0A200E43756 /* PBXContainerItemProxy */;
+		};
+		1EDAF292202EA0A200E43756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1EDAF272202EA0A200E43756 /* Amatino */;
+			targetProxy = 1EDAF291202EA0A200E43756 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1EDAF27C202EA0A200E43756 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1EDAF27D202EA0A200E43756 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1EDAF297202EA0A200E43756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1EDAF298202EA0A200E43756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		1EDAF29A202EA0A200E43756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Amatino/Amatino.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Amatino/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amatino.Amatino;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		1EDAF29B202EA0A200E43756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Amatino/Amatino.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Amatino/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amatino.Amatino;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		1EDAF29D202EA0A200E43756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AmatinoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amatino.AmatinoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amatino.app/Contents/MacOS/Amatino";
+			};
+			name = Debug;
+		};
+		1EDAF29E202EA0A200E43756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AmatinoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amatino.AmatinoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Amatino.app/Contents/MacOS/Amatino";
+			};
+			name = Release;
+		};
+		1EDAF2A0202EA0A200E43756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AmatinoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amatino.AmatinoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Amatino;
+			};
+			name = Debug;
+		};
+		1EDAF2A1202EA0A200E43756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AmatinoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = amatino.AmatinoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Amatino;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EDAF26E202EA0A200E43756 /* Build configuration list for PBXProject "Amatino" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EDAF297202EA0A200E43756 /* Debug */,
+				1EDAF298202EA0A200E43756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EDAF299202EA0A200E43756 /* Build configuration list for PBXNativeTarget "Amatino" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EDAF29A202EA0A200E43756 /* Debug */,
+				1EDAF29B202EA0A200E43756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EDAF29C202EA0A200E43756 /* Build configuration list for PBXNativeTarget "AmatinoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EDAF29D202EA0A200E43756 /* Debug */,
+				1EDAF29E202EA0A200E43756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EDAF29F202EA0A200E43756 /* Build configuration list for PBXNativeTarget "AmatinoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EDAF2A0202EA0A200E43756 /* Debug */,
+				1EDAF2A1202EA0A200E43756 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EDAF26B202EA0A200E43756 /* Project object */;
+}
