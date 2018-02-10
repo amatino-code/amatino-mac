@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2BF5C5202EAE350058709F /* AmatinoApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6CC34F202EAC4800109514 /* AmatinoApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E2BF5C9202EAF100058709F /* AMCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2BF5C8202EAE490058709F /* AMCryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E6CC354202EAD1700109514 /* AmatinoApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; };
+		1E6CC356202EAD5800109514 /* AmatinoApi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF276202EA0A200E43756 /* AppDelegate.swift */; };
 		1EDAF279202EA0A200E43756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF278202EA0A200E43756 /* ViewController.swift */; };
 		1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27A202EA0A200E43756 /* Assets.xcassets */; };
@@ -16,6 +20,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E6CC345202EABF300109514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "Amatino::AmatinoTests::Product";
+			remoteInfo = AmatinoApiTests;
+		};
+		1E6CC347202EABF300109514 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "Amatino::Amatino::Product";
+			remoteInfo = AmatinoApi;
+		};
 		1EDAF286202EA0A200E43756 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EDAF26B202EA0A200E43756 /* Project object */;
@@ -32,7 +50,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1E6CC355202EAD3000109514 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1E6CC356202EAD5800109514 /* AmatinoApi.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1E2BF5C8202EAE490058709F /* AMCryptography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCryptography.h; sourceTree = "<group>"; };
+		1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmatinoApi.xcodeproj; path = "amatino-swift/AmatinoApi.xcodeproj"; sourceTree = "<group>"; };
+		1E6CC34F202EAC4800109514 /* AmatinoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmatinoApi.h; sourceTree = "<group>"; };
 		1EDAF273202EA0A200E43756 /* Amatino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amatino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF276202EA0A200E43756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EDAF278202EA0A200E43756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6CC354202EAD1700109514 /* AmatinoApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,13 +108,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E6CC33F202EABF300109514 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E6CC346202EABF300109514 /* AmatinoApiTests.xctest */,
+				1E6CC348202EABF300109514 /* AmatinoApi.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E6CC34A202EAC1E00109514 /* LibraryHeader */ = {
+			isa = PBXGroup;
+			children = (
+				1E2BF5C8202EAE490058709F /* AMCryptography.h */,
+				1E6CC34F202EAC4800109514 /* AmatinoApi.h */,
+			);
+			path = LibraryHeader;
+			sourceTree = "<group>";
+		};
+		1E6CC353202EAD1700109514 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1EDAF26A202EA0A200E43756 = {
 			isa = PBXGroup;
 			children = (
+				1E6CC34A202EAC1E00109514 /* LibraryHeader */,
+				1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */,
 				1EDAF275202EA0A200E43756 /* Amatino */,
 				1EDAF288202EA0A200E43756 /* AmatinoTests */,
 				1EDAF293202EA0A200E43756 /* AmatinoUITests */,
 				1EDAF274202EA0A200E43756 /* Products */,
+				1E6CC353202EAD1700109514 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,14 +189,28 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1E2BF5C0202EAE2C0058709F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E2BF5C5202EAE350058709F /* AmatinoApi.h in Headers */,
+				1E2BF5C9202EAF100058709F /* AMCryptography.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		1EDAF272202EA0A200E43756 /* Amatino */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1EDAF299202EA0A200E43756 /* Build configuration list for PBXNativeTarget "Amatino" */;
 			buildPhases = (
+				1E2BF5C0202EAE2C0058709F /* Headers */,
 				1EDAF26F202EA0A200E43756 /* Sources */,
 				1EDAF270202EA0A200E43756 /* Frameworks */,
 				1EDAF271202EA0A200E43756 /* Resources */,
+				1E6CC355202EAD3000109514 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -217,6 +294,12 @@
 			mainGroup = 1EDAF26A202EA0A200E43756;
 			productRefGroup = 1EDAF274202EA0A200E43756 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1E6CC33F202EABF300109514 /* Products */;
+					ProjectRef = 1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1EDAF272202EA0A200E43756 /* Amatino */,
@@ -225,6 +308,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1E6CC346202EABF300109514 /* AmatinoApiTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AmatinoApiTests.xctest;
+			remoteRef = 1E6CC345202EABF300109514 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1E6CC348202EABF300109514 /* AmatinoApi.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AmatinoApi.framework;
+			remoteRef = 1E6CC347202EABF300109514 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1EDAF271202EA0A200E43756 /* Resources */ = {
