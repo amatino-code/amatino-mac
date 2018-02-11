@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2964FB202FBAB10065563B /* Hyperlink.swift */; };
+		1E2964FE202FC5E60065563B /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2964FD202FC5E60065563B /* TextButton.swift */; };
+		1E296500202FCE6D0065563B /* WelcomeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2964FF202FCE6D0065563B /* WelcomeContainer.swift */; };
+		1E296504202FCF5A0065563B /* WelcomeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E296503202FCF5A0065563B /* WelcomeEmail.swift */; };
+		1E296506202FD6280065563B /* WelcomePassphrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E296505202FD6280065563B /* WelcomePassphrase.swift */; };
+		1E296508202FDD960065563B /* WelcomeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E296507202FDD960065563B /* WelcomeLogin.swift */; };
+		1E29650C202FDFBD0065563B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29650B202FDFBD0065563B /* WelcomeView.swift */; };
 		1E2BF5C5202EAE350058709F /* AmatinoApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6CC34F202EAC4800109514 /* AmatinoApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E2BF5C9202EAF100058709F /* AMCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2BF5C8202EAE490058709F /* AMCryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E6CC354202EAD1700109514 /* AmatinoApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; };
@@ -17,6 +24,7 @@
 		1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Main.storyboard */; };
 		1EDAF28A202EA0A200E43756 /* AmatinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF289202EA0A200E43756 /* AmatinoTests.swift */; };
 		1EDAF295202EA0A200E43756 /* AmatinoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */; };
+		1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59725202EDBAB001965E0 /* Welcome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +72,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E2964FB202FBAB10065563B /* Hyperlink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hyperlink.swift; sourceTree = "<group>"; };
+		1E2964FD202FC5E60065563B /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		1E2964FF202FCE6D0065563B /* WelcomeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeContainer.swift; sourceTree = "<group>"; };
+		1E296503202FCF5A0065563B /* WelcomeEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeEmail.swift; sourceTree = "<group>"; };
+		1E296505202FD6280065563B /* WelcomePassphrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePassphrase.swift; sourceTree = "<group>"; };
+		1E296507202FDD960065563B /* WelcomeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLogin.swift; sourceTree = "<group>"; };
+		1E29650B202FDFBD0065563B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1E2BF5C8202EAE490058709F /* AMCryptography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCryptography.h; sourceTree = "<group>"; };
 		1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmatinoApi.xcodeproj; path = "amatino-swift/AmatinoApi.xcodeproj"; sourceTree = "<group>"; };
 		1E6CC34F202EAC4800109514 /* AmatinoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmatinoApi.h; sourceTree = "<group>"; };
@@ -80,6 +95,7 @@
 		1EDAF290202EA0A200E43756 /* AmatinoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmatinoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmatinoUITests.swift; sourceTree = "<group>"; };
 		1EDAF296202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EF59725202EDBAB001965E0 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +124,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E2964F6202FBAA20065563B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				1E2964FB202FBAB10065563B /* Hyperlink.swift */,
+				1E2964FD202FC5E60065563B /* TextButton.swift */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		1E296509202FDF970065563B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E29650A202FDF9E0065563B /* Welcome */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1E29650A202FDF9E0065563B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				1E296503202FCF5A0065563B /* WelcomeEmail.swift */,
+				1E296505202FD6280065563B /* WelcomePassphrase.swift */,
+				1E296507202FDD960065563B /* WelcomeLogin.swift */,
+				1E29650B202FDFBD0065563B /* WelcomeView.swift */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
 		1E6CC33F202EABF300109514 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +203,9 @@
 		1EDAF275202EA0A200E43756 /* Amatino */ = {
 			isa = PBXGroup;
 			children = (
+				1E296509202FDF970065563B /* Views */,
+				1E2964F6202FBAA20065563B /* Controls */,
+				1EF59722202EDB79001965E0 /* Windows */,
 				1EDAF276202EA0A200E43756 /* AppDelegate.swift */,
 				1EDAF278202EA0A200E43756 /* ViewController.swift */,
 				1EDAF27A202EA0A200E43756 /* Assets.xcassets */,
@@ -185,6 +232,15 @@
 				1EDAF296202EA0A200E43756 /* Info.plist */,
 			);
 			path = AmatinoUITests;
+			sourceTree = "<group>";
+		};
+		1EF59722202EDB79001965E0 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				1EF59725202EDBAB001965E0 /* Welcome.swift */,
+				1E2964FF202FCE6D0065563B /* WelcomeContainer.swift */,
+			);
+			name = Windows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,7 +413,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E296506202FD6280065563B /* WelcomePassphrase.swift in Sources */,
+				1E296504202FCF5A0065563B /* WelcomeEmail.swift in Sources */,
+				1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */,
+				1E2964FE202FC5E60065563B /* TextButton.swift in Sources */,
 				1EDAF279202EA0A200E43756 /* ViewController.swift in Sources */,
+				1E29650C202FDFBD0065563B /* WelcomeView.swift in Sources */,
+				1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */,
+				1E296508202FDD960065563B /* WelcomeLogin.swift in Sources */,
+				1E296500202FCE6D0065563B /* WelcomeContainer.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
