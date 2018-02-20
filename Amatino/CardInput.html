@@ -1,0 +1,68 @@
+<html lang="en">
+    <head>
+        <style>
+            .StripeElement {
+                background-color: transparent;
+                height: 30px;
+                padding-top: 8px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 2px;
+            }
+        #card-element {
+            width: calc(100vw - 20px);
+        }
+        body {
+            margin: 0px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="card-element"></div>
+    </body>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const STRIPE = Stripe('pk_test_MVX3ZBTjtQT17DfKrYKp1lKv');
+        const ELEMENTS = STRIPE.elements();
+        const style = {
+            base: {
+                color: '#323232',
+                lineHeight: '24px',
+                fontFamily: 'San Francisco, Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '17px',
+                '::placeholder': {
+                    fontSize: '17px',
+                    color: '#c7c7c7'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+    const CARD = ELEMENTS.create('card', {'style': style});
+    CARD.mount('#card-element');
+
+    async function createToken() {
+        const {token, error} = await STRIPE.createToken(CARD);
+        const data = {
+            'token': token,
+            'error': error
+        };
+        window.webkit.messageHandlers.tokenReady.postMessage(data);
+        return
+    }
+    
+    CARD.addEventListener('change', ({error}) => {
+          if (error) {
+              window.webkit.messageHandlers.cardError.postMessage(error.message);
+          } else {
+              window.webkit.messageHandlers.clearCardError.postMessage("");
+          }
+      });
+      
+
+    //window.setTimeout(function() {window.webkit.messageHandlers.native.postMessage("Hello from Javascript!")}, 3000);
+    </script>
+</html>

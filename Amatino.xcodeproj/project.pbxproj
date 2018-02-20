@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E04FA8C203007CA00DB826A /* WelcomePassphraseReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA8B203007CA00DB826A /* WelcomePassphraseReset.swift */; };
+		1E04FA922030088E00DB826A /* WelcomeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA912030088E00DB826A /* WelcomeSegue.swift */; };
+		1E04FA9420300F1100DB826A /* WelcomeCreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA9320300F1100DB826A /* WelcomeCreateAccount.swift */; };
+		1E04FA9920301D6900DB826A /* WelcomeSegueReverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA9820301D6900DB826A /* WelcomeSegueReverse.swift */; };
+		1E04FA9B20301FE200DB826A /* WelcomeSegueDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA9A20301FE200DB826A /* WelcomeSegueDown.swift */; };
+		1E04FA9D20301FFD00DB826A /* WelcomeSegueUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA9C20301FFD00DB826A /* WelcomeSegueUp.swift */; };
+		1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA9E203023AB00DB826A /* Stripe.swift */; };
+		1E1E8FA2203BD6A700CF91F2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8FA1203BD6A700CF91F2 /* Login.swift */; };
+		1E211725203AD275002AC8B9 /* Accounting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E211724203AD275002AC8B9 /* Accounting.storyboard */; };
 		1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2964FB202FBAB10065563B /* Hyperlink.swift */; };
 		1E2964FE202FC5E60065563B /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2964FD202FC5E60065563B /* TextButton.swift */; };
 		1E296500202FCE6D0065563B /* WelcomeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2964FF202FCE6D0065563B /* WelcomeContainer.swift */; };
@@ -16,14 +25,35 @@
 		1E29650C202FDFBD0065563B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29650B202FDFBD0065563B /* WelcomeView.swift */; };
 		1E2BF5C5202EAE350058709F /* AmatinoApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6CC34F202EAC4800109514 /* AmatinoApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E2BF5C9202EAF100058709F /* AMCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2BF5C8202EAE490058709F /* AMCryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E3287A22032846200884A85 /* SubscribeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A12032846200884A85 /* SubscribeEmail.swift */; };
+		1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A32032846E00884A85 /* SubscribePassphrase.swift */; };
+		1E3287A62032847C00884A85 /* SubscribePassphraseConfim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A52032847C00884A85 /* SubscribePassphraseConfim.swift */; };
+		1E3287A82032855300884A85 /* SubscribeBillingCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A72032855300884A85 /* SubscribeBillingCountry.swift */; };
+		1E3287AA2032855E00884A85 /* SubscribeBillingCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A92032855E00884A85 /* SubscribeBillingCurrency.swift */; };
+		1E3287AC2032856C00884A85 /* SubscribePlans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287AB2032856C00884A85 /* SubscribePlans.swift */; };
+		1E3287AE2032857C00884A85 /* SubscribeTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287AD2032857C00884A85 /* SubscribeTerms.swift */; };
+		1E3287B62032953300884A85 /* SubscribeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287B52032953300884A85 /* SubscribeTextField.swift */; };
+		1E3287B820329CB400884A85 /* SubscribeTextValidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287B720329CB400884A85 /* SubscribeTextValidity.swift */; };
+		1E5452262033FBA60073FFBD /* BillingCurrencySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5452252033FBA60073FFBD /* BillingCurrencySet.swift */; };
+		1E5452282033FBC80073FFBD /* BillingCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5452272033FBC80073FFBD /* BillingCurrency.swift */; };
+		1E54522A2033FDD00073FFBD /* BillingCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5452292033FDD00073FFBD /* BillingCountry.swift */; };
+		1E54522C2033FDFD0073FFBD /* BillingCountrySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54522B2033FDFD0073FFBD /* BillingCountrySet.swift */; };
+		1E54522E203416870073FFBD /* BillingPlanSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54522D203416870073FFBD /* BillingPlanSet.swift */; };
+		1E545230203418F40073FFBD /* BillingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54522F203418F40073FFBD /* BillingPlan.swift */; };
+		1E54523220341B270073FFBD /* BillingPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54523120341B270073FFBD /* BillingPrice.swift */; };
 		1E6CC354202EAD1700109514 /* AmatinoApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; };
 		1E6CC356202EAD5800109514 /* AmatinoApi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1EABD2A22037ABB700B88C7C /* SubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABD2A12037ABB700B88C7C /* SubscriptionRequest.swift */; };
+		1EABD2A82037B3BC00B88C7C /* SubscriptionRequestAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABD2A72037B3BC00B88C7C /* SubscriptionRequestAttributes.swift */; };
+		1EABD2AA2037BF8300B88C7C /* StripeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABD2A92037BF8300B88C7C /* StripeToken.swift */; };
+		1EBA294D2039513000C2BA72 /* WelcomeConfirmAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBA294C2039513000C2BA72 /* WelcomeConfirmAccount.swift */; };
 		1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF276202EA0A200E43756 /* AppDelegate.swift */; };
-		1EDAF279202EA0A200E43756 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF278202EA0A200E43756 /* ViewController.swift */; };
 		1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27A202EA0A200E43756 /* Assets.xcassets */; };
 		1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Main.storyboard */; };
 		1EDAF28A202EA0A200E43756 /* AmatinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF289202EA0A200E43756 /* AmatinoTests.swift */; };
 		1EDAF295202EA0A200E43756 /* AmatinoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */; };
+		1EE26D8E2032434600307528 /* CardInput.html in Resources */ = {isa = PBXBuildFile; fileRef = 1EE26D8D2032434600307528 /* CardInput.html */; };
+		1EE26D99203282AC00307528 /* WelcomeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE26D98203282AC00307528 /* WelcomeProgress.swift */; };
 		1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59725202EDBAB001965E0 /* Welcome.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +102,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E04FA8B203007CA00DB826A /* WelcomePassphraseReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePassphraseReset.swift; sourceTree = "<group>"; };
+		1E04FA912030088E00DB826A /* WelcomeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSegue.swift; sourceTree = "<group>"; };
+		1E04FA9320300F1100DB826A /* WelcomeCreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCreateAccount.swift; sourceTree = "<group>"; };
+		1E04FA9820301D6900DB826A /* WelcomeSegueReverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSegueReverse.swift; sourceTree = "<group>"; };
+		1E04FA9A20301FE200DB826A /* WelcomeSegueDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSegueDown.swift; sourceTree = "<group>"; };
+		1E04FA9C20301FFD00DB826A /* WelcomeSegueUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSegueUp.swift; sourceTree = "<group>"; };
+		1E04FA9E203023AB00DB826A /* Stripe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripe.swift; sourceTree = "<group>"; };
+		1E1E8FA1203BD6A700CF91F2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		1E211724203AD275002AC8B9 /* Accounting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounting.storyboard; sourceTree = "<group>"; };
 		1E2964FB202FBAB10065563B /* Hyperlink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hyperlink.swift; sourceTree = "<group>"; };
 		1E2964FD202FC5E60065563B /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		1E2964FF202FCE6D0065563B /* WelcomeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeContainer.swift; sourceTree = "<group>"; };
@@ -80,11 +119,30 @@
 		1E296507202FDD960065563B /* WelcomeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLogin.swift; sourceTree = "<group>"; };
 		1E29650B202FDFBD0065563B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		1E2BF5C8202EAE490058709F /* AMCryptography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCryptography.h; sourceTree = "<group>"; };
+		1E3287A12032846200884A85 /* SubscribeEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeEmail.swift; sourceTree = "<group>"; };
+		1E3287A32032846E00884A85 /* SubscribePassphrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribePassphrase.swift; sourceTree = "<group>"; };
+		1E3287A52032847C00884A85 /* SubscribePassphraseConfim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribePassphraseConfim.swift; sourceTree = "<group>"; };
+		1E3287A72032855300884A85 /* SubscribeBillingCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeBillingCountry.swift; sourceTree = "<group>"; };
+		1E3287A92032855E00884A85 /* SubscribeBillingCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeBillingCurrency.swift; sourceTree = "<group>"; };
+		1E3287AB2032856C00884A85 /* SubscribePlans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribePlans.swift; sourceTree = "<group>"; };
+		1E3287AD2032857C00884A85 /* SubscribeTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTerms.swift; sourceTree = "<group>"; };
+		1E3287B52032953300884A85 /* SubscribeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTextField.swift; sourceTree = "<group>"; };
+		1E3287B720329CB400884A85 /* SubscribeTextValidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTextValidity.swift; sourceTree = "<group>"; };
+		1E5452252033FBA60073FFBD /* BillingCurrencySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCurrencySet.swift; sourceTree = "<group>"; };
+		1E5452272033FBC80073FFBD /* BillingCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCurrency.swift; sourceTree = "<group>"; };
+		1E5452292033FDD00073FFBD /* BillingCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCountry.swift; sourceTree = "<group>"; };
+		1E54522B2033FDFD0073FFBD /* BillingCountrySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCountrySet.swift; sourceTree = "<group>"; };
+		1E54522D203416870073FFBD /* BillingPlanSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPlanSet.swift; sourceTree = "<group>"; };
+		1E54522F203418F40073FFBD /* BillingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPlan.swift; sourceTree = "<group>"; };
+		1E54523120341B270073FFBD /* BillingPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPrice.swift; sourceTree = "<group>"; };
 		1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmatinoApi.xcodeproj; path = "amatino-swift/AmatinoApi.xcodeproj"; sourceTree = "<group>"; };
 		1E6CC34F202EAC4800109514 /* AmatinoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmatinoApi.h; sourceTree = "<group>"; };
+		1EABD2A12037ABB700B88C7C /* SubscriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRequest.swift; sourceTree = "<group>"; };
+		1EABD2A72037B3BC00B88C7C /* SubscriptionRequestAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRequestAttributes.swift; sourceTree = "<group>"; };
+		1EABD2A92037BF8300B88C7C /* StripeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeToken.swift; sourceTree = "<group>"; };
+		1EBA294C2039513000C2BA72 /* WelcomeConfirmAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeConfirmAccount.swift; sourceTree = "<group>"; };
 		1EDAF273202EA0A200E43756 /* Amatino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amatino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF276202EA0A200E43756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1EDAF278202EA0A200E43756 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1EDAF27A202EA0A200E43756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EDAF27D202EA0A200E43756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EDAF27F202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +153,8 @@
 		1EDAF290202EA0A200E43756 /* AmatinoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmatinoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmatinoUITests.swift; sourceTree = "<group>"; };
 		1EDAF296202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EE26D8D2032434600307528 /* CardInput.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CardInput.html; sourceTree = "<group>"; };
+		1EE26D98203282AC00307528 /* WelcomeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProgress.swift; sourceTree = "<group>"; };
 		1EF59725202EDBAB001965E0 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +184,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E04FA95203010C200DB826A /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				1E32879C2032845100884A85 /* Fields */,
+				1E04FA9320300F1100DB826A /* WelcomeCreateAccount.swift */,
+				1E04FA9E203023AB00DB826A /* Stripe.swift */,
+				1EABD2A72037B3BC00B88C7C /* SubscriptionRequestAttributes.swift */,
+				1EE26D8D2032434600307528 /* CardInput.html */,
+				1E3287B52032953300884A85 /* SubscribeTextField.swift */,
+				1E3287B720329CB400884A85 /* SubscribeTextValidity.swift */,
+				1EABD2A12037ABB700B88C7C /* SubscriptionRequest.swift */,
+				1EABD2A92037BF8300B88C7C /* StripeToken.swift */,
+			);
+			name = CreateAccount;
+			sourceTree = "<group>";
+		};
+		1E04FA96203010CF00DB826A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1E296503202FCF5A0065563B /* WelcomeEmail.swift */,
+				1E296505202FD6280065563B /* WelcomePassphrase.swift */,
+				1E296507202FDD960065563B /* WelcomeLogin.swift */,
+				1E29650B202FDFBD0065563B /* WelcomeView.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		1E04FA97203010E000DB826A /* Reset */ = {
+			isa = PBXGroup;
+			children = (
+				1E04FA8B203007CA00DB826A /* WelcomePassphraseReset.swift */,
+			);
+			name = Reset;
+			sourceTree = "<group>";
+		};
+		1E1E8F9C203BD69C00CF91F2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				1E1E8FA1203BD6A700CF91F2 /* Login.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		1E2964F6202FBAA20065563B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,12 +247,43 @@
 		1E29650A202FDF9E0065563B /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				1E296503202FCF5A0065563B /* WelcomeEmail.swift */,
-				1E296505202FD6280065563B /* WelcomePassphrase.swift */,
-				1E296507202FDD960065563B /* WelcomeLogin.swift */,
-				1E29650B202FDFBD0065563B /* WelcomeView.swift */,
+				1EBA294B203950F700C2BA72 /* ConfirmAccount */,
+				1EBA29462039508300C2BA72 /* Segues */,
+				1EE26D972032829D00307528 /* Progress */,
+				1E04FA97203010E000DB826A /* Reset */,
+				1E04FA96203010CF00DB826A /* Login */,
+				1E04FA95203010C200DB826A /* CreateAccount */,
 			);
 			name = Welcome;
+			sourceTree = "<group>";
+		};
+		1E32879C2032845100884A85 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				1E5452202033FB8F0073FFBD /* Supporting */,
+				1E3287A12032846200884A85 /* SubscribeEmail.swift */,
+				1E3287A32032846E00884A85 /* SubscribePassphrase.swift */,
+				1E3287A52032847C00884A85 /* SubscribePassphraseConfim.swift */,
+				1E3287A72032855300884A85 /* SubscribeBillingCountry.swift */,
+				1E3287A92032855E00884A85 /* SubscribeBillingCurrency.swift */,
+				1E3287AB2032856C00884A85 /* SubscribePlans.swift */,
+				1E3287AD2032857C00884A85 /* SubscribeTerms.swift */,
+			);
+			name = Fields;
+			sourceTree = "<group>";
+		};
+		1E5452202033FB8F0073FFBD /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				1E5452252033FBA60073FFBD /* BillingCurrencySet.swift */,
+				1E5452272033FBC80073FFBD /* BillingCurrency.swift */,
+				1E5452292033FDD00073FFBD /* BillingCountry.swift */,
+				1E54522B2033FDFD0073FFBD /* BillingCountrySet.swift */,
+				1E54522D203416870073FFBD /* BillingPlanSet.swift */,
+				1E54522F203418F40073FFBD /* BillingPlan.swift */,
+				1E54523120341B270073FFBD /* BillingPrice.swift */,
+			);
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 		1E6CC33F202EABF300109514 /* Products */ = {
@@ -175,6 +309,25 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EBA29462039508300C2BA72 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				1E04FA912030088E00DB826A /* WelcomeSegue.swift */,
+				1E04FA9820301D6900DB826A /* WelcomeSegueReverse.swift */,
+				1E04FA9A20301FE200DB826A /* WelcomeSegueDown.swift */,
+				1E04FA9C20301FFD00DB826A /* WelcomeSegueUp.swift */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
+		1EBA294B203950F700C2BA72 /* ConfirmAccount */ = {
+			isa = PBXGroup;
+			children = (
+				1EBA294C2039513000C2BA72 /* WelcomeConfirmAccount.swift */,
+			);
+			name = ConfirmAccount;
 			sourceTree = "<group>";
 		};
 		1EDAF26A202EA0A200E43756 = {
@@ -203,13 +356,14 @@
 		1EDAF275202EA0A200E43756 /* Amatino */ = {
 			isa = PBXGroup;
 			children = (
+				1E1E8F9C203BD69C00CF91F2 /* Authentication */,
 				1E296509202FDF970065563B /* Views */,
 				1E2964F6202FBAA20065563B /* Controls */,
 				1EF59722202EDB79001965E0 /* Windows */,
 				1EDAF276202EA0A200E43756 /* AppDelegate.swift */,
-				1EDAF278202EA0A200E43756 /* ViewController.swift */,
 				1EDAF27A202EA0A200E43756 /* Assets.xcassets */,
 				1EDAF27C202EA0A200E43756 /* Main.storyboard */,
+				1E211724203AD275002AC8B9 /* Accounting.storyboard */,
 				1EDAF27F202EA0A200E43756 /* Info.plist */,
 				1EDAF280202EA0A200E43756 /* Amatino.entitlements */,
 			);
@@ -232,6 +386,14 @@
 				1EDAF296202EA0A200E43756 /* Info.plist */,
 			);
 			path = AmatinoUITests;
+			sourceTree = "<group>";
+		};
+		1EE26D972032829D00307528 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				1EE26D98203282AC00307528 /* WelcomeProgress.swift */,
+			);
+			name = Progress;
 			sourceTree = "<group>";
 		};
 		1EF59722202EDB79001965E0 /* Windows */ = {
@@ -267,6 +429,7 @@
 				1EDAF270202EA0A200E43756 /* Frameworks */,
 				1EDAF271202EA0A200E43756 /* Resources */,
 				1E6CC355202EAD3000109514 /* CopyFiles */,
+				1EEFABB2203053F1001599D9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -388,7 +551,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */,
+				1E211725203AD275002AC8B9 /* Accounting.storyboard in Resources */,
 				1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */,
+				1EE26D8E2032434600307528 /* CardInput.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,20 +573,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EEFABB2203053F1001599D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#Disables ATS in debug builds.\nINFOPLIST=\"${TARGET_BUILD_DIR}\"/\"${INFOPLIST_PATH}\"\ncase \"${CONFIGURATION}\" in\n\"Release\"|\"Adhoc\")\n/usr/libexec/PlistBuddy -c \"Set :NSAppTransportSecurity:NSAllowsArbitraryLoads NO\" \"${INFOPLIST}\"\n;;\n\"Debug\")\n/usr/libexec/PlistBuddy -c \"Set :NSAppTransportSecurity:NSAllowsArbitraryLoads YES\" \"${INFOPLIST}\"\n;;\nesac\nif [ \"${ALLOWS_ARBITRARY_LOADS_ENABLED}\" == \"true\" ]; then\necho \"ATS disabled for debug build\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1EDAF26F202EA0A200E43756 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E5452282033FBC80073FFBD /* BillingCurrency.swift in Sources */,
+				1E54522A2033FDD00073FFBD /* BillingCountry.swift in Sources */,
+				1EE26D99203282AC00307528 /* WelcomeProgress.swift in Sources */,
+				1E54522C2033FDFD0073FFBD /* BillingCountrySet.swift in Sources */,
+				1E3287B62032953300884A85 /* SubscribeTextField.swift in Sources */,
 				1E296506202FD6280065563B /* WelcomePassphrase.swift in Sources */,
 				1E296504202FCF5A0065563B /* WelcomeEmail.swift in Sources */,
+				1E3287A82032855300884A85 /* SubscribeBillingCountry.swift in Sources */,
+				1E5452262033FBA60073FFBD /* BillingCurrencySet.swift in Sources */,
+				1E04FA922030088E00DB826A /* WelcomeSegue.swift in Sources */,
 				1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */,
+				1E3287B820329CB400884A85 /* SubscribeTextValidity.swift in Sources */,
+				1E54522E203416870073FFBD /* BillingPlanSet.swift in Sources */,
+				1E1E8FA2203BD6A700CF91F2 /* Login.swift in Sources */,
+				1E3287A22032846200884A85 /* SubscribeEmail.swift in Sources */,
 				1E2964FE202FC5E60065563B /* TextButton.swift in Sources */,
-				1EDAF279202EA0A200E43756 /* ViewController.swift in Sources */,
 				1E29650C202FDFBD0065563B /* WelcomeView.swift in Sources */,
+				1EABD2A22037ABB700B88C7C /* SubscriptionRequest.swift in Sources */,
+				1E04FA9420300F1100DB826A /* WelcomeCreateAccount.swift in Sources */,
+				1E54523220341B270073FFBD /* BillingPrice.swift in Sources */,
+				1E04FA9920301D6900DB826A /* WelcomeSegueReverse.swift in Sources */,
 				1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */,
+				1E3287AC2032856C00884A85 /* SubscribePlans.swift in Sources */,
 				1E296508202FDD960065563B /* WelcomeLogin.swift in Sources */,
+				1E3287AA2032855E00884A85 /* SubscribeBillingCurrency.swift in Sources */,
+				1EBA294D2039513000C2BA72 /* WelcomeConfirmAccount.swift in Sources */,
+				1E04FA9B20301FE200DB826A /* WelcomeSegueDown.swift in Sources */,
 				1E296500202FCE6D0065563B /* WelcomeContainer.swift in Sources */,
+				1E545230203418F40073FFBD /* BillingPlan.swift in Sources */,
+				1EABD2A82037B3BC00B88C7C /* SubscriptionRequestAttributes.swift in Sources */,
+				1EABD2AA2037BF8300B88C7C /* StripeToken.swift in Sources */,
+				1E3287A62032847C00884A85 /* SubscribePassphraseConfim.swift in Sources */,
+				1E04FA8C203007CA00DB826A /* WelcomePassphraseReset.swift in Sources */,
+				1E04FA9D20301FFD00DB826A /* WelcomeSegueUp.swift in Sources */,
+				1E3287AE2032857C00884A85 /* SubscribeTerms.swift in Sources */,
+				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
+				1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,7 +788,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Amatino/Amatino.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Amatino/Info.plist;
@@ -594,7 +802,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Amatino/Amatino.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Amatino/Info.plist;

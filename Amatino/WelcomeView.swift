@@ -1,22 +1,58 @@
 //
 //  WelcomeView.swift
-//  Amatino
+//  Amatino MacOS
 //
-//  Created by Hugh Jeremy on 11/2/18.
-//  Copyright © 2018 Amatino Pty Ltd. All rights reserved.
+//  author: hugh@amatino.io
 //
 
 import Foundation
 import Cocoa
+import AmatinoApi
 
 class WelcomeView: NSViewController {
     
     @IBOutlet weak var emailField: WelcomeEmail!
     @IBOutlet weak var passPhraseField: WelcomePassphrase!
     @IBOutlet weak var loginButton: WelcomeLogin!
+    @IBOutlet weak var loginSpinner: NSProgressIndicator!
     
-    override func viewDidLoad() {
+    private var login: Login? = nil
+    
+    override func viewWillAppear() {
         emailField.window?.makeFirstResponder(emailField)
+        loginSpinner.isHidden = true
+    }
+
+    @IBAction func loginSelected(_ sender: Any) {
+        if !emailField.isValid() || !passPhraseField.isValid() {
+            return
+        }
+        
+        loginSpinner.isHidden = false
+        loginButton.isHidden = true
+
+        do {
+            try login = Login(email: emailField.stringValue, secret: passPhraseField.stringValue,
+                              callback: readyCallback)
+        } catch {
+            fatalError("Uncaught Login error: \(error)")
+        }
+
+        return
+    }
+    
+    private func readyCallback() {
+        
+        guard login != nil else { fatalError("Inconsistent internal state") }
+        
+        if login!.wasSuccessful() {
+            let app = NSApplication.shared.delegate as! AppDelegate
+            app.showAccountingInterface()
+        } else {
+            fatalError("Uncaught Login error: \(String(describing: login!.provideLoginError()))")
+        }
+
+        return
     }
     
 }
