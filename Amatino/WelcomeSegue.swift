@@ -34,7 +34,7 @@ class WelcomeSegue: NSStoryboardSegue {
         let containerViewController = sourceViewController.parent!
         
         containerViewController.insertChildViewController(destinationViewController, at: 1)
-        
+
         sourceViewController.view.wantsLayer = true
         destinationViewController.view.wantsLayer = true
         

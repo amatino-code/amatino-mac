@@ -19,19 +19,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var accountingInterface: NSWindowController? = nil
     var welcomeInterface: NSWindowController? = nil
+    var login: Login? = nil
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        // debug logout
-        let debugLogin = try? Login()
-        debugLogin?.removeSession()
-        
-        let login = try? Login()
-        
+        login = try? Login()
+
         if login == nil {
             showWelcomeInterface()
         } else {
-            showAccountingInterface()
+            showAccountingInterface(login!)
         }
 
     }
@@ -40,9 +37,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     }
     
-    func showAccountingInterface() {
+    func showAccountingInterface(_ login: Login) {
         accountingInterface = accountingStoryboard.instantiateController(withIdentifier: accountingWindowIdentifier) as? NSWindowController
         guard accountingInterface != nil else { fatalError("Failed to instantiate accounting interface") }
+        let accountingWindow = accountingInterface as? AccountingWindowController
+        guard accountingWindow != nil else { fatalError("Failed to cast Accounting Window") }
+        accountingWindow?.loadEnvironment(login: login)
         accountingInterface?.showWindow(self)
         welcomeInterface?.close()
         return

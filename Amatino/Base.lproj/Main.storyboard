@@ -898,7 +898,7 @@
                                 </connections>
                             </textField>
                             <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-PQ-uRk" customClass="SubscribePassphrase" customModule="Amatino" customModuleProvider="target">
-                                <rect key="frame" x="77" y="508" width="344" height="29"/>
+                                <rect key="frame" x="77" y="509" width="344" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="Passphrase" id="c4X-lc-xKq" customClass="NSSecureTextFieldCell">
                                     <font key="font" metaFont="system" size="17"/>
@@ -954,7 +954,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Swh-Jo-Ja7">
-                                <rect key="frame" x="80" y="167" width="342" height="5"/>
+                                <rect key="frame" x="80" y="167" width="342" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-Wz-Abp">
@@ -962,7 +962,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="LAZ-58-zTX">
-                                <rect key="frame" x="78" y="507" width="342" height="5"/>
+                                <rect key="frame" x="78" y="508" width="342" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAe-NC-YRb">
@@ -1071,7 +1071,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NuH-XA-woG">
-                                <rect key="frame" x="136" y="493" width="220" height="17"/>
+                                <rect key="frame" x="136" y="494" width="220" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Example passphrase error text" id="did-zF-34u">
                                     <font key="font" metaFont="systemBold"/>
@@ -1408,7 +1408,7 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Sqw-O0-bEP">
-                                <rect key="frame" x="79" y="413" width="342" height="5"/>
+                                <rect key="frame" x="79" y="413" width="342" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ya-Eu-tbn">
@@ -1455,6 +1455,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Nig-c2-xMU"/>
-        <segue reference="6V8-mt-Jqu"/>
+        <segue reference="2dO-1I-7Za"/>
     </inferredMetricsTieBreakers>
 </document>

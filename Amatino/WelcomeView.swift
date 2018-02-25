@@ -47,7 +47,8 @@ class WelcomeView: NSViewController {
         
         if login!.wasSuccessful() {
             let app = NSApplication.shared.delegate as! AppDelegate
-            app.showAccountingInterface()
+            app.login = login
+            app.showAccountingInterface(login!)
         } else {
             fatalError("Uncaught Login error: \(String(describing: login!.provideLoginError()))")
         }

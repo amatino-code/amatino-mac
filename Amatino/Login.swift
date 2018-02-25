@@ -14,10 +14,11 @@ class Login {
     private let apiKeyDefaultsKey = "api_key"
     private let sessionIdDefaultsKey = "session_id"
     private let userIdDefaultsKey = "user_id"
-    
-    private var session: Session? = nil
+
     private let callback: (() -> Void)?
     private let defaults = UserDefaults()
+    
+    public var session: Session? = nil
     
     init () throws {
         
@@ -50,11 +51,14 @@ class Login {
         assert(callback != nil)
         self.session = session
 
-        let attributes = try? session.describe()
-
-        if attributes != nil {
-            saveSession(attributes: attributes!)
+        let attributes: SessionAttributes
+        do {
+            attributes = try session.describe()
+        } catch {
+            fatalError("Unhandled session retrieval error: \(error)")
         }
+
+        saveSession(attributes: attributes)
 
         _ = callback!()
 
