@@ -23,3 +23,4 @@ class Welcome: NSWindow {
     }
 
 }
+

@@ -46,6 +46,8 @@
 		1E54523220341B270073FFBD /* BillingPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54523120341B270073FFBD /* BillingPrice.swift */; };
 		1E6CC354202EAD1700109514 /* AmatinoApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; };
 		1E6CC356202EAD5800109514 /* AmatinoApi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E789E502044E7AF007FB628 /* EntityWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E789E4F2044E7AF007FB628 /* EntityWindow.swift */; };
+		1E82B04F2044EE28001C342B /* EntityStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82B04E2044EE28001C342B /* EntityStatusBar.swift */; };
 		1E85DAD5203E90BB00C183F5 /* CreateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */; };
 		1E8B8027203E80AE00AE6FD8 /* AccountingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B8026203E80AE00AE6FD8 /* AccountingContainer.swift */; };
 		1E8B802D203E82EA00AE6FD8 /* AccountingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B802C203E82EA00AE6FD8 /* AccountingWindow.swift */; };
@@ -59,6 +61,7 @@
 		1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Main.storyboard */; };
 		1EDAF28A202EA0A200E43756 /* AmatinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF289202EA0A200E43756 /* AmatinoTests.swift */; };
 		1EDAF295202EA0A200E43756 /* AmatinoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */; };
+		1EDD381B20441233008D4DCC /* Entity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDD381A20441233008D4DCC /* Entity.storyboard */; };
 		1EE26D8E2032434600307528 /* CardInput.html in Resources */ = {isa = PBXBuildFile; fileRef = 1EE26D8D2032434600307528 /* CardInput.html */; };
 		1EE26D99203282AC00307528 /* WelcomeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE26D98203282AC00307528 /* WelcomeProgress.swift */; };
 		1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59725202EDBAB001965E0 /* Welcome.swift */; };
@@ -148,6 +151,8 @@
 		1E54523120341B270073FFBD /* BillingPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPrice.swift; sourceTree = "<group>"; };
 		1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmatinoApi.xcodeproj; path = "amatino-swift/AmatinoApi.xcodeproj"; sourceTree = "<group>"; };
 		1E6CC34F202EAC4800109514 /* AmatinoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmatinoApi.h; sourceTree = "<group>"; };
+		1E789E4F2044E7AF007FB628 /* EntityWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityWindow.swift; sourceTree = "<group>"; };
+		1E82B04E2044EE28001C342B /* EntityStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStatusBar.swift; sourceTree = "<group>"; };
 		1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEntity.swift; sourceTree = "<group>"; };
 		1E8B8026203E80AE00AE6FD8 /* AccountingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingContainer.swift; sourceTree = "<group>"; };
 		1E8B802C203E82EA00AE6FD8 /* AccountingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingWindow.swift; sourceTree = "<group>"; };
@@ -168,6 +173,7 @@
 		1EDAF290202EA0A200E43756 /* AmatinoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmatinoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmatinoUITests.swift; sourceTree = "<group>"; };
 		1EDAF296202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EDD381A20441233008D4DCC /* Entity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entity.storyboard; sourceTree = "<group>"; };
 		1EE26D8D2032434600307528 /* CardInput.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CardInput.html; sourceTree = "<group>"; };
 		1EE26D98203282AC00307528 /* WelcomeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProgress.swift; sourceTree = "<group>"; };
 		1EF59725202EDBAB001965E0 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
@@ -337,6 +343,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1E82B0492044EE17001C342B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1E82B04E2044EE28001C342B /* EntityStatusBar.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		1EBA29462039508300C2BA72 /* Segues */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +407,7 @@
 		1EDAF275202EA0A200E43756 /* Amatino */ = {
 			isa = PBXGroup;
 			children = (
+				1E82B0492044EE17001C342B /* Entity */,
 				1E1E8F9C203BD69C00CF91F2 /* Authentication */,
 				1E296509202FDF970065563B /* Views */,
 				1E2964F6202FBAA20065563B /* Controls */,
@@ -401,6 +416,7 @@
 				1EDAF27A202EA0A200E43756 /* Assets.xcassets */,
 				1EDAF27C202EA0A200E43756 /* Main.storyboard */,
 				1E211724203AD275002AC8B9 /* Accounting.storyboard */,
+				1EDD381A20441233008D4DCC /* Entity.storyboard */,
 				1EDAF27F202EA0A200E43756 /* Info.plist */,
 				1EDAF280202EA0A200E43756 /* Amatino.entitlements */,
 			);
@@ -441,6 +457,7 @@
 				1E8B8026203E80AE00AE6FD8 /* AccountingContainer.swift */,
 				1E8B802C203E82EA00AE6FD8 /* AccountingWindow.swift */,
 				1EFB1C25203ED13F00C838DB /* AccountingWindowController.swift */,
+				1E789E4F2044E7AF007FB628 /* EntityWindow.swift */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -592,6 +609,7 @@
 			files = (
 				1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */,
 				1E211725203AD275002AC8B9 /* Accounting.storyboard in Resources */,
+				1EDD381B20441233008D4DCC /* Entity.storyboard in Resources */,
 				1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */,
 				1EE26D8E2032434600307528 /* CardInput.html in Resources */,
 			);
@@ -672,6 +690,7 @@
 				1E279B4C2042417C0002E514 /* EntityListViewConfirmDelete.swift in Sources */,
 				1E545230203418F40073FFBD /* BillingPlan.swift in Sources */,
 				1EABD2A82037B3BC00B88C7C /* SubscriptionRequestAttributes.swift in Sources */,
+				1E82B04F2044EE28001C342B /* EntityStatusBar.swift in Sources */,
 				1EABD2AA2037BF8300B88C7C /* StripeToken.swift in Sources */,
 				1E3287A62032847C00884A85 /* SubscribePassphraseConfim.swift in Sources */,
 				1E04FA8C203007CA00DB826A /* WelcomePassphraseReset.swift in Sources */,
@@ -680,6 +699,7 @@
 				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
 				1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
+				1E789E502044E7AF007FB628 /* EntityWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

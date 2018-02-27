@@ -76,7 +76,18 @@ class EntityListView: NSViewController {
         performSegue(withIdentifier: deleteConfirmSegueId, sender: nil)
         return
     }
-    
+
+    @IBAction func openEntitySelected(_ sender: NSMenuItem) {
+        let rowIndex = entityTableView.selectedRow
+        if rowIndex < 0  || rowIndex > (entityListAttributes!.entities!.count - 1) {
+            return
+        }
+        
+        let target = entityListAttributes!.entities![rowIndex]
+        openEntity(target)
+        return
+    }
+
     public func resetDeletionTarget() {
         deletionTarget = nil
     }
@@ -89,6 +100,12 @@ class EntityListView: NSViewController {
                 entityView: self
             )
         }
+        return
+    }
+    
+    private func openEntity(_ entity: Entity) {
+        let app = NSApplication.shared.delegate as! AppDelegate
+        app.showEntityInterface(entity: entity)
         return
     }
     
