@@ -44,3 +44,5 @@ struct SubscriptionRequestAttributes: Encodable {
     }
     
 }
+
+let

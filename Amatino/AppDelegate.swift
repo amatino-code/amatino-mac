@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import AmatinoApi
+ 
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -62,7 +62,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         guard entityInterface != nil else { fatalError("Failed to instantiate entity interface") }
         let entityWindow = entityInterface as? EntityWindowController
         guard entityWindow != nil else { fatalError("Failed to cast Entity Window") }
-        entityWindow?.loadEntity(entity)
+        guard login?.session != nil else { fatalError("Login session not available when loading Entity interface") }
+        entityWindow?.loadEnvironment(entity, login!.session!)
         let name: String
         do {
             name = try entity.describe().name

@@ -7,7 +7,7 @@
 
 import Foundation
 import Cocoa
-import AmatinoApi
+ 
 
 class EntityListView: NSViewController {
     

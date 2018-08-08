@@ -315,8 +315,8 @@ Gw
                     <connections>
                         <outlet property="determinateProgressIndicator" destination="W2m-VR-8OZ" id="psC-Bn-msx"/>
                         <outlet property="progressIndicator" destination="KCL-Po-0ad" id="0p2-5f-Wjx"/>
-                        <segue destination="3So-UU-yTA" kind="custom" identifier="entityLoadToNoEntities" customClass="WelcomeSegue" customModule="Amatino" customModuleProvider="target" id="Mss-JL-6RF"/>
-                        <segue destination="hNx-Pa-o9E" kind="custom" identifier="entityLoadToSomeEntities" customClass="WelcomeSegue" customModule="Amatino" customModuleProvider="target" id="Wpo-kh-Zx0"/>
+                        <segue destination="3So-UU-yTA" kind="custom" identifier="entityLoadToNoEntities" customClass="CrossFadeSegue" customModule="Amatino" customModuleProvider="target" id="Mss-JL-6RF"/>
+                        <segue destination="hNx-Pa-o9E" kind="custom" identifier="entityLoadToSomeEntities" customClass="CrossFadeSegue" customModule="Amatino" customModuleProvider="target" id="Wpo-kh-Zx0"/>
                     </connections>
                 </viewController>
                 <customObject id="Deg-yd-P3P" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -613,7 +613,7 @@ DQ
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="JHj-ue-0Nw">
-                                    <rect key="frame" x="0.0" y="7" width="0.0" height="16"/>
+                                    <rect key="frame" x="0.0" y="8" width="0.0" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="X66-9y-moh">

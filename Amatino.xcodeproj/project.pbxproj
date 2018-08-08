@@ -25,8 +25,6 @@
 		1E296506202FD6280065563B /* WelcomePassphrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E296505202FD6280065563B /* WelcomePassphrase.swift */; };
 		1E296508202FDD960065563B /* WelcomeLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E296507202FDD960065563B /* WelcomeLogin.swift */; };
 		1E29650C202FDFBD0065563B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E29650B202FDFBD0065563B /* WelcomeView.swift */; };
-		1E2BF5C5202EAE350058709F /* AmatinoApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6CC34F202EAC4800109514 /* AmatinoApi.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E2BF5C9202EAF100058709F /* AMCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2BF5C8202EAE490058709F /* AMCryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E3287A22032846200884A85 /* SubscribeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A12032846200884A85 /* SubscribeEmail.swift */; };
 		1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A32032846E00884A85 /* SubscribePassphrase.swift */; };
 		1E3287A62032847C00884A85 /* SubscribePassphraseConfim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287A52032847C00884A85 /* SubscribePassphraseConfim.swift */; };
@@ -44,8 +42,11 @@
 		1E54522E203416870073FFBD /* BillingPlanSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54522D203416870073FFBD /* BillingPlanSet.swift */; };
 		1E545230203418F40073FFBD /* BillingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54522F203418F40073FFBD /* BillingPlan.swift */; };
 		1E54523220341B270073FFBD /* BillingPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54523120341B270073FFBD /* BillingPrice.swift */; };
-		1E6CC354202EAD1700109514 /* AmatinoApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; };
-		1E6CC356202EAD5800109514 /* AmatinoApi.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1E6CC348202EABF300109514 /* AmatinoApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E750CDC20462DFF001AD8CC /* TreeOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CDB20462DFF001AD8CC /* TreeOutlineView.swift */; };
+		1E750CDE20463324001AD8CC /* TreeOutlineLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CDD20463324001AD8CC /* TreeOutlineLoading.swift */; };
+		1E750CE020463489001AD8CC /* TreeOutlineContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CDF20463489001AD8CC /* TreeOutlineContainerView.swift */; };
+		1E750CE220464520001AD8CC /* EntitySplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CE120464520001AD8CC /* EntitySplitView.swift */; };
+		1E750CE520464A19001AD8CC /* CrossfadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CE420464A19001AD8CC /* CrossfadeSegue.swift */; };
 		1E789E502044E7AF007FB628 /* EntityWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E789E4F2044E7AF007FB628 /* EntityWindow.swift */; };
 		1E82B04F2044EE28001C342B /* EntityStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82B04E2044EE28001C342B /* EntityStatusBar.swift */; };
 		1E85DAD5203E90BB00C183F5 /* CreateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */; };
@@ -69,20 +70,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E6CC345202EABF300109514 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "Amatino::AmatinoTests::Product";
-			remoteInfo = AmatinoApiTests;
-		};
-		1E6CC347202EABF300109514 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "Amatino::Amatino::Product";
-			remoteInfo = AmatinoApi;
-		};
 		1EDAF286202EA0A200E43756 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1EDAF26B202EA0A200E43756 /* Project object */;
@@ -106,7 +93,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1E6CC356202EAD5800109514 /* AmatinoApi.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +117,6 @@
 		1E296505202FD6280065563B /* WelcomePassphrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePassphrase.swift; sourceTree = "<group>"; };
 		1E296507202FDD960065563B /* WelcomeLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeLogin.swift; sourceTree = "<group>"; };
 		1E29650B202FDFBD0065563B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		1E2BF5C8202EAE490058709F /* AMCryptography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMCryptography.h; sourceTree = "<group>"; };
 		1E3287A12032846200884A85 /* SubscribeEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeEmail.swift; sourceTree = "<group>"; };
 		1E3287A32032846E00884A85 /* SubscribePassphrase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribePassphrase.swift; sourceTree = "<group>"; };
 		1E3287A52032847C00884A85 /* SubscribePassphraseConfim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribePassphraseConfim.swift; sourceTree = "<group>"; };
@@ -149,8 +134,11 @@
 		1E54522D203416870073FFBD /* BillingPlanSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPlanSet.swift; sourceTree = "<group>"; };
 		1E54522F203418F40073FFBD /* BillingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPlan.swift; sourceTree = "<group>"; };
 		1E54523120341B270073FFBD /* BillingPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPrice.swift; sourceTree = "<group>"; };
-		1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmatinoApi.xcodeproj; path = "amatino-swift/AmatinoApi.xcodeproj"; sourceTree = "<group>"; };
-		1E6CC34F202EAC4800109514 /* AmatinoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmatinoApi.h; sourceTree = "<group>"; };
+		1E750CDB20462DFF001AD8CC /* TreeOutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineView.swift; sourceTree = "<group>"; };
+		1E750CDD20463324001AD8CC /* TreeOutlineLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineLoading.swift; sourceTree = "<group>"; };
+		1E750CDF20463489001AD8CC /* TreeOutlineContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineContainerView.swift; sourceTree = "<group>"; };
+		1E750CE120464520001AD8CC /* EntitySplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitySplitView.swift; sourceTree = "<group>"; };
+		1E750CE420464A19001AD8CC /* CrossfadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossfadeSegue.swift; sourceTree = "<group>"; };
 		1E789E4F2044E7AF007FB628 /* EntityWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityWindow.swift; sourceTree = "<group>"; };
 		1E82B04E2044EE28001C342B /* EntityStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStatusBar.swift; sourceTree = "<group>"; };
 		1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEntity.swift; sourceTree = "<group>"; };
@@ -185,7 +173,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E6CC354202EAD1700109514 /* AmatinoApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +257,7 @@
 		1E296509202FDF970065563B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E82B0492044EE17001C342B /* Entity */,
 				1EBDF656203CF0CC00E9DACD /* Entities */,
 				1E29650A202FDF9E0065563B /* Welcome */,
 			);
@@ -279,8 +267,8 @@
 		1E29650A202FDF9E0065563B /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				1E2964FF202FCE6D0065563B /* WelcomeContainer.swift */,
 				1EBA294B203950F700C2BA72 /* ConfirmAccount */,
-				1EBA29462039508300C2BA72 /* Segues */,
 				1EE26D972032829D00307528 /* Progress */,
 				1E04FA97203010E000DB826A /* Reset */,
 				1E04FA96203010CF00DB826A /* Login */,
@@ -318,24 +306,6 @@
 			name = Supporting;
 			sourceTree = "<group>";
 		};
-		1E6CC33F202EABF300109514 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1E6CC346202EABF300109514 /* AmatinoApiTests.xctest */,
-				1E6CC348202EABF300109514 /* AmatinoApi.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1E6CC34A202EAC1E00109514 /* LibraryHeader */ = {
-			isa = PBXGroup;
-			children = (
-				1E2BF5C8202EAE490058709F /* AMCryptography.h */,
-				1E6CC34F202EAC4800109514 /* AmatinoApi.h */,
-			);
-			path = LibraryHeader;
-			sourceTree = "<group>";
-		};
 		1E6CC353202EAD1700109514 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,23 +313,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1E82B0492044EE17001C342B /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				1E82B04E2044EE28001C342B /* EntityStatusBar.swift */,
-			);
-			name = Entity;
-			sourceTree = "<group>";
-		};
-		1EBA29462039508300C2BA72 /* Segues */ = {
+		1E750CE320464A02001AD8CC /* Segues */ = {
 			isa = PBXGroup;
 			children = (
 				1E04FA912030088E00DB826A /* WelcomeSegue.swift */,
 				1E04FA9820301D6900DB826A /* WelcomeSegueReverse.swift */,
 				1E04FA9A20301FE200DB826A /* WelcomeSegueDown.swift */,
 				1E04FA9C20301FFD00DB826A /* WelcomeSegueUp.swift */,
+				1E750CE420464A19001AD8CC /* CrossfadeSegue.swift */,
 			);
 			name = Segues;
+			sourceTree = "<group>";
+		};
+		1E750CE620465095001AD8CC /* TreeOutline */ = {
+			isa = PBXGroup;
+			children = (
+				1E750CDB20462DFF001AD8CC /* TreeOutlineView.swift */,
+				1E750CDD20463324001AD8CC /* TreeOutlineLoading.swift */,
+				1E750CDF20463489001AD8CC /* TreeOutlineContainerView.swift */,
+			);
+			name = TreeOutline;
+			sourceTree = "<group>";
+		};
+		1E82B0492044EE17001C342B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1E750CE620465095001AD8CC /* TreeOutline */,
+				1E82B04E2044EE28001C342B /* EntityStatusBar.swift */,
+				1E750CE120464520001AD8CC /* EntitySplitView.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		1EBA294B203950F700C2BA72 /* ConfirmAccount */ = {
@@ -384,8 +367,7 @@
 		1EDAF26A202EA0A200E43756 = {
 			isa = PBXGroup;
 			children = (
-				1E6CC34A202EAC1E00109514 /* LibraryHeader */,
-				1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */,
+				1EE62F36211AE43C009A0F20 /* Library */,
 				1EDAF275202EA0A200E43756 /* Amatino */,
 				1EDAF288202EA0A200E43756 /* AmatinoTests */,
 				1EDAF293202EA0A200E43756 /* AmatinoUITests */,
@@ -407,7 +389,7 @@
 		1EDAF275202EA0A200E43756 /* Amatino */ = {
 			isa = PBXGroup;
 			children = (
-				1E82B0492044EE17001C342B /* Entity */,
+				1E750CE320464A02001AD8CC /* Segues */,
 				1E1E8F9C203BD69C00CF91F2 /* Authentication */,
 				1E296509202FDF970065563B /* Views */,
 				1E2964F6202FBAA20065563B /* Controls */,
@@ -449,11 +431,17 @@
 			name = Progress;
 			sourceTree = "<group>";
 		};
+		1EE62F36211AE43C009A0F20 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		1EF59722202EDB79001965E0 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
 				1EF59725202EDBAB001965E0 /* Welcome.swift */,
-				1E2964FF202FCE6D0065563B /* WelcomeContainer.swift */,
 				1E8B8026203E80AE00AE6FD8 /* AccountingContainer.swift */,
 				1E8B802C203E82EA00AE6FD8 /* AccountingWindow.swift */,
 				1EFB1C25203ED13F00C838DB /* AccountingWindowController.swift */,
@@ -469,8 +457,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E2BF5C5202EAE350058709F /* AmatinoApi.h in Headers */,
-				1E2BF5C9202EAF100058709F /* AMCryptography.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,12 +556,6 @@
 			mainGroup = 1EDAF26A202EA0A200E43756;
 			productRefGroup = 1EDAF274202EA0A200E43756 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 1E6CC33F202EABF300109514 /* Products */;
-					ProjectRef = 1E6CC33E202EABF300109514 /* AmatinoApi.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				1EDAF272202EA0A200E43756 /* Amatino */,
@@ -584,23 +564,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1E6CC346202EABF300109514 /* AmatinoApiTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AmatinoApiTests.xctest;
-			remoteRef = 1E6CC345202EABF300109514 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1E6CC348202EABF300109514 /* AmatinoApi.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AmatinoApi.framework;
-			remoteRef = 1E6CC347202EABF300109514 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1EDAF271202EA0A200E43756 /* Resources */ = {
@@ -662,8 +625,10 @@
 				1E296504202FCF5A0065563B /* WelcomeEmail.swift in Sources */,
 				1E8B8027203E80AE00AE6FD8 /* AccountingContainer.swift in Sources */,
 				1E3287A82032855300884A85 /* SubscribeBillingCountry.swift in Sources */,
+				1E750CE520464A19001AD8CC /* CrossfadeSegue.swift in Sources */,
 				1E5452262033FBA60073FFBD /* BillingCurrencySet.swift in Sources */,
 				1E04FA922030088E00DB826A /* WelcomeSegue.swift in Sources */,
+				1E750CE220464520001AD8CC /* EntitySplitView.swift in Sources */,
 				1EFB1C26203ED13F00C838DB /* AccountingWindowController.swift in Sources */,
 				1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */,
 				1E3287B820329CB400884A85 /* SubscribeTextValidity.swift in Sources */,
@@ -685,8 +650,10 @@
 				1E3287AA2032855E00884A85 /* SubscribeBillingCurrency.swift in Sources */,
 				1EBA294D2039513000C2BA72 /* WelcomeConfirmAccount.swift in Sources */,
 				1E04FA9B20301FE200DB826A /* WelcomeSegueDown.swift in Sources */,
+				1E750CE020463489001AD8CC /* TreeOutlineContainerView.swift in Sources */,
 				1E8B802D203E82EA00AE6FD8 /* AccountingWindow.swift in Sources */,
 				1E296500202FCE6D0065563B /* WelcomeContainer.swift in Sources */,
+				1E750CDE20463324001AD8CC /* TreeOutlineLoading.swift in Sources */,
 				1E279B4C2042417C0002E514 /* EntityListViewConfirmDelete.swift in Sources */,
 				1E545230203418F40073FFBD /* BillingPlan.swift in Sources */,
 				1EABD2A82037B3BC00B88C7C /* SubscriptionRequestAttributes.swift in Sources */,
@@ -699,6 +666,7 @@
 				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
 				1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
+				1E750CDC20462DFF001AD8CC /* TreeOutlineView.swift in Sources */,
 				1E789E502044E7AF007FB628 /* EntityWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

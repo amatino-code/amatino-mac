@@ -8,16 +8,18 @@
 
 import Foundation
 import Cocoa
-import AmatinoApi
+ 
 
 class EntityWindowController: NSWindowController {
     
     @IBOutlet weak var statusBar: EntityStatusBar!
     
-    private var entity: Entity? = nil
+    var entity: Entity? = nil
+    var session: Session? = nil
     
-    func loadEntity(_ entity: Entity) {
+    func loadEnvironment(_ entity: Entity, _ session: Session) {
         self.entity = entity
+        self.session = session
         statusBar.loadEntity(entity: entity)
         return
     }
