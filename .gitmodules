@@ -1,0 +1,3 @@
+[submodule "amatino-swift"]
+	path = amatino-swift
+	url = https://github.com/amatino-code/amatino-swift.git
