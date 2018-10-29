@@ -15,7 +15,7 @@ class WelcomeEmail: NSTextField {
     func isValid() -> Bool {
 
         let text = self.stringValue
-        if text.characters.count > validityThreshold {
+        if text.count > validityThreshold {
             return true
         }
         

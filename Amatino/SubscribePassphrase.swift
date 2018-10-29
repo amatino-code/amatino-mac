@@ -18,7 +18,7 @@ class SubscribePassphrase: SubscribeTextField {
     }
 
     override func isValid() -> Bool {
-        if self.stringValue.characters.count < minimumLength {
+        if self.stringValue.count < minimumLength {
             return false
         }
         return true

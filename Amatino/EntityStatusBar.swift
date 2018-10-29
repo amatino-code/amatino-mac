@@ -16,11 +16,7 @@ class EntityStatusBar: NSToolbarItem {
     func loadEntity(entity: Entity) {
         self.entity = entity
         let underlyingView = view as? NSButton
-        do {
-            underlyingView?.title = try entity.describe().name
-        } catch {
-            fatalError("Unhandled entity retrieval error")
-        }
+        underlyingView?.title = entity.name
         return
     }
 

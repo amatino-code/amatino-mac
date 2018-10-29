@@ -11,9 +11,11 @@ import Cocoa
 
 class NoEntitiesView: NSViewController {
     
-    let segueToEntityListId = NSStoryboardSegue.Identifier("noEntitiesToSomeEntities")
+    let segueToEntityListId = NSStoryboardSegue.Identifier(
+        "noEntitiesToSomeEntities"
+    )
     
-    var accountingController: AccountingWindowController? = nil
+    var entityWindowController: EntityWindowController? = nil
 
     @IBOutlet weak var creationStack: NSStackView!
     @IBOutlet weak var createStack: NSStackView!
@@ -26,50 +28,73 @@ class NoEntitiesView: NSViewController {
     }
     
     override func viewDidAppear() {
-        accountingController = self.view.window?.windowController as? AccountingWindowController
-        guard accountingController != nil else { fatalError("AccountingWindowController missing!") }
+        entityWindowController = self.view.window?.windowController as?
+            EntityWindowController
+        guard entityWindowController != nil else { fatalError(
+            "AccountingWindowController missing!"
+        ) }
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if let destination = segue.destinationController as? CreateEntityPopover {
-            guard accountingController!.environmentReady == true else { fatalError("Attempt create entity before environment ready") }
-            destination.loadEnvironment(
-                session: accountingController!.session!,
-                regions: accountingController!.regionList!,
-                originator: self)
-            return
+        guard let entityWindowController = entityWindowController else {
+            fatalError("Entity Window Controller missing")
         }
-
-        if let destination = segue.destinationController as? EntityListView {
-            guard accountingController != nil else { fatalError("Accounting controller missing!") }
-            destination.setEnvironment(accountingController: accountingController!)
-            return
-        }
-
+        if let destination = segue.destinationController as?
+            CreateEntityPopover {
+                guard entityWindowController.environmentReady == true else {
+                    fatalError("Attempt create entity before environment ready")
+                }
+                guard let session = entityWindowController.session else {
+                    fatalError("Missing Entity Window Controller session")
+                }
+                destination.loadEnvironment(
+                    session: session,
+                    originator: self
+                )
+                return
+            }
     }
     
-    func createEntity(entityArguments: EntityCreateArguments) {
+    func createEntity(entityArguments: Entity.CreateArguments) {
         
         creationStack.isHidden = false
         createStack.isHidden = true
         progressIndicator.startAnimation(nil)
         
-        do {
-            try _ = Entity(
-                attributes: entityArguments,
-                session: accountingController!.session!,
-                readyCallback: newEntityReadyCallback
-            )
-        } catch {
-            fatalError("Unhandled entity creation error")
+        guard let entityWindowController = entityWindowController else {
+            fatalError("Missing entityWindowController")
         }
+        
+        guard let session = entityWindowController.session else {
+            fatalError("Missing Session")
+        }
+        
+        Entity.create(
+            session: session,
+            arguments: entityArguments,
+            callback: newEntityReadyCallback
+        )
         return
     }
     
-    private func newEntityReadyCallback(entity: Entity) {
-        accountingController!.reloadEntityList({ () in
-            self.performSegue(withIdentifier: self.segueToEntityListId, sender: self)
-        })
+    private func newEntityReadyCallback(error: Error?, entity: Entity?) {
+        guard let _ = entity else {
+            fatalError("Unhandled Entity creation error")
+        }
+        
+        guard let controller = entityWindowController else {
+            fatalError("Missing entity window controller")
+        }
+        
+        DispatchQueue.main.async {
+            controller.reloadEntityList({ () in
+                self.performSegue(
+                    withIdentifier: self.segueToEntityListId,
+                    sender: self
+                )
+            })
+        }
+
         return
     }
     

@@ -31,31 +31,35 @@ class WelcomeView: NSViewController {
         loginSpinner.isHidden = false
         loginButton.isHidden = true
 
-        do {
-            try login = Login(email: emailField.stringValue, secret: passPhraseField.stringValue,
-                              callback: readyCallback)
-        } catch {
-            fatalError("Uncaught Login error: \(error)")
-        }
+        login = Login(
+            email: emailField.stringValue,
+            secret: passPhraseField.stringValue,
+            callback: readyCallback
+        )
 
         return
     }
     
-    private func readyCallback() {
+    private func readyCallback(error: Error?) {
+
+        guard let login = login else {
+            fatalError("Inconsistent internal state")
+        }
+
+        if error != nil {
+            fatalError("Uncaught Login error")
+        }
+
+        let app = NSApplication.shared.delegate as! AppDelegate
+        app.login = login
         
-        guard login != nil else { fatalError("Inconsistent internal state") }
-        
-        if login!.wasSuccessful() {
-            let app = NSApplication.shared.delegate as! AppDelegate
-            app.login = login
-            app.showAccountingInterface(login!)
-        } else {
-            fatalError("Uncaught Login error: \(String(describing: login!.provideLoginError()))")
+        DispatchQueue.main.async {
+            app.showEntityListInterface(login: login)
         }
 
         return
     }
-    
+
 }
 
 extension WelcomeView: NSTextFieldDelegate {

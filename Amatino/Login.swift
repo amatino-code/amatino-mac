@@ -14,15 +14,11 @@ class Login {
     private let apiKeyDefaultsKey = "api_key"
     private let sessionIdDefaultsKey = "session_id"
     private let userIdDefaultsKey = "user_id"
-
-    private let callback: (() -> Void)?
     private let defaults = UserDefaults()
     
     public var session: Session? = nil
     
     init () throws {
-        
-        callback = nil
         
         let apiKey = defaults.value(forKey: apiKeyDefaultsKey) as? String
         let sessionId = defaults.value(forKey: sessionIdDefaultsKey) as? Int
@@ -33,81 +29,49 @@ class Login {
             throw SessionError(.notFound)
         }
         
-        session = Session(apiKey: apiKey!, sessionId: sessionId!, userId: userId!)
+        session = Session(
+            apiKey: apiKey!,
+            sessionId: sessionId!,
+            userId: userId!
+        )
 
         return
     }
     
-    init (email: String, secret: String, callback: @escaping () -> Void ) throws {
+    init (
+        email: String,
+        secret: String,
+        callback: @escaping (Error?) -> Void
+    ) {
         
-        self.callback = callback
-        
-        _ = try Session(email: email, secret: secret, readyCallback: readyCallback)
+        _ = Session.create(
+            email: email,
+            secret: secret,
+            callback: { (error, session) in
+                guard error == nil else {
+                    callback(error)
+                    return
+                }
+                guard let session = session else {
+                    callback(error ?? AmatinoError(.inconsistentInternalState))
+                    return
+                }
+                self.session = session
+                self.saveSession(session)
+                callback(nil)
+                return
+            }
+        )
         return
     }
     
-    func readyCallback(_ session: Session) {
-
-        assert(callback != nil)
-        self.session = session
-
-        let attributes: SessionAttributes
-        do {
-            attributes = try session.describe()
-        } catch {
-            fatalError("Unhandled session retrieval error: \(error)")
-        }
-
-        saveSession(attributes: attributes)
-
-        _ = callback!()
-
-        return
-        
-    }
-    
-    public func wasSuccessful() -> Bool {
-        
-        guard session != nil else { fatalError("Inconsistent internal state") }
-
-        do {
-            let _ = try session!.describe()
-        } catch {
-            fatalError("Uncaught session retrieval error: \(error)")
-        }
-        
-        let attributes = try? session!.describe()
-        
-        
-        if attributes == nil {
-            return false
-        }
-        
-        return true
-    }
-    
-    public func provideLoginError() -> Error? {
-        
-        guard session != nil else { fatalError("Inconsistent internal state") }
-        
-        var errorToReturn: Error? = nil
-        
-        do {
-            let _ = try session!.describe()
-        } catch {
-            errorToReturn = error
-        }
-
-        return errorToReturn
-    }
-    
-    private func saveSession(attributes: SessionAttributes) {
+    private func saveSession(_ session:  Session) {
         
         _ = removeSession()
         
-        defaults.set(attributes.apiKey, forKey: apiKeyDefaultsKey)
-        defaults.set(attributes.sessionId, forKey: sessionIdDefaultsKey)
-        defaults.set(attributes.userId, forKey: userIdDefaultsKey)
+        defaults.set(session.apiKey, forKey: apiKeyDefaultsKey)
+        defaults.set(session.sessionId, forKey: sessionIdDefaultsKey)
+        defaults.set(session.userId, forKey: userIdDefaultsKey)
         
         return
     }

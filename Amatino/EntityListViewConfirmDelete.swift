@@ -24,32 +24,39 @@ class EntityListViewConfirmDelete: NSViewController {
     
     override func viewWillAppear() {
         
-        guard deletionTarget != nil else { fatalError("Deletion executed without a target") }
+        guard let deletionTarget = self.deletionTarget else {
+            fatalError("Deletion executed without a target")
+        }
         view.window?.title = "Confirm Entity Deletion"
         
         showProgress(true)
         
-        do {
-            let attributes = try deletionTarget!.describe()
-            let warningText = warningBase + attributes.name + "?"
-            warning.stringValue = warningText
-        } catch {
-            fatalError("Unhandled entity description error: \(error)")
-        }
+        let warningText = warningBase + deletionTarget.name + "?"
+        warning.stringValue = warningText
         
         return
     }
     
     @IBAction func deleteSelected(_ sender: Any) {
         showProgress()
-        do {
-            try deletionTarget!.delete(readyCallback: { (entity: Entity) -> Void in
-                self.entityListView!.resetDeletionTarget()
-                self.entityListView!.refreshEntityList(self.dismiss)
-            })
-        } catch {
-            fatalError("Unhandled entity deletion errors: \(error)")
+        
+        guard let deletionTarget = self.deletionTarget else {
+            fatalError("Deletion executed without a target")
         }
+        
+        deletionTarget.delete(deletionCallback)
+    }
+    
+    private func deletionCallback(error: Error?, entity: Entity?) -> Void {
+        guard error == nil else {
+            fatalError("Unhandled Entity deletion error")
+        }
+        guard let listView = self.entityListView else {
+            fatalError("Missing entityListView")
+        }
+        listView.resetDeletionTarget()
+        listView.refreshEntityList(self.dismiss)
+        return
     }
     
     private func dismiss() {

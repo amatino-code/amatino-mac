@@ -25,7 +25,7 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Amatino Pty Ltd. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
-	<string>Main</string>
+	<string>Welcome</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

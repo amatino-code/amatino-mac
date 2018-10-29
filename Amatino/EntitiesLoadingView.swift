@@ -30,14 +30,26 @@ class EntitiesLoadingView: NSViewController {
         }
     }
     
-    let noEntitiesIdentifier = NSStoryboardSegue.Identifier("entityLoadToNoEntities")
-    let someEntitiesIdentifier = NSStoryboardSegue.Identifier("entityLoadToSomeEntities")
+    let noEntitiesIdentifier = NSStoryboardSegue.Identifier(
+        "entityLoadToNoEntities"
+    )
+    let someEntitiesIdentifier = NSStoryboardSegue.Identifier(
+        "entityLoadToSomeEntities"
+    )
+    let noNetIdentifier = NSStoryboardSegue.Identifier(
+        "entityLoadToNetWarning"
+    )
+    let errorIdentifier = NSStoryboardSegue.Identifier(
+        "entityLoadToError"
+    )
 
     private var session: Session? = nil
     private var user: User? = nil
     private var regionList: RegionList? = nil
     private var entityList: EntityList? = nil
-    private var accountingController: AccountingWindowController? = nil
+    private var entityWindowController: EntityWindowController? = nil
+    
+    private var loadingErrorText = "Oh no! Something went wrong."
     
     override func viewDidLoad() {
         determinateProgressIndicator.maxValue = progressMax
@@ -58,12 +70,27 @@ class EntitiesLoadingView: NSViewController {
         )
         
         progressIndicator.startAnimation(self)
-        
-        accountingController = self.view.window?.windowController as? AccountingWindowController
-        guard accountingController != nil else { fatalError("AccountingWindowController missing!") }
-        
-        accountingController?.setEnvironmentCallback(environmentReadyCallback)
 
+        return
+    }
+    
+    override func viewDidAppear() {
+        guard let controller = self.view.window?.windowController as?
+            EntityWindowController  else { fatalError(
+                "AccountingWindowController missing!"
+                ) }
+        
+        controller.setEnvironmentCallback(environmentReadyCallback)
+        controller.setEntitiesLoadingView(self)
+        
+        guard let login = (NSApplication.shared.delegate as? AppDelegate)?.login
+            else {
+                fatalError("Login missing from AppDelegate")
+        }
+    
+        controller.loadEnvironment(login: login)
+        self.entityWindowController = controller
+        
         return
     }
     
@@ -85,28 +112,31 @@ class EntitiesLoadingView: NSViewController {
     
     private func environmentReadyCallback() {
         
-        guard accountingController != nil else { fatalError("AccountingWindowController missing!") }
+        guard let entityWindowController = entityWindowController else {
+            fatalError("entityWindowController missing!")
+        }
         
-        let list: EntityListAttributes
-        do {
-            let opList = try accountingController!.entityList?.describe()
-            guard opList != nil else { fatalError("Unable to obtain entity list") }
-            list = opList!
-        } catch {
-            fatalError("Unable to obtain entity list")
+        guard let list = entityWindowController.entityList else {
+            fatalError("Entity list missing ")
         }
     
         let actionId: NSStoryboardSegue.Identifier
-        if list.entities == nil || list.entities!.count < 1 {
+        if list.entities.count < 1 {
             actionId = noEntitiesIdentifier
         } else {
             actionId = someEntitiesIdentifier
         }
         
-        let elapsed = Date().timeIntervalSince(self.start!)
+        guard let start = self.start else {
+            fatalError("start not set")
+        }
+        
+        let elapsed = Date().timeIntervalSince(start)
         
         if elapsed < minimumVisibleTime {
-            let waitTime = UInt64((self.minimumVisibleTime - elapsed) * Double(NSEC_PER_SEC))
+            let waitTime = UInt64(
+                (self.minimumVisibleTime - elapsed) * Double(NSEC_PER_SEC)
+            )
             let now = DispatchTime.now().uptimeNanoseconds
             let dispatchTime = DispatchTime(uptimeNanoseconds: (waitTime + now))
             DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
@@ -118,10 +148,33 @@ class EntitiesLoadingView: NSViewController {
         }
     }
     
+    public func showInternetWarning() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: self.noNetIdentifier, sender: nil)
+        }
+        return
+    }
+    
+    public func showError(withText text: String) {
+        loadingErrorText = text
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: self.errorIdentifier, sender: nil)
+        }
+        return
+    }
+    
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if let destination = segue.destinationController as? EntityListView {
-            guard accountingController != nil else { fatalError("Accounting controller missing!") }
-            destination.setEnvironment(accountingController: accountingController!)
+            guard let entityWindowController = entityWindowController else {
+                fatalError("Entity List controller missing!")
+            }
+            destination.entityWindowController = entityWindowController
+            return
+        }
+        
+        if let destination = segue.destinationController
+            as? EntityLoadingError {
+            destination.errorMessage = loadingErrorText
             return
         }
     }

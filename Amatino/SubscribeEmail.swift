@@ -19,7 +19,7 @@ class SubscribeEmail: SubscribeTextField {
     override func isValid() -> Bool {
 
         let regex = try! NSRegularExpression(pattern: validityPattern, options: .caseInsensitive)
-        let inputLength = self.stringValue.characters.count
+        let inputLength = self.stringValue.count
         
         if inputLength < 3 {
             return false

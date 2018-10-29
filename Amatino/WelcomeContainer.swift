@@ -12,15 +12,17 @@ import Cocoa
 
 class WelcomeContainer: NSViewController {
 
-    let mainBoardName = "Main"
+    let welcomeBoardName = "Welcome"
     let loginSceneName = "welcomeLogin"
     
     override func viewDidLoad() {
 
-        let boardName = NSStoryboard.Name(rawValue: mainBoardName)
+        let boardName = NSStoryboard.Name(rawValue: welcomeBoardName)
         let board = NSStoryboard(name: boardName, bundle: nil)
         let sceneId = NSStoryboard.SceneIdentifier(loginSceneName)
-        let welcomeView = board.instantiateController(withIdentifier: sceneId) as! NSViewController
+        let welcomeView = board.instantiateController(
+            withIdentifier: sceneId
+        ) as! NSViewController
         insertChildViewController(welcomeView, at: 0)
         view.addSubview(welcomeView.view)
 

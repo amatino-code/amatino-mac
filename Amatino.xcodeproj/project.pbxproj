@@ -15,7 +15,7 @@
 		1E04FA9D20301FFD00DB826A /* WelcomeSegueUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA9C20301FFD00DB826A /* WelcomeSegueUp.swift */; };
 		1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E04FA9E203023AB00DB826A /* Stripe.swift */; };
 		1E1E8FA2203BD6A700CF91F2 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E8FA1203BD6A700CF91F2 /* Login.swift */; };
-		1E211725203AD275002AC8B9 /* Accounting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E211724203AD275002AC8B9 /* Accounting.storyboard */; };
+		1E211725203AD275002AC8B9 /* Entities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E211724203AD275002AC8B9 /* Entities.storyboard */; };
 		1E22D2B8203FF083005DB3F2 /* EntityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E22D2B7203FF083005DB3F2 /* EntityListView.swift */; };
 		1E279B4C2042417C0002E514 /* EntityListViewConfirmDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E279B4B2042417C0002E514 /* EntityListViewConfirmDelete.swift */; };
 		1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2964FB202FBAB10065563B /* Hyperlink.swift */; };
@@ -34,6 +34,7 @@
 		1E3287AE2032857C00884A85 /* SubscribeTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287AD2032857C00884A85 /* SubscribeTerms.swift */; };
 		1E3287B62032953300884A85 /* SubscribeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287B52032953300884A85 /* SubscribeTextField.swift */; };
 		1E3287B820329CB400884A85 /* SubscribeTextValidity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3287B720329CB400884A85 /* SubscribeTextValidity.swift */; };
+		1E378694218549F3000B935E /* InternetWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E378693218549F3000B935E /* InternetWarning.swift */; };
 		1E3FBDB2203E4986006153CE /* NoEntitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3FBDB1203E4986006153CE /* NoEntitiesView.swift */; };
 		1E5452262033FBA60073FFBD /* BillingCurrencySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5452252033FBA60073FFBD /* BillingCurrencySet.swift */; };
 		1E5452282033FBC80073FFBD /* BillingCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5452272033FBC80073FFBD /* BillingCurrency.swift */; };
@@ -47,11 +48,11 @@
 		1E750CE020463489001AD8CC /* TreeOutlineContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CDF20463489001AD8CC /* TreeOutlineContainerView.swift */; };
 		1E750CE220464520001AD8CC /* EntitySplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CE120464520001AD8CC /* EntitySplitView.swift */; };
 		1E750CE520464A19001AD8CC /* CrossfadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CE420464A19001AD8CC /* CrossfadeSegue.swift */; };
-		1E789E502044E7AF007FB628 /* EntityWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E789E4F2044E7AF007FB628 /* EntityWindow.swift */; };
+		1E789E502044E7AF007FB628 /* AccountingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E789E4F2044E7AF007FB628 /* AccountingWindowController.swift */; };
 		1E82B04F2044EE28001C342B /* EntityStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82B04E2044EE28001C342B /* EntityStatusBar.swift */; };
 		1E85DAD5203E90BB00C183F5 /* CreateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */; };
-		1E8B8027203E80AE00AE6FD8 /* AccountingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B8026203E80AE00AE6FD8 /* AccountingContainer.swift */; };
-		1E8B802D203E82EA00AE6FD8 /* AccountingWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B802C203E82EA00AE6FD8 /* AccountingWindow.swift */; };
+		1E8B8027203E80AE00AE6FD8 /* EntityListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B8026203E80AE00AE6FD8 /* EntityListContainer.swift */; };
+		1E8B802D203E82EA00AE6FD8 /* EntityListWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B802C203E82EA00AE6FD8 /* EntityListWindow.swift */; };
 		1EABD2A22037ABB700B88C7C /* SubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABD2A12037ABB700B88C7C /* SubscriptionRequest.swift */; };
 		1EABD2A82037B3BC00B88C7C /* SubscriptionRequestAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABD2A72037B3BC00B88C7C /* SubscriptionRequestAttributes.swift */; };
 		1EABD2AA2037BF8300B88C7C /* StripeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABD2A92037BF8300B88C7C /* StripeToken.swift */; };
@@ -59,14 +60,65 @@
 		1EBDF659203CF0E900E9DACD /* EntitiesLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBDF658203CF0E900E9DACD /* EntitiesLoadingView.swift */; };
 		1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF276202EA0A200E43756 /* AppDelegate.swift */; };
 		1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27A202EA0A200E43756 /* Assets.xcassets */; };
-		1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Main.storyboard */; };
+		1EDAF27E202EA0A200E43756 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Welcome.storyboard */; };
 		1EDAF28A202EA0A200E43756 /* AmatinoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF289202EA0A200E43756 /* AmatinoTests.swift */; };
 		1EDAF295202EA0A200E43756 /* AmatinoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */; };
-		1EDD381B20441233008D4DCC /* Entity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDD381A20441233008D4DCC /* Entity.storyboard */; };
+		1EDD381B20441233008D4DCC /* Accounting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDD381A20441233008D4DCC /* Accounting.storyboard */; };
 		1EE26D8E2032434600307528 /* CardInput.html in Resources */ = {isa = PBXBuildFile; fileRef = 1EE26D8D2032434600307528 /* CardInput.html */; };
 		1EE26D99203282AC00307528 /* WelcomeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE26D98203282AC00307528 /* WelcomeProgress.swift */; };
 		1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59725202EDBAB001965E0 /* Welcome.swift */; };
-		1EFB1C26203ED13F00C838DB /* AccountingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB1C25203ED13F00C838DB /* AccountingWindowController.swift */; };
+		1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */; };
+		1EFBF1CB2186C822006A3EFC /* EntityLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */; };
+		1EFD4F692172B09B00F0AB28 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F382172B09500F0AB28 /* Account.swift */; };
+		1EFD4F6A2172B09B00F0AB28 /* AMCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFD4F392172B09500F0AB28 /* AMCryptography.h */; };
+		1EFD4F6B2172B09B00F0AB28 /* UrlTargetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F3A2172B09600F0AB28 /* UrlTargetable.swift */; };
+		1EFD4F6C2172B09B00F0AB28 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F3B2172B09600F0AB28 /* Ledger.swift */; };
+		1EFD4F6D2172B09B00F0AB28 /* UserAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F3C2172B09600F0AB28 /* UserAttributes.swift */; };
+		1EFD4F6E2172B09B00F0AB28 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F3D2172B09600F0AB28 /* Balance.swift */; };
+		1EFD4F6F2172B09B00F0AB28 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F3E2172B09600F0AB28 /* Tree.swift */; };
+		1EFD4F702172B09B00F0AB28 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F3F2172B09600F0AB28 /* Region.swift */; };
+		1EFD4F712172B09B00F0AB28 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F402172B09600F0AB28 /* User.swift */; };
+		1EFD4F722172B09B00F0AB28 /* AmatinoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F412172B09600F0AB28 /* AmatinoError.swift */; };
+		1EFD4F732172B09B00F0AB28 /* EntityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F422172B09600F0AB28 /* EntityObject.swift */; };
+		1EFD4F742172B09B00F0AB28 /* RegionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F432172B09600F0AB28 /* RegionList.swift */; };
+		1EFD4F752172B09B00F0AB28 /* LedgerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F442172B09600F0AB28 /* LedgerRow.swift */; };
+		1EFD4F762172B09B00F0AB28 /* RecursiveBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F452172B09600F0AB28 /* RecursiveBalance.swift */; };
+		1EFD4F772172B09B00F0AB28 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F462172B09600F0AB28 /* HTTPMethod.swift */; };
+		1EFD4F782172B09B00F0AB28 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F472172B09600F0AB28 /* Entry.swift */; };
+		1EFD4F792172B09B00F0AB28 /* PermissionsGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F482172B09600F0AB28 /* PermissionsGraph.swift */; };
+		1EFD4F7A2172B09B00F0AB28 /* GlobalUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F492172B09600F0AB28 /* GlobalUnit.swift */; };
+		1EFD4F7B2172B09B00F0AB28 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F4A2172B09600F0AB28 /* Position.swift */; };
+		1EFD4F7C2172B09B00F0AB28 /* EntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F4B2172B09700F0AB28 /* EntityList.swift */; };
+		1EFD4F7D2172B09B00F0AB28 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F4C2172B09700F0AB28 /* RequestData.swift */; };
+		1EFD4F7E2172B09B00F0AB28 /* CustomUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F4D2172B09700F0AB28 /* CustomUnit.swift */; };
+		1EFD4F7F2172B09B00F0AB28 /* UrlTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F4E2172B09700F0AB28 /* UrlTarget.swift */; };
+		1EFD4F802172B09B00F0AB28 /* AmatinoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F4F2172B09700F0AB28 /* AmatinoRequest.swift */; };
+		1EFD4F812172B09B00F0AB28 /* RecursiveLedgerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F502172B09700F0AB28 /* RecursiveLedgerPage.swift */; };
+		1EFD4F822172B09B00F0AB28 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F512172B09700F0AB28 /* Entity.swift */; };
+		1EFD4F832172B09B00F0AB28 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F522172B09700F0AB28 /* Transaction.swift */; };
+		1EFD4F842172B09B00F0AB28 /* AMCryptography.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F532172B09700F0AB28 /* AMCryptography.m */; };
+		1EFD4F852172B09B00F0AB28 /* AmatinoAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F542172B09700F0AB28 /* AmatinoAlpha.swift */; };
+		1EFD4F862172B09B00F0AB28 /* LedgerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F552172B09700F0AB28 /* LedgerPage.swift */; };
+		1EFD4F872172B09B00F0AB28 /* UnitCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F562172B09700F0AB28 /* UnitCode.swift */; };
+		1EFD4F882172B09B00F0AB28 /* UrlParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F572172B09800F0AB28 /* UrlParameters.swift */; };
+		1EFD4F892172B09B00F0AB28 /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F582172B09800F0AB28 /* AccountType.swift */; };
+		1EFD4F8A2172B09B00F0AB28 /* Magnitude.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F592172B09800F0AB28 /* Magnitude.swift */; };
+		1EFD4F8B2172B09B00F0AB28 /* AmatinoDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F5A2172B09800F0AB28 /* AmatinoDate.swift */; };
+		1EFD4F8C2172B09B00F0AB28 /* RegionListAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F5B2172B09800F0AB28 /* RegionListAttributes.swift */; };
+		1EFD4F8D2172B09B00F0AB28 /* AccountBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F5C2172B09800F0AB28 /* AccountBalance.swift */; };
+		1EFD4F8E2172B09B00F0AB28 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F5D2172B09800F0AB28 /* Node.swift */; };
+		1EFD4F8F2172B09B00F0AB28 /* RecursiveLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F5E2172B09900F0AB28 /* RecursiveLedger.swift */; };
+		1EFD4F902172B09B00F0AB28 /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F5F2172B09900F0AB28 /* Performance.swift */; };
+		1EFD4F912172B09B00F0AB28 /* Colour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F602172B09900F0AB28 /* Colour.swift */; };
+		1EFD4F922172B09B00F0AB28 /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F612172B09900F0AB28 /* TreeNode.swift */; };
+		1EFD4F932172B09B00F0AB28 /* EntityListAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F622172B09900F0AB28 /* EntityListAttributes.swift */; };
+		1EFD4F942172B09B00F0AB28 /* Amatino.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFD4F632172B09A00F0AB28 /* Amatino.h */; };
+		1EFD4F952172B09B00F0AB28 /* AmatinoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F642172B09A00F0AB28 /* AmatinoObject.swift */; };
+		1EFD4F962172B09B00F0AB28 /* GlobalUnitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F652172B09A00F0AB28 /* GlobalUnitList.swift */; };
+		1EFD4F972172B09B00F0AB28 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F662172B09A00F0AB28 /* Session.swift */; };
+		1EFD4F982172B09B00F0AB28 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F672172B09A00F0AB28 /* Side.swift */; };
+		1EFD4F992172B09B00F0AB28 /* PlaceholderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F682172B09B00F0AB28 /* PlaceholderNode.swift */; };
+		1EFD4F9B2173103300F0AB28 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F9A2173103200F0AB28 /* Unit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +159,7 @@
 		1E04FA9C20301FFD00DB826A /* WelcomeSegueUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSegueUp.swift; sourceTree = "<group>"; };
 		1E04FA9E203023AB00DB826A /* Stripe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripe.swift; sourceTree = "<group>"; };
 		1E1E8FA1203BD6A700CF91F2 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		1E211724203AD275002AC8B9 /* Accounting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounting.storyboard; sourceTree = "<group>"; };
+		1E211724203AD275002AC8B9 /* Entities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entities.storyboard; sourceTree = "<group>"; };
 		1E22D2B7203FF083005DB3F2 /* EntityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityListView.swift; sourceTree = "<group>"; };
 		1E279B4B2042417C0002E514 /* EntityListViewConfirmDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityListViewConfirmDelete.swift; sourceTree = "<group>"; };
 		1E2964FB202FBAB10065563B /* Hyperlink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hyperlink.swift; sourceTree = "<group>"; };
@@ -126,6 +178,7 @@
 		1E3287AD2032857C00884A85 /* SubscribeTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTerms.swift; sourceTree = "<group>"; };
 		1E3287B52032953300884A85 /* SubscribeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTextField.swift; sourceTree = "<group>"; };
 		1E3287B720329CB400884A85 /* SubscribeTextValidity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeTextValidity.swift; sourceTree = "<group>"; };
+		1E378693218549F3000B935E /* InternetWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetWarning.swift; sourceTree = "<group>"; };
 		1E3FBDB1203E4986006153CE /* NoEntitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEntitiesView.swift; sourceTree = "<group>"; };
 		1E5452252033FBA60073FFBD /* BillingCurrencySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCurrencySet.swift; sourceTree = "<group>"; };
 		1E5452272033FBC80073FFBD /* BillingCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCurrency.swift; sourceTree = "<group>"; };
@@ -139,11 +192,11 @@
 		1E750CDF20463489001AD8CC /* TreeOutlineContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineContainerView.swift; sourceTree = "<group>"; };
 		1E750CE120464520001AD8CC /* EntitySplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitySplitView.swift; sourceTree = "<group>"; };
 		1E750CE420464A19001AD8CC /* CrossfadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossfadeSegue.swift; sourceTree = "<group>"; };
-		1E789E4F2044E7AF007FB628 /* EntityWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityWindow.swift; sourceTree = "<group>"; };
+		1E789E4F2044E7AF007FB628 /* AccountingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingWindowController.swift; sourceTree = "<group>"; };
 		1E82B04E2044EE28001C342B /* EntityStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStatusBar.swift; sourceTree = "<group>"; };
 		1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEntity.swift; sourceTree = "<group>"; };
-		1E8B8026203E80AE00AE6FD8 /* AccountingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingContainer.swift; sourceTree = "<group>"; };
-		1E8B802C203E82EA00AE6FD8 /* AccountingWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingWindow.swift; sourceTree = "<group>"; };
+		1E8B8026203E80AE00AE6FD8 /* EntityListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityListContainer.swift; sourceTree = "<group>"; };
+		1E8B802C203E82EA00AE6FD8 /* EntityListWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityListWindow.swift; sourceTree = "<group>"; };
 		1EABD2A12037ABB700B88C7C /* SubscriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRequest.swift; sourceTree = "<group>"; };
 		1EABD2A72037B3BC00B88C7C /* SubscriptionRequestAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRequestAttributes.swift; sourceTree = "<group>"; };
 		1EABD2A92037BF8300B88C7C /* StripeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeToken.swift; sourceTree = "<group>"; };
@@ -152,7 +205,7 @@
 		1EDAF273202EA0A200E43756 /* Amatino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amatino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF276202EA0A200E43756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EDAF27A202EA0A200E43756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1EDAF27D202EA0A200E43756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1EDAF27D202EA0A200E43756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		1EDAF27F202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EDAF280202EA0A200E43756 /* Amatino.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Amatino.entitlements; sourceTree = "<group>"; };
 		1EDAF285202EA0A200E43756 /* AmatinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmatinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,11 +214,62 @@
 		1EDAF290202EA0A200E43756 /* AmatinoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmatinoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF294202EA0A200E43756 /* AmatinoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmatinoUITests.swift; sourceTree = "<group>"; };
 		1EDAF296202EA0A200E43756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EDD381A20441233008D4DCC /* Entity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Entity.storyboard; sourceTree = "<group>"; };
+		1EDD381A20441233008D4DCC /* Accounting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounting.storyboard; sourceTree = "<group>"; };
 		1EE26D8D2032434600307528 /* CardInput.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = CardInput.html; sourceTree = "<group>"; };
 		1EE26D98203282AC00307528 /* WelcomeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeProgress.swift; sourceTree = "<group>"; };
 		1EF59725202EDBAB001965E0 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
-		1EFB1C25203ED13F00C838DB /* AccountingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountingWindowController.swift; sourceTree = "<group>"; };
+		1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityWindowController.swift; sourceTree = "<group>"; };
+		1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLoadingError.swift; sourceTree = "<group>"; };
+		1EFD4F382172B09500F0AB28 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = "amatino-swift/Sources/Amatino/Account.swift"; sourceTree = "<group>"; };
+		1EFD4F392172B09500F0AB28 /* AMCryptography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMCryptography.h; path = "amatino-swift/Sources/Amatino/AMCryptography.h"; sourceTree = "<group>"; };
+		1EFD4F3A2172B09600F0AB28 /* UrlTargetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlTargetable.swift; path = "amatino-swift/Sources/Amatino/UrlTargetable.swift"; sourceTree = "<group>"; };
+		1EFD4F3B2172B09600F0AB28 /* Ledger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ledger.swift; path = "amatino-swift/Sources/Amatino/Ledger.swift"; sourceTree = "<group>"; };
+		1EFD4F3C2172B09600F0AB28 /* UserAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAttributes.swift; path = "amatino-swift/Sources/Amatino/UserAttributes.swift"; sourceTree = "<group>"; };
+		1EFD4F3D2172B09600F0AB28 /* Balance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Balance.swift; path = "amatino-swift/Sources/Amatino/Balance.swift"; sourceTree = "<group>"; };
+		1EFD4F3E2172B09600F0AB28 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tree.swift; path = "amatino-swift/Sources/Amatino/Tree.swift"; sourceTree = "<group>"; };
+		1EFD4F3F2172B09600F0AB28 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Region.swift; path = "amatino-swift/Sources/Amatino/Region.swift"; sourceTree = "<group>"; };
+		1EFD4F402172B09600F0AB28 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "amatino-swift/Sources/Amatino/User.swift"; sourceTree = "<group>"; };
+		1EFD4F412172B09600F0AB28 /* AmatinoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmatinoError.swift; path = "amatino-swift/Sources/Amatino/AmatinoError.swift"; sourceTree = "<group>"; };
+		1EFD4F422172B09600F0AB28 /* EntityObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityObject.swift; path = "amatino-swift/Sources/Amatino/EntityObject.swift"; sourceTree = "<group>"; };
+		1EFD4F432172B09600F0AB28 /* RegionList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegionList.swift; path = "amatino-swift/Sources/Amatino/RegionList.swift"; sourceTree = "<group>"; };
+		1EFD4F442172B09600F0AB28 /* LedgerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LedgerRow.swift; path = "amatino-swift/Sources/Amatino/LedgerRow.swift"; sourceTree = "<group>"; };
+		1EFD4F452172B09600F0AB28 /* RecursiveBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecursiveBalance.swift; path = "amatino-swift/Sources/Amatino/RecursiveBalance.swift"; sourceTree = "<group>"; };
+		1EFD4F462172B09600F0AB28 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = "amatino-swift/Sources/Amatino/HTTPMethod.swift"; sourceTree = "<group>"; };
+		1EFD4F472172B09600F0AB28 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = "amatino-swift/Sources/Amatino/Entry.swift"; sourceTree = "<group>"; };
+		1EFD4F482172B09600F0AB28 /* PermissionsGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PermissionsGraph.swift; path = "amatino-swift/Sources/Amatino/PermissionsGraph.swift"; sourceTree = "<group>"; };
+		1EFD4F492172B09600F0AB28 /* GlobalUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalUnit.swift; path = "amatino-swift/Sources/Amatino/GlobalUnit.swift"; sourceTree = "<group>"; };
+		1EFD4F4A2172B09600F0AB28 /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Position.swift; path = "amatino-swift/Sources/Amatino/Position.swift"; sourceTree = "<group>"; };
+		1EFD4F4B2172B09700F0AB28 /* EntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityList.swift; path = "amatino-swift/Sources/Amatino/EntityList.swift"; sourceTree = "<group>"; };
+		1EFD4F4C2172B09700F0AB28 /* RequestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestData.swift; path = "amatino-swift/Sources/Amatino/RequestData.swift"; sourceTree = "<group>"; };
+		1EFD4F4D2172B09700F0AB28 /* CustomUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomUnit.swift; path = "amatino-swift/Sources/Amatino/CustomUnit.swift"; sourceTree = "<group>"; };
+		1EFD4F4E2172B09700F0AB28 /* UrlTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlTarget.swift; path = "amatino-swift/Sources/Amatino/UrlTarget.swift"; sourceTree = "<group>"; };
+		1EFD4F4F2172B09700F0AB28 /* AmatinoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmatinoRequest.swift; path = "amatino-swift/Sources/Amatino/AmatinoRequest.swift"; sourceTree = "<group>"; };
+		1EFD4F502172B09700F0AB28 /* RecursiveLedgerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecursiveLedgerPage.swift; path = "amatino-swift/Sources/Amatino/RecursiveLedgerPage.swift"; sourceTree = "<group>"; };
+		1EFD4F512172B09700F0AB28 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = "amatino-swift/Sources/Amatino/Entity.swift"; sourceTree = "<group>"; };
+		1EFD4F522172B09700F0AB28 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transaction.swift; path = "amatino-swift/Sources/Amatino/Transaction.swift"; sourceTree = "<group>"; };
+		1EFD4F532172B09700F0AB28 /* AMCryptography.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMCryptography.m; path = "amatino-swift/Sources/Amatino/AMCryptography.m"; sourceTree = "<group>"; };
+		1EFD4F542172B09700F0AB28 /* AmatinoAlpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmatinoAlpha.swift; path = "amatino-swift/Sources/Amatino/AmatinoAlpha.swift"; sourceTree = "<group>"; };
+		1EFD4F552172B09700F0AB28 /* LedgerPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LedgerPage.swift; path = "amatino-swift/Sources/Amatino/LedgerPage.swift"; sourceTree = "<group>"; };
+		1EFD4F562172B09700F0AB28 /* UnitCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitCode.swift; path = "amatino-swift/Sources/Amatino/UnitCode.swift"; sourceTree = "<group>"; };
+		1EFD4F572172B09800F0AB28 /* UrlParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlParameters.swift; path = "amatino-swift/Sources/Amatino/UrlParameters.swift"; sourceTree = "<group>"; };
+		1EFD4F582172B09800F0AB28 /* AccountType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountType.swift; path = "amatino-swift/Sources/Amatino/AccountType.swift"; sourceTree = "<group>"; };
+		1EFD4F592172B09800F0AB28 /* Magnitude.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Magnitude.swift; path = "amatino-swift/Sources/Amatino/Magnitude.swift"; sourceTree = "<group>"; };
+		1EFD4F5A2172B09800F0AB28 /* AmatinoDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmatinoDate.swift; path = "amatino-swift/Sources/Amatino/AmatinoDate.swift"; sourceTree = "<group>"; };
+		1EFD4F5B2172B09800F0AB28 /* RegionListAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegionListAttributes.swift; path = "amatino-swift/Sources/Amatino/RegionListAttributes.swift"; sourceTree = "<group>"; };
+		1EFD4F5C2172B09800F0AB28 /* AccountBalance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountBalance.swift; path = "amatino-swift/Sources/Amatino/AccountBalance.swift"; sourceTree = "<group>"; };
+		1EFD4F5D2172B09800F0AB28 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = "amatino-swift/Sources/Amatino/Node.swift"; sourceTree = "<group>"; };
+		1EFD4F5E2172B09900F0AB28 /* RecursiveLedger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecursiveLedger.swift; path = "amatino-swift/Sources/Amatino/RecursiveLedger.swift"; sourceTree = "<group>"; };
+		1EFD4F5F2172B09900F0AB28 /* Performance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Performance.swift; path = "amatino-swift/Sources/Amatino/Performance.swift"; sourceTree = "<group>"; };
+		1EFD4F602172B09900F0AB28 /* Colour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colour.swift; path = "amatino-swift/Sources/Amatino/Colour.swift"; sourceTree = "<group>"; };
+		1EFD4F612172B09900F0AB28 /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TreeNode.swift; path = "amatino-swift/Sources/Amatino/TreeNode.swift"; sourceTree = "<group>"; };
+		1EFD4F622172B09900F0AB28 /* EntityListAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityListAttributes.swift; path = "amatino-swift/Sources/Amatino/EntityListAttributes.swift"; sourceTree = "<group>"; };
+		1EFD4F632172B09A00F0AB28 /* Amatino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Amatino.h; path = "amatino-swift/Sources/Amatino/Amatino.h"; sourceTree = "<group>"; };
+		1EFD4F642172B09A00F0AB28 /* AmatinoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AmatinoObject.swift; path = "amatino-swift/Sources/Amatino/AmatinoObject.swift"; sourceTree = "<group>"; };
+		1EFD4F652172B09A00F0AB28 /* GlobalUnitList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalUnitList.swift; path = "amatino-swift/Sources/Amatino/GlobalUnitList.swift"; sourceTree = "<group>"; };
+		1EFD4F662172B09A00F0AB28 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = "amatino-swift/Sources/Amatino/Session.swift"; sourceTree = "<group>"; };
+		1EFD4F672172B09A00F0AB28 /* Side.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Side.swift; path = "amatino-swift/Sources/Amatino/Side.swift"; sourceTree = "<group>"; };
+		1EFD4F682172B09B00F0AB28 /* PlaceholderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceholderNode.swift; path = "amatino-swift/Sources/Amatino/PlaceholderNode.swift"; sourceTree = "<group>"; };
+		1EFD4F9A2173103200F0AB28 /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Unit.swift; path = "amatino-swift/Sources/Amatino/Unit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +361,7 @@
 		1E296509202FDF970065563B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E378692218549DC000B935E /* Ancillary */,
 				1E82B0492044EE17001C342B /* Entity */,
 				1EBDF656203CF0CC00E9DACD /* Entities */,
 				1E29650A202FDF9E0065563B /* Welcome */,
@@ -290,6 +395,15 @@
 				1E3287AD2032857C00884A85 /* SubscribeTerms.swift */,
 			);
 			name = Fields;
+			sourceTree = "<group>";
+		};
+		1E378692218549DC000B935E /* Ancillary */ = {
+			isa = PBXGroup;
+			children = (
+				1E378693218549F3000B935E /* InternetWarning.swift */,
+				1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */,
+			);
+			name = Ancillary;
 			sourceTree = "<group>";
 		};
 		1E5452202033FB8F0073FFBD /* Supporting */ = {
@@ -396,9 +510,9 @@
 				1EF59722202EDB79001965E0 /* Windows */,
 				1EDAF276202EA0A200E43756 /* AppDelegate.swift */,
 				1EDAF27A202EA0A200E43756 /* Assets.xcassets */,
-				1EDAF27C202EA0A200E43756 /* Main.storyboard */,
-				1E211724203AD275002AC8B9 /* Accounting.storyboard */,
-				1EDD381A20441233008D4DCC /* Entity.storyboard */,
+				1EDAF27C202EA0A200E43756 /* Welcome.storyboard */,
+				1E211724203AD275002AC8B9 /* Entities.storyboard */,
+				1EDD381A20441233008D4DCC /* Accounting.storyboard */,
 				1EDAF27F202EA0A200E43756 /* Info.plist */,
 				1EDAF280202EA0A200E43756 /* Amatino.entitlements */,
 			);
@@ -434,6 +548,56 @@
 		1EE62F36211AE43C009A0F20 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				1EFD4F382172B09500F0AB28 /* Account.swift */,
+				1EFD4F5C2172B09800F0AB28 /* AccountBalance.swift */,
+				1EFD4F582172B09800F0AB28 /* AccountType.swift */,
+				1EFD4F632172B09A00F0AB28 /* Amatino.h */,
+				1EFD4F542172B09700F0AB28 /* AmatinoAlpha.swift */,
+				1EFD4F5A2172B09800F0AB28 /* AmatinoDate.swift */,
+				1EFD4F412172B09600F0AB28 /* AmatinoError.swift */,
+				1EFD4F642172B09A00F0AB28 /* AmatinoObject.swift */,
+				1EFD4F4F2172B09700F0AB28 /* AmatinoRequest.swift */,
+				1EFD4F392172B09500F0AB28 /* AMCryptography.h */,
+				1EFD4F532172B09700F0AB28 /* AMCryptography.m */,
+				1EFD4F3D2172B09600F0AB28 /* Balance.swift */,
+				1EFD4F602172B09900F0AB28 /* Colour.swift */,
+				1EFD4F4D2172B09700F0AB28 /* CustomUnit.swift */,
+				1EFD4F512172B09700F0AB28 /* Entity.swift */,
+				1EFD4F4B2172B09700F0AB28 /* EntityList.swift */,
+				1EFD4F622172B09900F0AB28 /* EntityListAttributes.swift */,
+				1EFD4F422172B09600F0AB28 /* EntityObject.swift */,
+				1EFD4F472172B09600F0AB28 /* Entry.swift */,
+				1EFD4F492172B09600F0AB28 /* GlobalUnit.swift */,
+				1EFD4F652172B09A00F0AB28 /* GlobalUnitList.swift */,
+				1EFD4F462172B09600F0AB28 /* HTTPMethod.swift */,
+				1EFD4F3B2172B09600F0AB28 /* Ledger.swift */,
+				1EFD4F552172B09700F0AB28 /* LedgerPage.swift */,
+				1EFD4F442172B09600F0AB28 /* LedgerRow.swift */,
+				1EFD4F592172B09800F0AB28 /* Magnitude.swift */,
+				1EFD4F5D2172B09800F0AB28 /* Node.swift */,
+				1EFD4F5F2172B09900F0AB28 /* Performance.swift */,
+				1EFD4F482172B09600F0AB28 /* PermissionsGraph.swift */,
+				1EFD4F682172B09B00F0AB28 /* PlaceholderNode.swift */,
+				1EFD4F4A2172B09600F0AB28 /* Position.swift */,
+				1EFD4F452172B09600F0AB28 /* RecursiveBalance.swift */,
+				1EFD4F5E2172B09900F0AB28 /* RecursiveLedger.swift */,
+				1EFD4F502172B09700F0AB28 /* RecursiveLedgerPage.swift */,
+				1EFD4F3F2172B09600F0AB28 /* Region.swift */,
+				1EFD4F432172B09600F0AB28 /* RegionList.swift */,
+				1EFD4F5B2172B09800F0AB28 /* RegionListAttributes.swift */,
+				1EFD4F4C2172B09700F0AB28 /* RequestData.swift */,
+				1EFD4F662172B09A00F0AB28 /* Session.swift */,
+				1EFD4F672172B09A00F0AB28 /* Side.swift */,
+				1EFD4F522172B09700F0AB28 /* Transaction.swift */,
+				1EFD4F3E2172B09600F0AB28 /* Tree.swift */,
+				1EFD4F612172B09900F0AB28 /* TreeNode.swift */,
+				1EFD4F562172B09700F0AB28 /* UnitCode.swift */,
+				1EFD4F572172B09800F0AB28 /* UrlParameters.swift */,
+				1EFD4F4E2172B09700F0AB28 /* UrlTarget.swift */,
+				1EFD4F3A2172B09600F0AB28 /* UrlTargetable.swift */,
+				1EFD4F402172B09600F0AB28 /* User.swift */,
+				1EFD4F3C2172B09600F0AB28 /* UserAttributes.swift */,
+				1EFD4F9A2173103200F0AB28 /* Unit.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -442,10 +606,10 @@
 			isa = PBXGroup;
 			children = (
 				1EF59725202EDBAB001965E0 /* Welcome.swift */,
-				1E8B8026203E80AE00AE6FD8 /* AccountingContainer.swift */,
-				1E8B802C203E82EA00AE6FD8 /* AccountingWindow.swift */,
-				1EFB1C25203ED13F00C838DB /* AccountingWindowController.swift */,
-				1E789E4F2044E7AF007FB628 /* EntityWindow.swift */,
+				1E8B8026203E80AE00AE6FD8 /* EntityListContainer.swift */,
+				1E8B802C203E82EA00AE6FD8 /* EntityListWindow.swift */,
+				1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */,
+				1E789E4F2044E7AF007FB628 /* AccountingWindowController.swift */,
 			);
 			name = Windows;
 			sourceTree = "<group>";
@@ -457,6 +621,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EFD4F942172B09B00F0AB28 /* Amatino.h in Headers */,
+				1EFD4F6A2172B09B00F0AB28 /* AMCryptography.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,11 +692,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Amatino Pty Ltd";
 				TargetAttributes = {
 					1EDAF272202EA0A200E43756 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 					1EDAF284202EA0A200E43756 = {
@@ -571,9 +738,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */,
-				1E211725203AD275002AC8B9 /* Accounting.storyboard in Resources */,
-				1EDD381B20441233008D4DCC /* Entity.storyboard in Resources */,
-				1EDAF27E202EA0A200E43756 /* Main.storyboard in Resources */,
+				1E211725203AD275002AC8B9 /* Entities.storyboard in Resources */,
+				1EDD381B20441233008D4DCC /* Accounting.storyboard in Resources */,
+				1EDAF27E202EA0A200E43756 /* Welcome.storyboard in Resources */,
 				1EE26D8E2032434600307528 /* CardInput.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,56 +785,106 @@
 				1E5452282033FBC80073FFBD /* BillingCurrency.swift in Sources */,
 				1E54522A2033FDD00073FFBD /* BillingCountry.swift in Sources */,
 				1EE26D99203282AC00307528 /* WelcomeProgress.swift in Sources */,
+				1EFD4F702172B09B00F0AB28 /* Region.swift in Sources */,
+				1EFD4F752172B09B00F0AB28 /* LedgerRow.swift in Sources */,
+				1EFD4F882172B09B00F0AB28 /* UrlParameters.swift in Sources */,
 				1E54522C2033FDFD0073FFBD /* BillingCountrySet.swift in Sources */,
 				1E3287B62032953300884A85 /* SubscribeTextField.swift in Sources */,
 				1E85DAD5203E90BB00C183F5 /* CreateEntity.swift in Sources */,
 				1E296506202FD6280065563B /* WelcomePassphrase.swift in Sources */,
+				1EFD4F852172B09B00F0AB28 /* AmatinoAlpha.swift in Sources */,
 				1E296504202FCF5A0065563B /* WelcomeEmail.swift in Sources */,
-				1E8B8027203E80AE00AE6FD8 /* AccountingContainer.swift in Sources */,
+				1E8B8027203E80AE00AE6FD8 /* EntityListContainer.swift in Sources */,
 				1E3287A82032855300884A85 /* SubscribeBillingCountry.swift in Sources */,
+				1EFD4F972172B09B00F0AB28 /* Session.swift in Sources */,
+				1EFD4F902172B09B00F0AB28 /* Performance.swift in Sources */,
+				1EFD4F912172B09B00F0AB28 /* Colour.swift in Sources */,
 				1E750CE520464A19001AD8CC /* CrossfadeSegue.swift in Sources */,
 				1E5452262033FBA60073FFBD /* BillingCurrencySet.swift in Sources */,
 				1E04FA922030088E00DB826A /* WelcomeSegue.swift in Sources */,
+				1EFD4F6B2172B09B00F0AB28 /* UrlTargetable.swift in Sources */,
+				1EFD4F7E2172B09B00F0AB28 /* CustomUnit.swift in Sources */,
+				1EFD4F7A2172B09B00F0AB28 /* GlobalUnit.swift in Sources */,
 				1E750CE220464520001AD8CC /* EntitySplitView.swift in Sources */,
-				1EFB1C26203ED13F00C838DB /* AccountingWindowController.swift in Sources */,
+				1EFD4F8E2172B09B00F0AB28 /* Node.swift in Sources */,
+				1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */,
 				1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */,
 				1E3287B820329CB400884A85 /* SubscribeTextValidity.swift in Sources */,
+				1EFD4F7D2172B09B00F0AB28 /* RequestData.swift in Sources */,
+				1EFD4F6C2172B09B00F0AB28 /* Ledger.swift in Sources */,
+				1EFD4F862172B09B00F0AB28 /* LedgerPage.swift in Sources */,
 				1E54522E203416870073FFBD /* BillingPlanSet.swift in Sources */,
 				1E1E8FA2203BD6A700CF91F2 /* Login.swift in Sources */,
 				1E3287A22032846200884A85 /* SubscribeEmail.swift in Sources */,
 				1E2964FE202FC5E60065563B /* TextButton.swift in Sources */,
 				1E29650C202FDFBD0065563B /* WelcomeView.swift in Sources */,
 				1EABD2A22037ABB700B88C7C /* SubscriptionRequest.swift in Sources */,
+				1EFD4F692172B09B00F0AB28 /* Account.swift in Sources */,
+				1EFD4F982172B09B00F0AB28 /* Side.swift in Sources */,
 				1E04FA9420300F1100DB826A /* WelcomeCreateAccount.swift in Sources */,
 				1E54523220341B270073FFBD /* BillingPrice.swift in Sources */,
+				1EFD4F9B2173103300F0AB28 /* Unit.swift in Sources */,
+				1EFD4F7B2172B09B00F0AB28 /* Position.swift in Sources */,
 				1E3FBDB2203E4986006153CE /* NoEntitiesView.swift in Sources */,
 				1E04FA9920301D6900DB826A /* WelcomeSegueReverse.swift in Sources */,
 				1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */,
+				1EFD4F832172B09B00F0AB28 /* Transaction.swift in Sources */,
+				1E378694218549F3000B935E /* InternetWarning.swift in Sources */,
+				1EFD4F762172B09B00F0AB28 /* RecursiveBalance.swift in Sources */,
+				1EFD4F8B2172B09B00F0AB28 /* AmatinoDate.swift in Sources */,
 				1EBDF659203CF0E900E9DACD /* EntitiesLoadingView.swift in Sources */,
+				1EFD4F922172B09B00F0AB28 /* TreeNode.swift in Sources */,
 				1E3287AC2032856C00884A85 /* SubscribePlans.swift in Sources */,
+				1EFD4F6F2172B09B00F0AB28 /* Tree.swift in Sources */,
+				1EFD4F802172B09B00F0AB28 /* AmatinoRequest.swift in Sources */,
+				1EFD4F992172B09B00F0AB28 /* PlaceholderNode.swift in Sources */,
 				1E296508202FDD960065563B /* WelcomeLogin.swift in Sources */,
+				1EFD4F6E2172B09B00F0AB28 /* Balance.swift in Sources */,
 				1E22D2B8203FF083005DB3F2 /* EntityListView.swift in Sources */,
 				1E3287AA2032855E00884A85 /* SubscribeBillingCurrency.swift in Sources */,
 				1EBA294D2039513000C2BA72 /* WelcomeConfirmAccount.swift in Sources */,
+				1EFD4F8F2172B09B00F0AB28 /* RecursiveLedger.swift in Sources */,
+				1EFD4F8C2172B09B00F0AB28 /* RegionListAttributes.swift in Sources */,
 				1E04FA9B20301FE200DB826A /* WelcomeSegueDown.swift in Sources */,
 				1E750CE020463489001AD8CC /* TreeOutlineContainerView.swift in Sources */,
-				1E8B802D203E82EA00AE6FD8 /* AccountingWindow.swift in Sources */,
+				1E8B802D203E82EA00AE6FD8 /* EntityListWindow.swift in Sources */,
+				1EFD4F742172B09B00F0AB28 /* RegionList.swift in Sources */,
 				1E296500202FCE6D0065563B /* WelcomeContainer.swift in Sources */,
+				1EFD4F732172B09B00F0AB28 /* EntityObject.swift in Sources */,
 				1E750CDE20463324001AD8CC /* TreeOutlineLoading.swift in Sources */,
+				1EFD4F872172B09B00F0AB28 /* UnitCode.swift in Sources */,
 				1E279B4C2042417C0002E514 /* EntityListViewConfirmDelete.swift in Sources */,
+				1EFD4F792172B09B00F0AB28 /* PermissionsGraph.swift in Sources */,
+				1EFD4F8D2172B09B00F0AB28 /* AccountBalance.swift in Sources */,
+				1EFD4F932172B09B00F0AB28 /* EntityListAttributes.swift in Sources */,
 				1E545230203418F40073FFBD /* BillingPlan.swift in Sources */,
+				1EFD4F712172B09B00F0AB28 /* User.swift in Sources */,
+				1EFD4F782172B09B00F0AB28 /* Entry.swift in Sources */,
+				1EFD4F892172B09B00F0AB28 /* AccountType.swift in Sources */,
+				1EFD4F722172B09B00F0AB28 /* AmatinoError.swift in Sources */,
 				1EABD2A82037B3BC00B88C7C /* SubscriptionRequestAttributes.swift in Sources */,
+				1EFD4F772172B09B00F0AB28 /* HTTPMethod.swift in Sources */,
+				1EFD4F822172B09B00F0AB28 /* Entity.swift in Sources */,
+				1EFD4F952172B09B00F0AB28 /* AmatinoObject.swift in Sources */,
 				1E82B04F2044EE28001C342B /* EntityStatusBar.swift in Sources */,
+				1EFD4F8A2172B09B00F0AB28 /* Magnitude.swift in Sources */,
 				1EABD2AA2037BF8300B88C7C /* StripeToken.swift in Sources */,
 				1E3287A62032847C00884A85 /* SubscribePassphraseConfim.swift in Sources */,
+				1EFBF1CB2186C822006A3EFC /* EntityLoadingError.swift in Sources */,
 				1E04FA8C203007CA00DB826A /* WelcomePassphraseReset.swift in Sources */,
 				1E04FA9D20301FFD00DB826A /* WelcomeSegueUp.swift in Sources */,
+				1EFD4F842172B09B00F0AB28 /* AMCryptography.m in Sources */,
 				1E3287AE2032857C00884A85 /* SubscribeTerms.swift in Sources */,
 				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
 				1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
+				1EFD4F7C2172B09B00F0AB28 /* EntityList.swift in Sources */,
+				1EFD4F962172B09B00F0AB28 /* GlobalUnitList.swift in Sources */,
+				1EFD4F7F2172B09B00F0AB28 /* UrlTarget.swift in Sources */,
 				1E750CDC20462DFF001AD8CC /* TreeOutlineView.swift in Sources */,
-				1E789E502044E7AF007FB628 /* EntityWindow.swift in Sources */,
+				1E789E502044E7AF007FB628 /* AccountingWindowController.swift in Sources */,
+				1EFD4F812172B09B00F0AB28 /* RecursiveLedgerPage.swift in Sources */,
+				1EFD4F6D2172B09B00F0AB28 /* UserAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,12 +920,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1EDAF27C202EA0A200E43756 /* Main.storyboard */ = {
+		1EDAF27C202EA0A200E43756 /* Welcome.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1EDAF27D202EA0A200E43756 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Welcome.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -728,6 +945,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -735,6 +953,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -767,6 +986,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Library/amatino-swift/Sources/Amatino/Amatino.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -785,6 +1005,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -792,6 +1013,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -816,6 +1038,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Library/amatino-swift/Sources/Amatino/Amatino.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
@@ -824,12 +1047,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Amatino/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = amatino.Amatino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -838,6 +1063,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Amatino/Info.plist;

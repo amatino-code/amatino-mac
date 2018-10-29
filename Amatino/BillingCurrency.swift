@@ -16,8 +16,12 @@ class BillingCurrency {
     
     init(code: String, name: String, symbol: String, countryNames: [String]?) {
         
-        guard code.characters.count == 3 else { fatalError("Invalid currency code: \(code)") }
-        guard symbol.characters.count == 1 else { fatalError("Invalid symbol: \(symbol)")}
+        guard code.count == 3 else {
+            fatalError("Invalid currency code: \(code)")
+        }
+        guard symbol.count == 1 else {
+            fatalError("Invalid symbol: \(symbol)")
+        }
         
         associatedCountryNames = countryNames
         self.name = name

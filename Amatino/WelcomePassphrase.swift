@@ -15,7 +15,7 @@ class WelcomePassphrase: NSTextField {
         
         self.focusRingType = NSFocusRingType.none
         let text = self.stringValue
-        if text.characters.count > validityThreshold {
+        if text.count > validityThreshold {
             return true
         }
         

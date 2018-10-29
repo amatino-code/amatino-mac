@@ -15,7 +15,7 @@ class CreateEntityPopover: NSViewController {
     @IBOutlet weak var storageRegionMenu: NSPopUpButton!
     
     private var session: Session? = nil
-    private var regions: RegionList? = nil
+    //private var regions: RegionList? = nil
     private var originator: Any? = nil
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -24,23 +24,12 @@ class CreateEntityPopover: NSViewController {
     
     @IBAction func createButtonPressed(_ sender: NSButton) {
         
-        var selectedRegion: Region? = nil
-        for region in try! (regions?.describe().allAvailable)! {
-            if region.name == storageRegionMenu.titleOfSelectedItem {
-                selectedRegion = region
-                break
-            }
-        }
-        
-        guard selectedRegion != nil else { fatalError("Selected region not fount") }
-        
-        let arguments: EntityCreateArguments
+        let arguments: Entity.CreateArguments
         
         do {
-            try arguments = EntityCreateArguments(
+            try arguments = Entity.CreateArguments(
                 name: nameInput.stringValue,
-                description: descriptionInput.stringValue,
-                region: selectedRegion!
+                description: descriptionInput.stringValue
             )
         } catch {
             fatalError("Unhandled entity creation error")
@@ -52,7 +41,7 @@ class CreateEntityPopover: NSViewController {
             return
         }
         
-        if let _ = originator as? AccountingWindowController {
+        if let _ = originator as? EntityWindowController {
             // Determine whether the request occured with NoEntities
             // or SomeEntities visible, and call the appropriate
             // creation method.
@@ -63,11 +52,11 @@ class CreateEntityPopover: NSViewController {
     
     public func loadEnvironment(
         session: Session,
-        regions: RegionList,
+        //regions: RegionList,
         originator: Any
         ) {
         self.session = session
-        self.regions = regions
+        //self.regions = regions
         self.originator = originator
         return
     }
@@ -77,15 +66,9 @@ class CreateEntityPopover: NSViewController {
     }
     
     private func installRegions() {
-        guard regions != nil else { fatalError("Missing regions!") }
-        let regionAttributes: RegionListAttributes
-        do { regionAttributes = try regions!.describe() }
-        catch { fatalError("Unhandled region retrieval error") }
         storageRegionMenu.removeAllItems()
-        for entity in regionAttributes.allAvailable {
-            storageRegionMenu.addItem(withTitle: entity.name)
-        }
-        
+        // Add Region listing here
+        storageRegionMenu.addItem(withTitle: "Default")
     }
     
 }

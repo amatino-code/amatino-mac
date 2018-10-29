@@ -8,7 +8,7 @@
 import Foundation
 import Cocoa
 
-class AccountingWindow: NSWindow {
+class EntityListWindow: NSWindow {
     
     override var canBecomeKey: Bool {
         return true
