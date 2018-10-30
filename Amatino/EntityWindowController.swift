@@ -21,6 +21,7 @@ class EntityWindowController: NSWindowController {
     public private(set) var regionList: RegionList? = nil
     public private(set) var entityList: EntityList? = nil
     public private(set) var entitiesLoadingView: EntitiesLoadingView? = nil
+    public var entityListView: EntityListView? = nil
     
     @IBOutlet weak var toolbarEmailField: NSTextField!
 
@@ -34,6 +35,24 @@ class EntityWindowController: NSWindowController {
     }
     private var environmentReadyCallback: (() -> Void)? = nil
     
+    @IBAction func scopeSelected(_ sender: EntityLifeStageSelection) {
+        print("New scope selected: \(sender.selectedScope.rawValue)")
+        guard let listView = entityListView else {
+            fatalError("EntityListView is missing")
+        }
+        let overlay = EntityListLoadingOverlay(
+            overTable: listView.entityTableView
+        )
+        listView.view.addSubview(overlay)
+        retrieveEntityList ({
+            listView.reloadEntityTable()
+            overlay.removeFromSuperview()
+            return
+        }, sender.selectedScope)
+        return
+    }
+    
+ 
     func loadEnvironment(login: Login) {
 
         self.login = login
@@ -47,7 +66,8 @@ class EntityWindowController: NSWindowController {
     }
     
     private func retrieveEntityList(
-        _ completionCallback: @escaping () -> Void
+        _ completionCallback: @escaping () -> Void,
+        _ scope: EntityListScope = .active
     ) {
         
         guard let session = login?.session else {
@@ -85,7 +105,7 @@ class EntityWindowController: NSWindowController {
         
         EntityList.retrieve(
             session: session,
-            scope: .active,
+            scope: scope,
             callback: entityCallback
         )
         
@@ -148,7 +168,7 @@ class EntityWindowController: NSWindowController {
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if let destination = segue.destinationController
-                as? CreateEntityPopover {
+            as? CreateEntityPopover {
             guard environmentReady == true else {
                 fatalError("Attempt create entity before environment ready")
             }

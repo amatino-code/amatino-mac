@@ -46,10 +46,14 @@ class EntityListView: NSViewController {
     @IBOutlet weak var entityTableView: NSTableView!
     
     override func viewWillAppear() {
-        if let _ = entityWindowController?.entityList {
-            entityTableView.reloadData()
-            tableReloaded = true
+        if let controller = entityWindowController {
+            controller.entityListView = self
+            if let _ = controller.entityList {
+                entityTableView.reloadData()
+                tableReloaded = true
+            }
         }
+
         return
     }
     
@@ -59,6 +63,7 @@ class EntityListView: NSViewController {
                 as? EntityWindowController else {
                 fatalError("Unable to acquire EntityWindowController")
             }
+            controller.entityListView = self
             entityWindowController = controller
         }
         if !tableReloaded {

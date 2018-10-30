@@ -51,9 +51,12 @@ class WelcomeProgress: NSViewController {
             }
             
             if elapsed < self.minimumVisibleTime {
-                let waitTime = UInt64((self.minimumVisibleTime - elapsed) * Double(NSEC_PER_SEC))
+                let waitTime = UInt64((self.minimumVisibleTime - elapsed) *
+                    Double(NSEC_PER_SEC))
                 let now = DispatchTime.now().uptimeNanoseconds
-                let dispatchTime = DispatchTime(uptimeNanoseconds: (waitTime + now))
+                let dispatchTime = DispatchTime(
+                    uptimeNanoseconds: (waitTime + now)
+                )
                 DispatchQueue.main.asyncAfter(deadline: dispatchTime) {
                     action()
                     return

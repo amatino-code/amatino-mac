@@ -69,6 +69,9 @@
 		1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59725202EDBAB001965E0 /* Welcome.swift */; };
 		1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */; };
 		1EFBF1CB2186C822006A3EFC /* EntityLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */; };
+		1EFBF1CD2186FB35006A3EFC /* LifeStageSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CC2186FB35006A3EFC /* LifeStageSelection.swift */; };
+		1EFBF1D02187B1BA006A3EFC /* EntityScopeToolbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CF2187B1BA006A3EFC /* EntityScopeToolbarItem.swift */; };
+		1EFBF1D22187FD1B006A3EFC /* EntityListLoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1D12187FD1B006A3EFC /* EntityListLoadingOverlay.swift */; };
 		1EFD4F692172B09B00F0AB28 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F382172B09500F0AB28 /* Account.swift */; };
 		1EFD4F6A2172B09B00F0AB28 /* AMCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EFD4F392172B09500F0AB28 /* AMCryptography.h */; };
 		1EFD4F6B2172B09B00F0AB28 /* UrlTargetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD4F3A2172B09600F0AB28 /* UrlTargetable.swift */; };
@@ -220,6 +223,9 @@
 		1EF59725202EDBAB001965E0 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityWindowController.swift; sourceTree = "<group>"; };
 		1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLoadingError.swift; sourceTree = "<group>"; };
+		1EFBF1CC2186FB35006A3EFC /* LifeStageSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStageSelection.swift; sourceTree = "<group>"; };
+		1EFBF1CF2187B1BA006A3EFC /* EntityScopeToolbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityScopeToolbarItem.swift; sourceTree = "<group>"; };
+		1EFBF1D12187FD1B006A3EFC /* EntityListLoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityListLoadingOverlay.swift; sourceTree = "<group>"; };
 		1EFD4F382172B09500F0AB28 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = "amatino-swift/Sources/Amatino/Account.swift"; sourceTree = "<group>"; };
 		1EFD4F392172B09500F0AB28 /* AMCryptography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMCryptography.h; path = "amatino-swift/Sources/Amatino/AMCryptography.h"; sourceTree = "<group>"; };
 		1EFD4F3A2172B09600F0AB28 /* UrlTargetable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UrlTargetable.swift; path = "amatino-swift/Sources/Amatino/UrlTargetable.swift"; sourceTree = "<group>"; };
@@ -452,9 +458,11 @@
 		1E82B0492044EE17001C342B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				1EFBF1CE2187B18A006A3EFC /* WindowToolbar */,
 				1E750CE620465095001AD8CC /* TreeOutline */,
 				1E82B04E2044EE28001C342B /* EntityStatusBar.swift */,
 				1E750CE120464520001AD8CC /* EntitySplitView.swift */,
+				1EFBF1D12187FD1B006A3EFC /* EntityListLoadingOverlay.swift */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -612,6 +620,15 @@
 				1E789E4F2044E7AF007FB628 /* AccountingWindowController.swift */,
 			);
 			name = Windows;
+			sourceTree = "<group>";
+		};
+		1EFBF1CE2187B18A006A3EFC /* WindowToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				1EFBF1CC2186FB35006A3EFC /* LifeStageSelection.swift */,
+				1EFBF1CF2187B1BA006A3EFC /* EntityScopeToolbarItem.swift */,
+			);
+			name = WindowToolbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -784,6 +801,7 @@
 			files = (
 				1E5452282033FBC80073FFBD /* BillingCurrency.swift in Sources */,
 				1E54522A2033FDD00073FFBD /* BillingCountry.swift in Sources */,
+				1EFBF1D22187FD1B006A3EFC /* EntityListLoadingOverlay.swift in Sources */,
 				1EE26D99203282AC00307528 /* WelcomeProgress.swift in Sources */,
 				1EFD4F702172B09B00F0AB28 /* Region.swift in Sources */,
 				1EFD4F752172B09B00F0AB28 /* LedgerRow.swift in Sources */,
@@ -792,6 +810,7 @@
 				1E3287B62032953300884A85 /* SubscribeTextField.swift in Sources */,
 				1E85DAD5203E90BB00C183F5 /* CreateEntity.swift in Sources */,
 				1E296506202FD6280065563B /* WelcomePassphrase.swift in Sources */,
+				1EFBF1D02187B1BA006A3EFC /* EntityScopeToolbarItem.swift in Sources */,
 				1EFD4F852172B09B00F0AB28 /* AmatinoAlpha.swift in Sources */,
 				1E296504202FCF5A0065563B /* WelcomeEmail.swift in Sources */,
 				1E8B8027203E80AE00AE6FD8 /* EntityListContainer.swift in Sources */,
@@ -875,6 +894,7 @@
 				1E04FA9D20301FFD00DB826A /* WelcomeSegueUp.swift in Sources */,
 				1EFD4F842172B09B00F0AB28 /* AMCryptography.m in Sources */,
 				1E3287AE2032857C00884A85 /* SubscribeTerms.swift in Sources */,
+				1EFBF1CD2186FB35006A3EFC /* LifeStageSelection.swift in Sources */,
 				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
 				1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
