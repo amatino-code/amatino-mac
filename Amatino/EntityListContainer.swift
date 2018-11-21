@@ -11,15 +11,15 @@ import Cocoa
 
 class EntityListContainer: NSViewController {
     
-    let board = NSStoryboard(name: NSStoryboard.Name(
-        rawValue: "Entities"
-    ), bundle: nil)
-    let entityLoadScene = NSStoryboard.SceneIdentifier("entityLoadView")
+    let board = NSStoryboard(name: "Entities", bundle: nil)
+    let entityLoadScene = "entityLoadView"
     
 
     public var session: Session? = nil
     
     override func viewDidLoad() {
+        
+        view.wantsLayer = true
 
         guard let _ = (
             NSApplication.shared.delegate as? AppDelegate
@@ -33,7 +33,7 @@ class EntityListContainer: NSViewController {
                 fatalError("Could not cast EntitiesLoadingView")
         }
         entityLoadingView.view.wantsLayer = true
-        insertChildViewController(entityLoadingView, at: 0)
+        insertChild(entityLoadingView, at: 0)
         view.addSubview(entityLoadingView.view)
         
         return

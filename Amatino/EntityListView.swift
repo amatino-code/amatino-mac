@@ -26,12 +26,8 @@ class EntityListView: NSViewController {
     private let tableNetIncomeCellId = NSUserInterfaceItemIdentifier(
         rawValue: "entityTableCellNetIncome"
     )
-    private let deleteConfirmSegueId = NSStoryboardSegue.Identifier(
-        "entityListToDeleteConfirm"
-    )
-    private let noEntitiesSegueId = NSStoryboardSegue.Identifier(
-        "entityListToNoEntities"
-    )
+    private let deleteConfirmSegueId = "entityListToDeleteConfirm"
+    private let noEntitiesSegueId = "entityListToNoEntities"
     
     public var entityWindowController: EntityWindowController? = nil
 

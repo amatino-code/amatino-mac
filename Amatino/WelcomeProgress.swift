@@ -10,8 +10,8 @@ import Cocoa
 class WelcomeProgress: NSViewController {
     
     private let minimumVisibleTime: Double = 1 // seconds
-    private let reversalSegueId = NSStoryboardSegue.Identifier("progressReversalSegue")
-    private let successSegueId = NSStoryboardSegue.Identifier("welcomeSuccessSegue")
+    private let reversalSegueId = "progressReversalSegue"
+    private let successSegueId = "welcomeSuccessSegue"
     
     @IBOutlet weak var welcomeProgress: NSProgressIndicator!
     private var request: SubscriptionRequest? = nil

@@ -191,7 +191,7 @@ class WelcomeCreateAccount: NSViewController {
             passphrase: subscribePassphrase.stringValue,
             token: stripeToken
         )
-        let identifier = NSStoryboardSegue.Identifier("welcomeProgressSegue")
+        let identifier = "welcomeProgressSegue"
         _ = performSegue(withIdentifier: identifier, sender: nil)
         return
     }
@@ -255,12 +255,12 @@ extension WelcomeCreateAccount: WKScriptMessageHandler {
 
 extension WelcomeCreateAccount: NSTextDelegate, NSControlTextEditingDelegate {
     
-    override func controlTextDidBeginEditing(_ obj: Notification) {
+    func controlTextDidBeginEditing(_ obj: Notification) {
         let field = obj.object as? SubscribeValidity
         field?.clearError()
     }
     
-    override func controlTextDidEndEditing(_ obj: Notification) {
+    func controlTextDidEndEditing(_ obj: Notification) {
         let field = obj.object as? SubscribeValidity
         guard field != nil else { return }
         updateSubscribeButtonState()

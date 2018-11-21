@@ -20,10 +20,10 @@ class TextButton: NSButton {
         guard font != nil else {return}
         
         let styleAttributes = [
-            NSAttributedStringKey.foregroundColor: standardColor!,
-            NSAttributedStringKey.font: font!,
-            NSAttributedStringKey.paragraphStyle: generateStyle()
-        ] as [NSAttributedStringKey : Any]
+            NSAttributedString.Key.foregroundColor: standardColor!,
+            NSAttributedString.Key.font: font!,
+            NSAttributedString.Key.paragraphStyle: generateStyle()
+        ] as [NSAttributedString.Key : Any]
         
         let attributedTitle = NSAttributedString(string: title, attributes: styleAttributes)
         self.attributedTitle = attributedTitle
@@ -50,12 +50,12 @@ class TextButton: NSButton {
         return style
     }
     
-    private func generateAttributes(color: NSColor) -> [NSAttributedStringKey: Any] {
+    private func generateAttributes(color: NSColor) -> [NSAttributedString.Key: Any] {
         let attributes = [
-            NSAttributedStringKey.foregroundColor: color,
-            NSAttributedStringKey.font: font!,
-            NSAttributedStringKey.paragraphStyle: generateStyle()
-        ] as [NSAttributedStringKey: Any]
+            NSAttributedString.Key.foregroundColor: color,
+            NSAttributedString.Key.font: font!,
+            NSAttributedString.Key.paragraphStyle: generateStyle()
+        ] as [NSAttributedString.Key: Any]
         return attributes
     }
 

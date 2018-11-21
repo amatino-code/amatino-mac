@@ -37,19 +37,6 @@
                                         <segue destination="6TE-6s-BBJ" kind="popover" popoverAnchorView="Zdh-pE-oMW" popoverBehavior="t" preferredEdge="maxY" id="P5c-JN-3Bz"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="45E383DF-4E4A-4510-887A-DFE6D97B5FB9" label="" paletteLabel="" id="WFo-Qk-tPk">
-                                    <nil key="toolTip"/>
-                                    <size key="minSize" width="70" height="25"/>
-                                    <size key="maxSize" width="127" height="25"/>
-                                    <button key="view" verticalHuggingPriority="750" id="kFD-G4-LFE">
-                                        <rect key="frame" x="0.0" y="14" width="127" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" title="Logout" bezelStyle="texturedRounded" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bvV-j7-O3b">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="5A573496-A4D9-4694-9F1E-8340EA55F28A" label="" paletteLabel="User Email" id="59A-Jz-8mE">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="38" height="17"/>
@@ -64,7 +51,7 @@
                                         </textFieldCell>
                                     </textField>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="E2FE228B-E0C3-44B7-A5A5-7F7589EC97AF" label="Custom View" paletteLabel="Custom View" id="nvQ-68-PyP" userLabel="Scope Selection" customClass="EntityScopeToolbarItem" customModule="Amatino" customModuleProvider="target">
+                                <toolbarItem implicitItemIdentifier="E2FE228B-E0C3-44B7-A5A5-7F7589EC97AF" label="Scope Selection" paletteLabel="Scope Selection" id="nvQ-68-PyP" userLabel="Scope Selection" customClass="EntityScopeToolbarItem" customModule="Amatino" customModuleProvider="target">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="90" height="28"/>
                                     <size key="maxSize" width="100" height="28"/>
@@ -94,7 +81,6 @@
                                 <toolbarItem reference="nvQ-68-PyP"/>
                                 <toolbarItem reference="Na1-Fe-Pex"/>
                                 <toolbarItem reference="59A-Jz-8mE"/>
-                                <toolbarItem reference="WFo-Qk-tPk"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -383,7 +369,7 @@ DQ
                         <outlet property="determinateProgressIndicator" destination="W2m-VR-8OZ" id="psC-Bn-msx"/>
                         <outlet property="progressIndicator" destination="KCL-Po-0ad" id="0p2-5f-Wjx"/>
                         <segue destination="3So-UU-yTA" kind="custom" identifier="entityLoadToNoEntities" customClass="CrossFadeSegue" customModule="Amatino" customModuleProvider="target" id="Mss-JL-6RF"/>
-                        <segue destination="hNx-Pa-o9E" kind="custom" identifier="entityLoadToSomeEntities" customClass="CrossFadeSegue" customModule="Amatino" customModuleProvider="target" id="Wpo-kh-Zx0"/>
+                        <segue destination="hNx-Pa-o9E" kind="custom" identifier="entityLoadToSomeEntities" customClass="WelcomeSegue" customModule="Amatino" customModuleProvider="target" id="Wpo-kh-Zx0"/>
                         <segue destination="5n9-c0-4o7" kind="custom" identifier="entityLoadToNetWarning" customClass="WelcomeSegueUp" customModule="Amatino" customModuleProvider="target" id="Idw-6u-ViK"/>
                         <segue destination="2aS-M2-lII" kind="custom" identifier="entityLoadToError" customClass="WelcomeSegueUp" customModule="Amatino" customModuleProvider="target" id="Q4t-1s-Xlc"/>
                     </connections>
@@ -871,7 +857,7 @@ Gw
         <image name="NSAddTemplate" width="11" height="11"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xJp-hF-4BE"/>
+        <segue reference="Wpo-kh-Zx0"/>
         <segue reference="Mss-JL-6RF"/>
         <segue reference="Mov-1e-p9a"/>
         <segue reference="P5c-JN-3Bz"/>

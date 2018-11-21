@@ -63,7 +63,7 @@ class WelcomeView: NSViewController {
 }
 
 extension WelcomeView: NSTextFieldDelegate {
-    override func controlTextDidChange(_ obj: Notification) {
+    func controlTextDidChange(_ obj: Notification) {
         if emailField.isValid() && passPhraseField.isValid() {
             loginButton.showHighlightState()
         } else {

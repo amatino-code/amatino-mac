@@ -17,7 +17,7 @@ class CrossFadeSegue: NSStoryboardSegue {
         let destinationViewController = destinationController as! NSViewController
         let containerViewController = sourceViewController.parent!
         
-        containerViewController.insertChildViewController(destinationViewController, at: 1)
+        containerViewController.insertChild(destinationViewController, at: 1)
         
         containerViewController.view.wantsLayer = true
         sourceViewController.view.wantsLayer = true

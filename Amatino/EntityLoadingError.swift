@@ -19,5 +19,4 @@ class EntityLoadingError: NSViewController {
             of: "\n", with: " "
         )
     }
-
 }

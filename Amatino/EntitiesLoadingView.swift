@@ -30,18 +30,10 @@ class EntitiesLoadingView: NSViewController {
         }
     }
     
-    let noEntitiesIdentifier = NSStoryboardSegue.Identifier(
-        "entityLoadToNoEntities"
-    )
-    let someEntitiesIdentifier = NSStoryboardSegue.Identifier(
-        "entityLoadToSomeEntities"
-    )
-    let noNetIdentifier = NSStoryboardSegue.Identifier(
-        "entityLoadToNetWarning"
-    )
-    let errorIdentifier = NSStoryboardSegue.Identifier(
-        "entityLoadToError"
-    )
+    let noEntitiesIdentifier = "entityLoadToNoEntities"
+    let someEntitiesIdentifier = "entityLoadToSomeEntities"
+    let noNetIdentifier = "entityLoadToNetWarning"
+    let errorIdentifier = "entityLoadToError"
 
     private var session: Session? = nil
     private var user: User? = nil

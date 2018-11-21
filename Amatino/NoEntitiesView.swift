@@ -11,9 +11,7 @@ import Cocoa
 
 class NoEntitiesView: NSViewController {
     
-    let segueToEntityListId = NSStoryboardSegue.Identifier(
-        "noEntitiesToSomeEntities"
-    )
+    let segueToEntityListId = "noEntitiesToSomeEntities"
     
     var entityWindowController: EntityWindowController? = nil
 

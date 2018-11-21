@@ -11,9 +11,9 @@ import Cocoa
 
 class EntityWindowController: NSWindowController {
     
-    let connectionFailures = [-1003, -1009]
+    let connectionFailures = [-1003, -1009, -1200]
     
-    let offlineWarningId = NSStoryboard.SceneIdentifier("offlineWarning")
+    let offlineWarningId = "offlineWarning"
     
     public private(set) var login: Login? = nil
     public private(set) var session: Session? = nil

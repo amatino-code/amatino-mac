@@ -12,25 +12,17 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let welcomeWindowIdentifier = NSStoryboard.SceneIdentifier(
-        "welcomeWindowController"
-    )
-    let accountingWindowIdentifier = NSStoryboard.SceneIdentifier(
-        "accountingWindowController"
-    )
-    let entityWindowIdentifier = NSStoryboard.SceneIdentifier(
-        "entityWindowController"
-    )
+    let welcomeWindowIdentifier = "welcomeWindowController"
+
+    let entityWindowIdentifier = "entityWindowController"
+
     let welcomeStoryboard = NSStoryboard(
-        name: NSStoryboard.Name("Welcome"),
+        name: "Welcome",
         bundle: nil
     )
+
     let entitiesStoryboard = NSStoryboard(
-        name: NSStoryboard.Name("Entities"),
-        bundle: nil
-    )
-    let accountingStoryboard = NSStoryboard(
-        name: NSStoryboard.Name("Accounting"),
+        name: "Entities",
         bundle: nil
     )
 
@@ -103,25 +95,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func showAccountingInterface(entity: Entity) {
-        guard let accountingInterface =
-            accountingStoryboard.instantiateController(
-                withIdentifier: entityWindowIdentifier
-        ) as? NSWindowController else {
-            fatalError("Failed to instantiate entity interface")
-        }
-        guard let accountingWindow = accountingInterface as?
-            AccountingWindowController
-            else {
-                fatalError("Failed to cast Entity Window")
-            }
-        guard let session = login?.session else {
-            fatalError(
-                "Login session not available when loading Entity interface"
-            )
-        }
-        accountingWindow.loadEnvironment(entity, session)
-        accountingWindow.window?.title = entity.name
-        accountingWindow.showWindow(self)
+        
+        let accountingController = AccountingWindowController(
+            displaying: entity
+        )
+
+        accountingController.showWindow(self)
+        return
     }
 
 }
