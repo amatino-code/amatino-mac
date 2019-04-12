@@ -104,9 +104,9 @@ class EntityWindowController: NSWindowController {
         }
         
         EntityList.retrieve(
-            session: session,
-            scope: scope,
-            callback: entityCallback
+            authenticatedBy: session,
+            inScope: scope,
+            then: entityCallback
         )
         
         // Lookup user and region list

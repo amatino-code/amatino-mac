@@ -161,16 +161,16 @@ class CreateAccountView: NSView {
         if let parent = parentField.selectedNode {
             arguments = try Account.CreateArguments(
                 name: nameField.stringValue,
+                parent: parent,
                 description: descriptionField.stringValue,
-                globalUnit: unit,
-                parent: parent
+                denomination: unit
             )
         } else {
             arguments = try Account.CreateArguments(
                 name: nameField.stringValue,
                 type: typeField.selectedType,
                 description: descriptionField.stringValue,
-                globalUnit: unit
+                denomination: unit
             )
         }
         return arguments

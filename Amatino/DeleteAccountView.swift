@@ -41,9 +41,9 @@ class DeleteAccountView: NSView {
         progressIndicator.controlSize = .small
         addSubview(progressIndicator)
         Account.retrieve(
-            entity: tree.entity,
-            accountId: target.id,
-            callback: self.accountReadyCallback
+            from: tree.entity,
+            withId: target.accountId,
+            then: self.accountReadyCallback
         )
         return
     }

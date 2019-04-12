@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 class TreeOutlineTableView: NSOutlineView {
-    
+
     private let accountColumnId =  NSUserInterfaceItemIdentifier(
         "accountColumn"
     )
@@ -19,6 +19,17 @@ class TreeOutlineTableView: NSOutlineView {
     )
     private let accountCellId = NSUserInterfaceItemIdentifier("accountCell")
     private let balanceCellId = NSUserInterfaceItemIdentifier("balanceCell")
+    
+    public var selectedNode: Node? {
+        get {
+            let selectedItem = item(atRow: selectedRow)
+            if selectedItem == nil { return nil }
+            guard let ledgerRow = selectedItem as? Node else {
+                fatalError("Unexpected item type")
+            }
+            return ledgerRow
+        }
+    }
     
     var tree: Tree?
     
@@ -30,8 +41,20 @@ class TreeOutlineTableView: NSOutlineView {
         addTableColumn(outlineColumn)
         addTableColumn(balanceColumn)
         outlineTableColumn = outlineColumn
+        outlineColumn.tableView = self
+        balanceColumn.tableView = self
+        outlineColumn.resizingMask = [.autoresizingMask, .userResizingMask]
+        balanceColumn.resizingMask = [.autoresizingMask, .userResizingMask]
+        columnAutoresizingStyle = .uniformColumnAutoresizingStyle
+        outlineColumn.width = 150
+        balanceColumn.width = 50
         delegate = self
         dataSource = self
+        headerView = nil
+        allowsColumnSelection = false
+        usesAlternatingRowBackgroundColors = false
+        intercellSpacing = .zero
+        selectionHighlightStyle = .sourceList
         return
     }
     
@@ -43,6 +66,11 @@ class TreeOutlineTableView: NSOutlineView {
         self.tree = tree
         reloadData()
         return
+    }
+    
+    override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+        superview?.mouseDown(with: event)
     }
     
 }
@@ -57,7 +85,30 @@ extension TreeOutlineTableView: NSOutlineViewDelegate {
         
         let newView = NSTableCellView()
         let cellText = NSTextField()
+        let cellFrame = NSMakeRect(0, 0, tableColumn!.width, 20)
+        newView.frame = cellFrame
+        cellText.frame = newView.bounds
+        cellText.backgroundColor = nil
+        cellText.isBordered = false
+        cellText.isBezeled = false
+        cellText.isEditable = false
+        cellText.isSelectable = true
+        cellText.translatesAutoresizingMaskIntoConstraints = false
+        cellText.cell?.lineBreakMode = .byTruncatingMiddle
+        newView.addSubview(cellText)
         newView.textField = cellText
+        newView.leadingAnchor.constraint(
+            equalTo: cellText.leadingAnchor
+        ).isActive = true
+        newView.trailingAnchor.constraint(
+            equalTo: cellText.trailingAnchor
+        ).isActive = true
+        newView.topAnchor.constraint(
+            equalTo: cellText.topAnchor
+        ).isActive = true
+        newView.bottomAnchor.constraint(
+            equalTo: cellText.bottomAnchor
+        )
 
         guard let node = item as? TreeNode else {
             fatalError("Unknown item type")

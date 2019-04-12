@@ -13,14 +13,10 @@ class LedgerTableCreditView: NSTableCellView {
     
     let cellText = NSTextField()
     
-    override init(frame frameRect: NSRect) {
+    init(for row: LedgerRow, frame frameRect: NSRect) {
         super.init(frame: frameRect)
         cellText.frame = frameRect
         textField = cellText
-        guard let row = objectValue as? LedgerRow else {
-            textField?.stringValue = "Error"
-            return
-        }
         textField?.stringValue = row.presentationCredit
         textField?.isSelectable = true
         return

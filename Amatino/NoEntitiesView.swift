@@ -68,9 +68,9 @@ class NoEntitiesView: NSViewController {
         }
         
         Entity.create(
-            session: session,
-            arguments: entityArguments,
-            callback: newEntityReadyCallback
+            authenticatedBy: session,
+            withArguments: entityArguments,
+            then: newEntityReadyCallback
         )
         return
     }

@@ -39,7 +39,7 @@ class GlobalUnitSelection: AMPopUpButton {
         removeAllItems()
         addItem(withTitle: "Loading...")
         isEnabled = false
-        GlobalUnitList.retrieve(session: session, callback: unitListCallback)
+        GlobalUnitList.retrieve(authenticatedBy: session, then: unitListCallback)
         return
     }
 

@@ -10,16 +10,27 @@ import Cocoa
 
 class EntitySplitController: NSSplitViewController {
     
-    let entity: Entity
-    let outline: TreeOutlineContainerController
+    private let entity: Entity
+    private let outline: TreeOutlineContainerController
+    private let ledger: LedgerController
+    private let outlineSplitItem: NSSplitViewItem
+    private let ledgerSplitItem: NSSplitViewItem
     
     init(displaying entity: Entity) {
         self.entity = entity
         
-        outline = TreeOutlineContainerController(displaying: entity)
-        let outlineSplitView = NSSplitViewItem(viewController: outline)
+        ledger = LedgerController()
+        outline = TreeOutlineContainerController(
+            displaying: entity,
+            associatedWith: ledger
+        )
+        outlineSplitItem = NSSplitViewItem(viewController: outline)
+        ledgerSplitItem = NSSplitViewItem(viewController: ledger)
         super.init(nibName: nil, bundle: nil)
-        addSplitViewItem(outlineSplitView)
+
+        splitView.isVertical = true
+        addSplitViewItem(outlineSplitItem)
+        addSplitViewItem(ledgerSplitItem)
 
         return
     }

@@ -35,4 +35,12 @@ extension NSView {
         layer?.add(shakeAnimation, forKey: "")
     }
     
+    func pinAnchors(ofSubview subView: NSView) {
+        subView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        subView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        subView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        subView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        return
+    }
+    
 }

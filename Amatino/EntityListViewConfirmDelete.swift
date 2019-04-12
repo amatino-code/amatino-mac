@@ -44,7 +44,7 @@ class EntityListViewConfirmDelete: NSViewController {
             fatalError("Deletion executed without a target")
         }
         
-        deletionTarget.delete(deletionCallback)
+        deletionTarget.delete(then: deletionCallback)
     }
     
     private func deletionCallback(error: Error?, entity: Entity?) -> Void {

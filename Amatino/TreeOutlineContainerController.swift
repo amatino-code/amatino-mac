@@ -14,14 +14,21 @@ class TreeOutlineContainerController: NSViewController {
     let entity: Entity
     let loadingController: TreeOutlineLoadingController
     
-    init(displaying entity: Entity) {
+    private var ledger: LedgerController? = nil
+    
+    init(
+        displaying entity: Entity,
+        associatedWith ledger: LedgerController? = nil
+    ) {
         loadingController = TreeOutlineLoadingController(
             loadingTreeOf: entity
         )
+        self.ledger = ledger
         self.entity = entity
         super.init(nibName: nil, bundle: nil)
         return
     }
+
     
     override func loadView() {
         view = NSView(frame: defaultFrame)
@@ -42,7 +49,8 @@ class TreeOutlineContainerController: NSViewController {
     ) {
         let outline = TreeOutlineController(
             outlining: tree,
-            denominatedIn: unit
+            denominatedIn: unit,
+            associatedWith: ledger
         )
         insertChild(outline, at: 0)
         transition(
@@ -51,6 +59,18 @@ class TreeOutlineContainerController: NSViewController {
             options: .slideLeft,
             completionHandler: nil
         )
+        outline.view.leadingAnchor.constraint(
+            equalTo: view.leadingAnchor
+        ).isActive = true
+        outline.view.trailingAnchor.constraint(
+            equalTo: view.trailingAnchor
+        ).isActive = true
+        outline.view.topAnchor.constraint(
+            equalTo: view.topAnchor
+        ).isActive = true
+        outline.view.bottomAnchor.constraint(
+            equalTo: view.bottomAnchor
+        ).isActive = true
         return
     }
     

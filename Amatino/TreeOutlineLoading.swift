@@ -32,9 +32,9 @@ class TreeOutlineLoadingController: NSViewController {
             }
             self.loadedGlobalUnit = unit
             Tree.retrieve(
-                entity: entity,
-                globalUnit: unit,
-                callback: self.treeReadyCallback
+                for: entity,
+                denominatedIn: unit,
+                then: self.treeReadyCallback
             )
         })
         

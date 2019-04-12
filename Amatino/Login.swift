@@ -47,13 +47,13 @@ class Login {
         _ = Session.create(
             email: email,
             secret: secret,
-            callback: { (error, session) in
+            then: { (error, session) in
                 guard error == nil else {
                     callback(error)
                     return
                 }
                 guard let session = session else {
-                    callback(error ?? AmatinoError(.inconsistentInternalState))
+                    callback(error ?? AmatinoError(.inconsistentState))
                     return
                 }
                 self.session = session

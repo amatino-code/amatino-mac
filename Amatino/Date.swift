@@ -14,13 +14,9 @@ class LedgerTableDateView: NSTableCellView {
     let formatter = DateFormatter()
     let cellText = NSTextField()
 
-    override init(frame frameRect: NSRect) {
+    init(for row: LedgerRow, frame frameRect: NSRect) {
         super.init(frame: frameRect)
         self.textField = cellText
-        guard let row = objectValue as? LedgerRow else {
-            textField?.stringValue = "Error"
-            return
-        }
         formatter.locale = Locale.current
         let dateString = formatter.string(from: row.transactionTime)
         textField?.stringValue = dateString

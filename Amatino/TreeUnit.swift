@@ -32,9 +32,9 @@ class TreeUnit {
             return
         }
         GlobalUnit.retrieve(
-            unitId: fallbackGlobalUnitId,
-            session: entity.session,
-            callback: callback
+            withId: fallbackGlobalUnitId,
+            authenticatedBy: entity.session,
+            then: callback
         )
         return
     }
@@ -60,9 +60,9 @@ class TreeUnit {
         }
         if isGlobalUnit {
             GlobalUnit.retrieve(
-                unitId: unitId,
-                session: entity.session,
-                callback: callback
+                withId: unitId,
+                authenticatedBy: entity.session,
+                then: callback
             )
             return
         }

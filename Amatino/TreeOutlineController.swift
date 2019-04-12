@@ -17,15 +17,23 @@ class TreeOutlineController: NSViewController {
     private var creationPopover: NSPopover?
     private var progressIndicator: NSProgressIndicator?
 
+    public var associatedLedger: LedgerController?
     public var tree: Tree?
     public var unit: GlobalUnit?
     
     private let treeOutline: TreeOutlineView
     
-    init(outlining tree: Tree, denominatedIn unit: GlobalUnit) {
+    private var lastPresentedNode: Node? = nil
+    
+    init(
+        outlining tree: Tree,
+        denominatedIn unit: GlobalUnit,
+        associatedWith ledger: LedgerController? = nil
+    ) {
         
         self.tree = tree
         self.unit = unit
+        self.associatedLedger = ledger
         self.treeOutline = TreeOutlineView(
             frame: defaultTableFrame,
             outlining: tree
@@ -36,16 +44,41 @@ class TreeOutlineController: NSViewController {
 
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
-    override func loadView() {
-        view = self.treeOutline
+    override func viewDidLoad() { treeOutline.sizeToFit() }
+    
+    required init?(coder: NSCoder) { fatalError("not implemented") }
+    
+    override func loadView() { view = self.treeOutline }
+    
+    override func mouseDown(with event: NSEvent) {
+        super.mouseDown(with: event)
+        let point = treeOutline.convert(event.locationInWindow, from: nil)
+        if treeOutline.isMousePoint(point, in: treeOutline.bounds) {
+            considerLedgerPresentation(for: treeOutline.selectedNode)
+        }
         return
     }
+    
+    private func considerLedgerPresentation(for node: Node?) {
 
-    // Add AccountPlusButton
+        guard let ledger = associatedLedger else { return }
+        guard let tree = tree else { fatalError("Missing Tree") }
+        if node == nil && lastPresentedNode == nil { return }
+        lastPresentedNode = node
+        guard let node = node else { ledger.showIdle(); return }
+        
+        ledger.presentLedger(
+            forAccount: node,
+            in: tree.entity,
+            ordered: .oldestFirst
+        )
+        return
+
+    }
+    
+
+// Add AccountPlusButton
     
 //    @IBOutlet weak var accountPlus: NSButton!
 //    @IBAction func accountPlusClicked(_ sender: Any) {
@@ -57,7 +90,6 @@ class TreeOutlineController: NSViewController {
 //        print("Edit account")
 //        return
 //    }
-    
 
     func deleteAccount() {
         guard let tree = tree else { fatalError("Tree missing!") }
@@ -113,9 +145,9 @@ class TreeOutlineController: NSViewController {
             fatalError("Missing unit!")
         }
         Tree.retrieve(
-            entity: tree.entity,
-            globalUnit: unit,
-            callback: treeReadyCallback
+            for: tree.entity,
+            denominatedIn: unit,
+            then: treeReadyCallback
         )
         return
     }
@@ -184,9 +216,9 @@ class TreeOutlineController: NSViewController {
         }
 
         Account.create(
-            entity: entity,
+            in: entity,
             arguments: arguments,
-            callback: accountCreationCallback
+            then: accountCreationCallback
         )
 
         return

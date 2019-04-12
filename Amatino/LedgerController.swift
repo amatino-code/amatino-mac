@@ -11,11 +11,16 @@ import Cocoa
 
 class LedgerController: NSViewController {
     
-    private let ledger: Ledger
+    let ledgerView: LedgerView
     
-    init(displaying ledger: Ledger) {
-        self.ledger = ledger
+    init() {
+        ledgerView = LedgerView()
         super.init(nibName: nil, bundle: nil)
+        return
+    }
+    
+    override func loadView() {
+        self.view = ledgerView
         return
     }
     
@@ -23,6 +28,40 @@ class LedgerController: NSViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func presentLedger(
+        forAccount account: AccountRepresentative,
+        in entity: Entity,
+        ordered order: LedgerOrder
+    ) {
+        
+        ledgerView.showLoading()
+        
+        Ledger.retrieve(
+            for: account,
+            in: entity,
+            inOrder: order,
+            then: self.ledgerReadyCallback
+        )
+        
+    }
+    
+    private func ledgerReadyCallback(error: Error?, ledger: Ledger?) {
+        DispatchQueue.main.async {
+            guard let ledger = ledger else {
+                let _ = GenericErrorController(
+                    displaying: error ?? AmatinoAppError(.internalFailure),
+                    presentedBy: self
+                )
+                return
+            }
+            
+            self.ledgerView.present(ledger)
+        }
+        return
+    }
+    
+    public func showIdle() { ledgerView.showIdle() }
+
 }
 
 //extension LedgerController: NSTableViewDataSource {
