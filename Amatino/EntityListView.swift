@@ -49,7 +49,8 @@ class EntityListView: NSViewController {
                 tableReloaded = true
             }
         }
-
+        
+        entityTableView.doubleAction = #selector(doubleClick(_:))
         return
     }
     
@@ -117,19 +118,7 @@ class EntityListView: NSViewController {
     }
 
     @IBAction func openEntitySelected(_ sender: NSMenuItem) {
-        let rowIndex = entityTableView.selectedRow
-        
-        guard let entityList = entityList else {
-            fatalError("Missing EntityList")
-        }
-
-        if rowIndex < 0  || rowIndex > (entityList.count - 1) {
-            return
-        }
-        
-        let target = entityList[rowIndex]
-
-        openEntity(target)
+        openEntityAtSelectedRow()
         return
     }
 
@@ -154,6 +143,21 @@ class EntityListView: NSViewController {
                 entityView: self
             )
         }
+        return
+    }
+    
+    @objc func doubleClick(_: Any?) { openEntityAtSelectedRow(); return }
+    
+    private func openEntityAtSelectedRow() {
+        let rowIndex = entityTableView.selectedRow
+        guard let entityList = entityList else {
+            fatalError("Missing EntityList")
+        }
+        if rowIndex < 0  || rowIndex > (entityList.count - 1) {
+            return
+        }
+        let target = entityList[rowIndex]
+        openEntity(target)
         return
     }
     
