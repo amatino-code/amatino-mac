@@ -23,6 +23,8 @@ class EntityWindowController: NSWindowController {
     public private(set) var entitiesLoadingView: EntitiesLoadingView? = nil
     public var entityListView: EntityListView? = nil
     
+    @IBOutlet weak var newEntityButton: NSToolbarItem!
+    @IBOutlet weak var entityScopeButton: EntityScopeToolbarItem!
     @IBOutlet weak var toolbarEmailField: NSTextField!
 
     public var environmentReady: Bool {
@@ -36,7 +38,7 @@ class EntityWindowController: NSWindowController {
     private var environmentReadyCallback: (() -> Void)? = nil
     
     @IBAction func scopeSelected(_ sender: EntityLifeStageSelection) {
-        print("New scope selected: \(sender.selectedScope.rawValue)")
+
         guard let listView = entityListView else {
             fatalError("EntityListView is missing")
         }
@@ -52,7 +54,14 @@ class EntityWindowController: NSWindowController {
         return
     }
     
- 
+    override func windowDidLoad() {
+        super.windowDidLoad()
+        if entityListView == nil {
+            disableToolbar()
+        }
+        return
+    }
+    
     func loadEnvironment(login: Login) {
 
         self.login = login
@@ -69,6 +78,8 @@ class EntityWindowController: NSWindowController {
         _ completionCallback: @escaping () -> Void,
         _ scope: EntityListScope = .active
     ) {
+        
+        disableToolbar()
         
         guard let session = login?.session else {
             fatalError("Session missing")
@@ -96,6 +107,7 @@ class EntityWindowController: NSWindowController {
                 }
                 fatalError("Uncaught list retrieval error")
             }
+            enableToolbar()
             entityList = list
             DispatchQueue.main.async {
                 completionCallback()
@@ -153,6 +165,18 @@ class EntityWindowController: NSWindowController {
             }
         }
         
+        return
+    }
+    
+    private func enableToolbar() {
+        entityScopeButton.isEnabled = true
+        newEntityButton.isEnabled = true
+        return
+    }
+    
+    private func disableToolbar() {
+        entityScopeButton.isEnabled = false
+        newEntityButton.isEnabled = false
         return
     }
     

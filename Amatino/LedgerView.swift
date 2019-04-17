@@ -18,7 +18,7 @@ class LedgerView: NSView {
     private let scrollView: NSScrollView
     private let views: [NSView]
     
-    private var ledger: Ledger?
+    public private(set) var ledger: Ledger?
     
     init() {
 
@@ -69,10 +69,19 @@ class LedgerView: NSView {
     public func showLedger() { hideAll(); scrollView.isHidden = false }
     public func showIdle() { hideAll(); idleView.isHidden = false }
     
-    public func present(_ ledger: Ledger) {
+    public func present(_ ledger: Ledger, withAccountsFrom tree: Tree) {
         self.ledger = ledger
-        ledgerTableView.load(ledger)
+        ledgerTableView.load(ledger, withAccountsFrom: tree)
         showLedger()
+        return
+    }
+    
+    public func refresh(_ ledger: Ledger) {
+        self.ledger = ledger
+        return
+    }
+    
+    public func refresh(_ tree: Tree) {
         return
     }
     

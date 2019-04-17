@@ -10,12 +10,6 @@ import Foundation
 import Cocoa
 
 class LedgerDescriptionInput: NSTextField {
-    
-    override var acceptsFirstResponder: Bool {
-        get {
-            return true
-        }
-    }
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -24,6 +18,7 @@ class LedgerDescriptionInput: NSTextField {
         isEditable = true
         placeholderString = "Description"
         drawsBackground = false
+        print("Description size: \(self.font?.pointSize)")
         return
     }
 

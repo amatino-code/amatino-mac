@@ -32,14 +32,12 @@ class LedgerTableAccountView: NSView {
     }
     
     override func mouseEntered(with event: NSEvent) {
-        print("Mouse entered!")
         text.isHidden = true
         addSubview(popUp)
         super.mouseEntered(with: event)
     }
     
     override func mouseExited(with event: NSEvent) {
-        print("Mouse exited!")
         text.isHidden = false
         popUp.removeFromSuperview()
         super.mouseExited(with: event)

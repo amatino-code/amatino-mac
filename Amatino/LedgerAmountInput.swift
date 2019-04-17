@@ -9,13 +9,20 @@
 import Foundation
 import Cocoa
 
-class LedgerAmountInput: NSTextField {
+
+class LedgerAmountInput: NSTextField, NSTextDelegate {
     
     private let side: Side
-    private let text = NSTextField()
+    
     private let numberFormatter = NumberFormatter()
     private let adverseColor = NSColor.systemRed
+
     private var storedAmount: Decimal = 0
+    
+    private var doneEditingCallback: (() -> Void)? = nil
+    
+    public weak var opposingSide: LedgerAmountInput?
+
     public private(set) var amount: Decimal {
         get {
             return storedAmount
@@ -28,9 +35,11 @@ class LedgerAmountInput: NSTextField {
             )!
         }
     }
-    public weak var opposingSide: LedgerAmountInput?
     
-    init(frame frameRect: NSRect, side: Side) {
+    init(
+        frame frameRect: NSRect,
+        side: Side
+    ) {
         self.side = side
         super.init(frame: frameRect)
         numberFormatter.locale = Locale.current
@@ -46,8 +55,10 @@ class LedgerAmountInput: NSTextField {
         isBordered = false
         alignment = .right
         translatesAutoresizingMaskIntoConstraints = false
+        drawsBackground = false
         return
     }
+    
 
     required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -60,6 +71,8 @@ class LedgerAmountInput: NSTextField {
     
     override func textDidEndEditing(_ notification: Notification) {
         super.textDidEndEditing(notification)
+        print("\(side) did end editing")
+        doneEditingCallback?()
         if stringValue.isEmpty { amount = 0; return }
         let parsedAmount = numberFormatter.number(from: stringValue)
         guard let parsed = parsedAmount else { warnOfBadNumber(); return }
@@ -79,6 +92,11 @@ class LedgerAmountInput: NSTextField {
         return
     }
     
+    public func whenDoneEditing(call callback: @escaping () -> Void) {
+        doneEditingCallback = callback
+        return
+    }
+
     public func add(amount: Decimal, side: Side) -> Decimal {
         if side == self.side {
             self.amount += amount
@@ -87,4 +105,6 @@ class LedgerAmountInput: NSTextField {
         }
         return self.amount
     }
+
 }
+

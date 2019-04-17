@@ -49,7 +49,7 @@ class GenericErrorView: NSView {
 
     private let error: Error
     
-    init(displaying error: Error) {
+    public init(displaying error: Error) {
 
         if let _ = error as? URLError {
             if let image = networkImage {
@@ -71,6 +71,7 @@ class GenericErrorView: NSView {
         } else {
             message = NSLocalizedString(rawGenericText, comment: "")
         }
+
         messageView = Label(frame: textFrame)
         messageView.stringValue = message
         

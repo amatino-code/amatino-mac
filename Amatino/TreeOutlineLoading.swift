@@ -28,7 +28,11 @@ class TreeOutlineLoadingController: NSViewController {
         TreeUnit(entity: entity).retrieve( callback: { [unowned self]
             (error, globalUnit) in
             guard let unit = globalUnit else {
-                fatalError("Unhandled Unit retrieval error")
+                let _ = GenericErrorController(
+                    displaying: error,
+                    presentedBy: self
+                )
+                return
             }
             self.loadedGlobalUnit = unit
             Tree.retrieve(
@@ -58,7 +62,7 @@ class TreeOutlineLoadingController: NSViewController {
 
     private func treeReadyCallback(error: Error?, tree: Tree?) {
         guard let tree = tree else {
-            let _ = GenericErrorView(displaying: error ?? AmatinoAppError())
+            let _ = GenericErrorController(displaying: error, presentedBy: self)
             return
         }
         guard let unit = loadedGlobalUnit else { fatalError("Missing unit") }

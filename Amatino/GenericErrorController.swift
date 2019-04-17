@@ -16,8 +16,16 @@ class GenericErrorController: NSViewController {
     
     unowned let controller: NSViewController
     
-    init(displaying error: Error, presentedBy controller: NSViewController) {
-        self.error = error
+    convenience init(displaying error: Error?, displayIn window: NSWindow) {
+        guard let controller = window.contentViewController else {
+            fatalError("Unable to locate a controller for error display")
+        }
+        self.init(displaying: error, presentedBy: controller)
+        return
+    }
+    
+    init(displaying error: Error?, presentedBy controller: NSViewController) {
+        self.error = error ?? AmatinoAppError(.internalFailure)
         self.controller = controller
         super.init(nibName: nil, bundle: nil)
         controller.presentAsSheet(self)

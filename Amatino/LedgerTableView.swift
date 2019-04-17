@@ -12,6 +12,7 @@ import Cocoa
 class LedgerTableView: NSTableView {
     
     private var ledger: Ledger?
+    private var accountSelection: AccountSelection?
     
     private let dateColId =  NSUserInterfaceItemIdentifier("dataCol")
     private let descrColId =  NSUserInterfaceItemIdentifier("descColId")
@@ -34,12 +35,7 @@ class LedgerTableView: NSTableView {
     private let crName = NSLocalizedString("Credit", comment: "")
     private let balanceName = NSLocalizedString("Balance", comment: "")
     
-    private let inputDate: LedgerDateInput
-    private let inputDescription: LedgerDescriptionInput
-    private let inputAccount: LedgerAccountInput
-    private let inputDebit: LedgerDebitInput
-    private let inputCredit: LedgerCreditInput
-    private let inputBalancePreview: LedgerBalancePreview
+    private let inputRow: LedgerInputRow
     
     private let defaultRowHeight = CGFloat(24)
     
@@ -66,27 +62,8 @@ class LedgerTableView: NSTableView {
         creditColumn.width = CGFloat(60)
         balanceColumn.width = CGFloat(60)
         
-        inputDate = LedgerDateInput(
-            frame: NSMakeRect(0, 0, dateColumn.width, defaultRowHeight)
-        )
-        inputDescription = LedgerDescriptionInput(
-            frame: NSMakeRect(0, 0, descriptionColumn.width, defaultRowHeight)
-        )
-        inputAccount = LedgerAccountInput(
-            frame: NSMakeRect(0, 0, oppositionColumn.width, defaultRowHeight)
-        )
-        inputCredit = LedgerCreditInput(
-            frame: NSMakeRect(0, 0, creditColumn.width, defaultRowHeight)
-        )
-        inputDebit = LedgerDebitInput(
-            frame: NSMakeRect(0, 0, debitColumn.width, defaultRowHeight)
-        )
-        inputBalancePreview = LedgerBalancePreview(
-            frame: NSMakeRect(0, 0, balanceColumn.width, defaultRowHeight)
-        )
-        
-        inputDebit.opposingSide = inputCredit
-        inputCredit.opposingSide = inputDebit
+        inputRow = LedgerInputRow()
+        inputRow.observeCompletion()
     
         super.init(frame: frameRect)
         
@@ -118,10 +95,22 @@ class LedgerTableView: NSTableView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func load(_ ledger: Ledger) {
+    public func load(_ ledger: Ledger, withAccountsFrom tree: Tree) {
         self.ledger = ledger
+        let selection = AccountSelection(
+            frame: NSMakeRect(0, 0, CGFloat(100), defaultRowHeight),
+            tree: tree
+        )
+        self.inputRow.act(for: ledger, offering: selection)
+        self.accountSelection = selection
         self.reloadData()
         self.sizeToFit()
+        return
+    }
+    
+    public func refresh(_ ledger: Ledger) {
+        self.ledger = ledger
+        self.reloadData()
         return
     }
     
@@ -178,17 +167,17 @@ extension LedgerTableView: NSTableViewDelegate {
     private func inputCell(for column: NSTableColumn) -> NSView {
         switch column.identifier {
         case dateColId:
-            return inputDate
+            return inputRow.date
         case descrColId:
-            return inputDescription
+            return inputRow.description
         case oppoColId:
-            return inputAccount
+            return inputRow.account
         case drColId:
-            return inputDebit
+            return inputRow.debit
         case crColId:
-            return inputCredit
+            return inputRow.credit
         case balColId:
-            return inputBalancePreview
+            return inputRow.preview
         default:
             fatalError("Unknown table column")
         }

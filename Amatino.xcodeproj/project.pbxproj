@@ -24,7 +24,6 @@
 		1E0C600121A7C1A7005B3AAC /* LedgerDebitInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C600021A7C1A7005B3AAC /* LedgerDebitInput.swift */; };
 		1E0C600321A7C1B0005B3AAC /* LedgerCreditInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C600221A7C1B0005B3AAC /* LedgerCreditInput.swift */; };
 		1E0C600521A7C1BB005B3AAC /* LedgerBalancePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E0C600421A7C1BB005B3AAC /* LedgerBalancePreview.swift */; };
-		1E1090DC21952442005EFF9C /* AMPopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1090DB21952442005EFF9C /* AMPopupButton.swift */; };
 		1E1090DE219524AB005EFF9C /* TypeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1090DD219524AB005EFF9C /* TypeSelection.swift */; };
 		1E1090E02195349A005EFF9C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1090DF2195349A005EFF9C /* Node.swift */; };
 		1E1090E221953D6C005EFF9C /* ParentSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1090E121953D6C005EFF9C /* ParentSelection.swift */; };
@@ -100,7 +99,10 @@
 		1EBF4253218B50C50062D6ED /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF4252218B50C50062D6ED /* CreateAccountController.swift */; };
 		1EBF4255218B75960062D6ED /* AccountTypeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF4254218B75960062D6ED /* AccountTypeSelection.swift */; };
 		1EBFCCE9219B9B720019F412 /* AccountRepresentative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBFCCE8219B9B720019F412 /* AccountRepresentative.swift */; };
+		1EC893DB2262ADB7006D995D /* AMPopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC893DA2262ADB7006D995D /* AMPopupButton.swift */; };
 		1ECB451121A50B62000E43BC /* TreeOutlineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB451021A50B62000E43BC /* TreeOutlineTableView.swift */; };
+		1ED4562022615D990020ACED /* LedgerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4561F22615D990020ACED /* LedgerInputRow.swift */; };
+		1ED456222261952B0020ACED /* NSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED456212261952B0020ACED /* NSTextField.swift */; };
 		1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF276202EA0A200E43756 /* AppDelegate.swift */; };
 		1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27A202EA0A200E43756 /* Assets.xcassets */; };
 		1EDAF27E202EA0A200E43756 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Welcome.storyboard */; };
@@ -116,6 +118,8 @@
 		1EEBCC9D21A12D3800E5A544 /* EntitySplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBCC9C21A12D3800E5A544 /* EntitySplitController.swift */; };
 		1EEBCC9F21A204C200E5A544 /* TreeOutlineLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBCC9E21A204C200E5A544 /* TreeOutlineLoadingView.swift */; };
 		1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59725202EDBAB001965E0 /* Welcome.swift */; };
+		1EF950D122653478005F9CFE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF950D022653478005F9CFE /* Notifications.swift */; };
+		1EF950D522669844005F9CFE /* LedgerAccountInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF950D422669844005F9CFE /* LedgerAccountInputCell.swift */; };
 		1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */; };
 		1EFBF1CB2186C822006A3EFC /* EntityLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */; };
 		1EFBF1CD2186FB35006A3EFC /* LifeStageSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CC2186FB35006A3EFC /* LifeStageSelection.swift */; };
@@ -217,7 +221,6 @@
 		1E0C600021A7C1A7005B3AAC /* LedgerDebitInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerDebitInput.swift; sourceTree = "<group>"; };
 		1E0C600221A7C1B0005B3AAC /* LedgerCreditInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerCreditInput.swift; sourceTree = "<group>"; };
 		1E0C600421A7C1BB005B3AAC /* LedgerBalancePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerBalancePreview.swift; sourceTree = "<group>"; };
-		1E1090DB21952442005EFF9C /* AMPopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMPopupButton.swift; sourceTree = "<group>"; };
 		1E1090DD219524AB005EFF9C /* TypeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSelection.swift; sourceTree = "<group>"; };
 		1E1090DF2195349A005EFF9C /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = "amatino-swift/Sources/Amatino/Node.swift"; sourceTree = "<group>"; };
 		1E1090E121953D6C005EFF9C /* ParentSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentSelection.swift; sourceTree = "<group>"; };
@@ -293,7 +296,10 @@
 		1EBF4252218B50C50062D6ED /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		1EBF4254218B75960062D6ED /* AccountTypeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTypeSelection.swift; sourceTree = "<group>"; };
 		1EBFCCE8219B9B720019F412 /* AccountRepresentative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountRepresentative.swift; path = "amatino-swift/Sources/Amatino/AccountRepresentative.swift"; sourceTree = "<group>"; };
+		1EC893DA2262ADB7006D995D /* AMPopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMPopupButton.swift; sourceTree = "<group>"; };
 		1ECB451021A50B62000E43BC /* TreeOutlineTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineTableView.swift; sourceTree = "<group>"; };
+		1ED4561F22615D990020ACED /* LedgerInputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerInputRow.swift; sourceTree = "<group>"; };
+		1ED456212261952B0020ACED /* NSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextField.swift; sourceTree = "<group>"; };
 		1EDAF273202EA0A200E43756 /* Amatino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amatino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF276202EA0A200E43756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EDAF27A202EA0A200E43756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -316,6 +322,8 @@
 		1EEBCC9C21A12D3800E5A544 /* EntitySplitController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntitySplitController.swift; sourceTree = "<group>"; };
 		1EEBCC9E21A204C200E5A544 /* TreeOutlineLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineLoadingView.swift; sourceTree = "<group>"; };
 		1EF59725202EDBAB001965E0 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
+		1EF950D022653478005F9CFE /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		1EF950D422669844005F9CFE /* LedgerAccountInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerAccountInputCell.swift; sourceTree = "<group>"; };
 		1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityWindowController.swift; sourceTree = "<group>"; };
 		1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLoadingError.swift; sourceTree = "<group>"; };
 		1EFBF1CC2186FB35006A3EFC /* LifeStageSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStageSelection.swift; sourceTree = "<group>"; };
@@ -440,6 +448,7 @@
 				1E0C600221A7C1B0005B3AAC /* LedgerCreditInput.swift */,
 				1E0C600421A7C1BB005B3AAC /* LedgerBalancePreview.swift */,
 				1E4A80CC21AE30CE00E1C549 /* LedgerAmountInput.swift */,
+				1EF950D422669844005F9CFE /* LedgerAccountInputCell.swift */,
 			);
 			name = InputCells;
 			sourceTree = "<group>";
@@ -448,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				1E1090E6219618CD005EFF9C /* NSView.swift */,
+				1ED456212261952B0020ACED /* NSTextField.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -462,6 +472,7 @@
 				1E0C5FF321A690B9005B3AAC /* LedgerLoadingView.swift */,
 				1E0C5FF521A69206005B3AAC /* LedgerIdleView.swift */,
 				1E0C5FF721A6BC25005B3AAC /* LedgerTableView.swift */,
+				1ED4561F22615D990020ACED /* LedgerInputRow.swift */,
 			);
 			name = Ledger;
 			sourceTree = "<group>";
@@ -533,7 +544,6 @@
 		1E3004312194CFF200A7745E /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				1E1090DB21952442005EFF9C /* AMPopupButton.swift */,
 				1E1090E32195CF2C005EFF9C /* Label.swift */,
 				1E1090F221990BE1005EFF9C /* AMButton.swift */,
 				1E25F6A821A0475E00EAF839 /* PushButton.swift */,
@@ -669,6 +679,7 @@
 				1E1090F421990D49005EFF9C /* GenericErrorController.swift */,
 				1EDB0AE8219D7390006351DF /* DeleteAccountControlView.swift */,
 				1EDB0AEA219D7898006351DF /* AccountSelection.swift */,
+				1EC893DA2262ADB7006D995D /* AMPopupButton.swift */,
 				1EDB0AEC219D863E006351DF /* OptionalAccountSelection.swift */,
 				1EDB0AEE219EE3AD006351DF /* DeleteAccountView.swift */,
 				1E25F6A6219FE66B00EAF839 /* DeleteAccountController.swift */,
@@ -702,6 +713,7 @@
 		1EDAF275202EA0A200E43756 /* Amatino */ = {
 			isa = PBXGroup;
 			children = (
+				1EF950CF22652D6A005F9CFE /* Notifications */,
 				1E3004312194CFF200A7745E /* Templates */,
 				1EBF424A218947B10062D6ED /* Other */,
 				1E750CE320464A02001AD8CC /* Segues */,
@@ -814,6 +826,14 @@
 				1E789E4F2044E7AF007FB628 /* AccountingWindowController.swift */,
 			);
 			name = Windows;
+			sourceTree = "<group>";
+		};
+		1EF950CF22652D6A005F9CFE /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1EF950D022653478005F9CFE /* Notifications.swift */,
+			);
+			name = Notifications;
 			sourceTree = "<group>";
 		};
 		1EFBF1CE2187B18A006A3EFC /* WindowToolbar */ = {
@@ -1010,6 +1030,7 @@
 				1E3287B62032953300884A85 /* SubscribeTextField.swift in Sources */,
 				1E1090F321990BE1005EFF9C /* AMButton.swift in Sources */,
 				1E25F6A7219FE66B00EAF839 /* DeleteAccountController.swift in Sources */,
+				1EC893DB2262ADB7006D995D /* AMPopupButton.swift in Sources */,
 				1E85DAD5203E90BB00C183F5 /* CreateEntity.swift in Sources */,
 				1E1090FB219947F2005EFF9C /* LedgerView.swift in Sources */,
 				1E296506202FD6280065563B /* WelcomePassphrase.swift in Sources */,
@@ -1110,6 +1131,7 @@
 				1E10910B219A0AA7005EFF9C /* LedgerTableBalance.swift in Sources */,
 				1EFD4F772172B09B00F0AB28 /* HTTPMethod.swift in Sources */,
 				1EFD4F822172B09B00F0AB28 /* Entity.swift in Sources */,
+				1ED456222261952B0020ACED /* NSTextField.swift in Sources */,
 				1EFD4F952172B09B00F0AB28 /* AmatinoObject.swift in Sources */,
 				1EBF4249218940550062D6ED /* TreeUnit.swift in Sources */,
 				1E82B04F2044EE28001C342B /* EntityStatusBar.swift in Sources */,
@@ -1128,19 +1150,21 @@
 				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
 				1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */,
 				1E0C5FFD21A7C18F005B3AAC /* LedgerDescriptionInput.swift in Sources */,
+				1EF950D122653478005F9CFE /* Notifications.swift in Sources */,
 				1E1090E02195349A005EFF9C /* Node.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
+				1EF950D522669844005F9CFE /* LedgerAccountInputCell.swift in Sources */,
 				1EFD4F7C2172B09B00F0AB28 /* EntityList.swift in Sources */,
 				1E1DBCE021A0E8E400861DBA /* TreeOutlineView.swift in Sources */,
 				1E378CC12190CCC8006E3F6B /* CreateAccountView.swift in Sources */,
 				1EFD4F962172B09B00F0AB28 /* GlobalUnitList.swift in Sources */,
+				1ED4562022615D990020ACED /* LedgerInputRow.swift in Sources */,
 				1E378CBD218FE15B006E3F6B /* GlobalUnitSelection.swift in Sources */,
 				1EFD4F7F2172B09B00F0AB28 /* UrlTarget.swift in Sources */,
 				1E109109219A0A62005EFF9C /* Credit.swift in Sources */,
 				1E750CDC20462DFF001AD8CC /* TreeOutlineController.swift in Sources */,
 				1E1090EF2198E52E005EFF9C /* GitReportButton.swift in Sources */,
 				1E789E502044E7AF007FB628 /* AccountingWindowController.swift in Sources */,
-				1E1090DC21952442005EFF9C /* AMPopupButton.swift in Sources */,
 				1EBF4253218B50C50062D6ED /* CreateAccountController.swift in Sources */,
 				1E1090DE219524AB005EFF9C /* TypeSelection.swift in Sources */,
 				1EEBCC9F21A204C200E5A544 /* TreeOutlineLoadingView.swift in Sources */,

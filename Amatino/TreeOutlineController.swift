@@ -17,9 +17,9 @@ class TreeOutlineController: NSViewController {
     private var creationPopover: NSPopover?
     private var progressIndicator: NSProgressIndicator?
 
-    public var associatedLedger: LedgerController?
-    public var tree: Tree?
-    public var unit: GlobalUnit?
+    public private(set) var associatedLedger: LedgerController?
+    public private(set) var tree: Tree?
+    public private(set) var unit: GlobalUnit?
     
     private let treeOutline: TreeOutlineView
     
@@ -71,25 +71,12 @@ class TreeOutlineController: NSViewController {
         ledger.presentLedger(
             forAccount: node,
             in: tree.entity,
-            ordered: .oldestFirst
+            ordered: .oldestFirst,
+            withAccountsFrom: tree
         )
         return
 
     }
-    
-
-// Add AccountPlusButton
-    
-//    @IBOutlet weak var accountPlus: NSButton!
-//    @IBAction func accountPlusClicked(_ sender: Any) {
-//        showAccountCreationPopover(anchoredTo: accountPlus)
-//        return
-//    }
-//
-//    @IBAction func editAccount(_ sender: NSMenuItem) {
-//        print("Edit account")
-//        return
-//    }
 
     func deleteAccount() {
         guard let tree = tree else { fatalError("Tree missing!") }
@@ -155,7 +142,7 @@ class TreeOutlineController: NSViewController {
     private func treeReadyCallback(error: Error?, tree: Tree?) {
         guard let tree = tree else {
             let _ = GenericErrorController(
-                displaying: error ?? AmatinoAppError(.internalFailure),
+                displaying: error,
                 presentedBy: self
             )
             return

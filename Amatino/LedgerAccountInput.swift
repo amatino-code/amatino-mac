@@ -11,18 +11,35 @@ import Cocoa
 
 class LedgerAccountInput: NSView {
     
+    private let inputFont = NSFont.systemFont(ofSize: CGFloat(12))
 
-    private let popUp = NSPopUpButton()
+    private var popUp: AccountSelection? = nil
+    
+    public var selectedAccount: AccountRepresentative {
+        get {
+            guard let popUp = popUp else { fatalError("Missing popUp") }
+            return popUp.selectedNode
+        }
+    }
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        popUp.frame = bounds
-        popUp.pullsDown = false
-        popUp.addItem(withTitle: "Assets")
-        popUp.addItem(withTitle: "Liabilities")
-        popUp.isBordered = false
-        popUp.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(popUp)
+        return
+    }
+    
+    public func offer(selection: AccountSelection) {
+        if let popUp = popUp{
+            replaceSubview(popUp, with: selection)
+        } else {
+            addSubview(selection)
+        }
+        selection.preferredEdge = .minY
+        selection.isBordered = false
+        selection.font = inputFont
+        let cell = LedgerAccountInputCell()
+        selection.cell = cell
+        cell.arrowPosition = .arrowAtCenter
+        self.popUp = selection
         return
     }
 

@@ -26,6 +26,7 @@ class LedgerDateInput: NSTextField, NSTextFieldDelegate {
         isBordered = false
         isBezeled = false
         delegate = self
+        drawsBackground = false
         return
     }
 
