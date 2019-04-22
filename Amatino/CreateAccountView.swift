@@ -146,7 +146,7 @@ class CreateAccountView: NSView {
     }
     
     @objc private func parentSelected() {
-        if let node = parentField.selectedNode {
+        if let node = parentField.selectedAccount {
             typeField.select(node.type)
             typeField.isEnabled = false
             return
@@ -154,11 +154,16 @@ class CreateAccountView: NSView {
         typeField.isEnabled = true
         return
     }
+    
+    public func prefill(tentativeName name: String) {
+        nameField.stringValue = name
+        return
+    }
 
     public func readUserInput() throws -> Account.CreateArguments {
         let unit = try denominationField.retrieveSelectedUnit()
         let arguments: Account.CreateArguments
-        if let parent = parentField.selectedNode {
+        if let parent = parentField.selectedAccount {
             arguments = try Account.CreateArguments(
                 name: nameField.stringValue,
                 parent: parent,

@@ -55,12 +55,12 @@ class LedgerTableView: NSTableView {
         creditColumn.headerCell.stringValue = crName
         balanceColumn.headerCell.stringValue = balanceName
 
-        dateColumn.width = CGFloat(70)
+        dateColumn.width = CGFloat(40)
         descriptionColumn.width = CGFloat(200)
         oppositionColumn.width = CGFloat(100)
-        debitColumn.width = CGFloat(60)
-        creditColumn.width = CGFloat(60)
-        balanceColumn.width = CGFloat(60)
+        debitColumn.width = CGFloat(50)
+        creditColumn.width = CGFloat(50)
+        balanceColumn.width = CGFloat(50)
         
         inputRow = LedgerInputRow()
         inputRow.observeCompletion()

@@ -85,6 +85,11 @@
 		1E85DAD5203E90BB00C183F5 /* CreateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */; };
 		1E8B8027203E80AE00AE6FD8 /* EntityListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B8026203E80AE00AE6FD8 /* EntityListContainer.swift */; };
 		1E8B802D203E82EA00AE6FD8 /* EntityListWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B802C203E82EA00AE6FD8 /* EntityListWindow.swift */; };
+		1E939E7D226C006F00E576E4 /* AccountSelectionPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E939E7C226C006F00E576E4 /* AccountSelectionPopUp.swift */; };
+		1E939E7F226C3A7900E576E4 /* AccountSelectionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E939E7E226C3A7900E576E4 /* AccountSelectionTextField.swift */; };
+		1E939E81226C4C6F00E576E4 /* AccountSelectionCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E939E80226C4C6F00E576E4 /* AccountSelectionCompletion.swift */; };
+		1E939E83226D684800E576E4 /* AccountSelectionFieldEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E939E82226D684800E576E4 /* AccountSelectionFieldEditor.swift */; };
+		1E939E85226D695300E576E4 /* AccountSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E939E84226D695300E576E4 /* AccountSelectionCell.swift */; };
 		1EA9068F2260A2E2006B3E99 /* Denominated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9068D2260A2E2006B3E99 /* Denominated.swift */; };
 		1EA906902260A2E2006B3E99 /* Denomination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA9068E2260A2E2006B3E99 /* Denomination.swift */; };
 		1EABD2A22037ABB700B88C7C /* SubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABD2A12037ABB700B88C7C /* SubscriptionRequest.swift */; };
@@ -119,7 +124,6 @@
 		1EEBCC9F21A204C200E5A544 /* TreeOutlineLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEBCC9E21A204C200E5A544 /* TreeOutlineLoadingView.swift */; };
 		1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF59725202EDBAB001965E0 /* Welcome.swift */; };
 		1EF950D122653478005F9CFE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF950D022653478005F9CFE /* Notifications.swift */; };
-		1EF950D522669844005F9CFE /* LedgerAccountInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF950D422669844005F9CFE /* LedgerAccountInputCell.swift */; };
 		1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */; };
 		1EFBF1CB2186C822006A3EFC /* EntityLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */; };
 		1EFBF1CD2186FB35006A3EFC /* LifeStageSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBF1CC2186FB35006A3EFC /* LifeStageSelection.swift */; };
@@ -282,6 +286,11 @@
 		1E85DAD4203E90BB00C183F5 /* CreateEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEntity.swift; sourceTree = "<group>"; };
 		1E8B8026203E80AE00AE6FD8 /* EntityListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityListContainer.swift; sourceTree = "<group>"; };
 		1E8B802C203E82EA00AE6FD8 /* EntityListWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityListWindow.swift; sourceTree = "<group>"; };
+		1E939E7C226C006F00E576E4 /* AccountSelectionPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectionPopUp.swift; sourceTree = "<group>"; };
+		1E939E7E226C3A7900E576E4 /* AccountSelectionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectionTextField.swift; sourceTree = "<group>"; };
+		1E939E80226C4C6F00E576E4 /* AccountSelectionCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectionCompletion.swift; sourceTree = "<group>"; };
+		1E939E82226D684800E576E4 /* AccountSelectionFieldEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectionFieldEditor.swift; sourceTree = "<group>"; };
+		1E939E84226D695300E576E4 /* AccountSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSelectionCell.swift; sourceTree = "<group>"; };
 		1EA9068D2260A2E2006B3E99 /* Denominated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Denominated.swift; path = "amatino-swift/Sources/Amatino/Denominated.swift"; sourceTree = "<group>"; };
 		1EA9068E2260A2E2006B3E99 /* Denomination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Denomination.swift; path = "amatino-swift/Sources/Amatino/Denomination.swift"; sourceTree = "<group>"; };
 		1EABD2A12037ABB700B88C7C /* SubscriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRequest.swift; sourceTree = "<group>"; };
@@ -323,7 +332,6 @@
 		1EEBCC9E21A204C200E5A544 /* TreeOutlineLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineLoadingView.swift; sourceTree = "<group>"; };
 		1EF59725202EDBAB001965E0 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		1EF950D022653478005F9CFE /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		1EF950D422669844005F9CFE /* LedgerAccountInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerAccountInputCell.swift; sourceTree = "<group>"; };
 		1EFB1C25203ED13F00C838DB /* EntityWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityWindowController.swift; sourceTree = "<group>"; };
 		1EFBF1CA2186C822006A3EFC /* EntityLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLoadingError.swift; sourceTree = "<group>"; };
 		1EFBF1CC2186FB35006A3EFC /* LifeStageSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeStageSelection.swift; sourceTree = "<group>"; };
@@ -448,7 +456,6 @@
 				1E0C600221A7C1B0005B3AAC /* LedgerCreditInput.swift */,
 				1E0C600421A7C1BB005B3AAC /* LedgerBalancePreview.swift */,
 				1E4A80CC21AE30CE00E1C549 /* LedgerAmountInput.swift */,
-				1EF950D422669844005F9CFE /* LedgerAccountInputCell.swift */,
 			);
 			name = InputCells;
 			sourceTree = "<group>";
@@ -636,6 +643,19 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		1E939E77226BDEFB00E576E4 /* AccountSelection */ = {
+			isa = PBXGroup;
+			children = (
+				1EDB0AEA219D7898006351DF /* AccountSelection.swift */,
+				1E939E7C226C006F00E576E4 /* AccountSelectionPopUp.swift */,
+				1E939E7E226C3A7900E576E4 /* AccountSelectionTextField.swift */,
+				1E939E80226C4C6F00E576E4 /* AccountSelectionCompletion.swift */,
+				1E939E82226D684800E576E4 /* AccountSelectionFieldEditor.swift */,
+				1E939E84226D695300E576E4 /* AccountSelectionCell.swift */,
+			);
+			name = AccountSelection;
+			sourceTree = "<group>";
+		};
 		1EBA294B203950F700C2BA72 /* ConfirmAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,7 +687,7 @@
 		1EBF424F218B4CBD0062D6ED /* UserInterfaces */ = {
 			isa = PBXGroup;
 			children = (
-				1E1090E5219618AC005EFF9C /* Extensions */,
+				1E939E77226BDEFB00E576E4 /* AccountSelection */,
 				1E1090DD219524AB005EFF9C /* TypeSelection.swift */,
 				1EBF4250218B4CD80062D6ED /* CreateAccountPopover.swift */,
 				1E1090EE2198E52E005EFF9C /* GitReportButton.swift */,
@@ -678,7 +698,6 @@
 				1E1090EC2198CA95005EFF9C /* GenericErrorView.swift */,
 				1E1090F421990D49005EFF9C /* GenericErrorController.swift */,
 				1EDB0AE8219D7390006351DF /* DeleteAccountControlView.swift */,
-				1EDB0AEA219D7898006351DF /* AccountSelection.swift */,
 				1EC893DA2262ADB7006D995D /* AMPopupButton.swift */,
 				1EDB0AEC219D863E006351DF /* OptionalAccountSelection.swift */,
 				1EDB0AEE219EE3AD006351DF /* DeleteAccountView.swift */,
@@ -713,6 +732,7 @@
 		1EDAF275202EA0A200E43756 /* Amatino */ = {
 			isa = PBXGroup;
 			children = (
+				1E1090E5219618AC005EFF9C /* Extensions */,
 				1EF950CF22652D6A005F9CFE /* Notifications */,
 				1E3004312194CFF200A7745E /* Templates */,
 				1EBF424A218947B10062D6ED /* Other */,
@@ -1052,11 +1072,14 @@
 				1EFD4F7E2172B09B00F0AB28 /* CustomUnit.swift in Sources */,
 				1EFD4F7A2172B09B00F0AB28 /* GlobalUnit.swift in Sources */,
 				1EDB0AEB219D7898006351DF /* AccountSelection.swift in Sources */,
+				1E939E7D226C006F00E576E4 /* AccountSelectionPopUp.swift in Sources */,
+				1E939E81226C4C6F00E576E4 /* AccountSelectionCompletion.swift in Sources */,
 				1E1090E7219618CD005EFF9C /* NSView.swift in Sources */,
 				1E1091012199F6B9005EFF9C /* Date.swift in Sources */,
 				1EBF4255218B75960062D6ED /* AccountTypeSelection.swift in Sources */,
 				1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */,
 				1E0C5FF621A69206005B3AAC /* LedgerIdleView.swift in Sources */,
+				1E939E85226D695300E576E4 /* AccountSelectionCell.swift in Sources */,
 				1E2964FC202FBAB10065563B /* Hyperlink.swift in Sources */,
 				1E0C5FF421A690BA005B3AAC /* LedgerLoadingView.swift in Sources */,
 				1E3287B820329CB400884A85 /* SubscribeTextValidity.swift in Sources */,
@@ -1073,6 +1096,7 @@
 				1EABD2A22037ABB700B88C7C /* SubscriptionRequest.swift in Sources */,
 				1E1090E221953D6C005EFF9C /* ParentSelection.swift in Sources */,
 				1EEBCC9D21A12D3800E5A544 /* EntitySplitController.swift in Sources */,
+				1E939E7F226C3A7900E576E4 /* AccountSelectionTextField.swift in Sources */,
 				1EFD4F692172B09B00F0AB28 /* Account.swift in Sources */,
 				1EBFCCE9219B9B720019F412 /* AccountRepresentative.swift in Sources */,
 				1EFD4F982172B09B00F0AB28 /* Side.swift in Sources */,
@@ -1093,6 +1117,7 @@
 				1EFD4F922172B09B00F0AB28 /* TreeNode.swift in Sources */,
 				1E3287AC2032856C00884A85 /* SubscribePlans.swift in Sources */,
 				1EA9068F2260A2E2006B3E99 /* Denominated.swift in Sources */,
+				1E939E83226D684800E576E4 /* AccountSelectionFieldEditor.swift in Sources */,
 				1EFD4F6F2172B09B00F0AB28 /* Tree.swift in Sources */,
 				1EFD4F802172B09B00F0AB28 /* AmatinoRequest.swift in Sources */,
 				1EFD4F992172B09B00F0AB28 /* PlaceholderNode.swift in Sources */,
@@ -1153,7 +1178,6 @@
 				1EF950D122653478005F9CFE /* Notifications.swift in Sources */,
 				1E1090E02195349A005EFF9C /* Node.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
-				1EF950D522669844005F9CFE /* LedgerAccountInputCell.swift in Sources */,
 				1EFD4F7C2172B09B00F0AB28 /* EntityList.swift in Sources */,
 				1E1DBCE021A0E8E400861DBA /* TreeOutlineView.swift in Sources */,
 				1E378CC12190CCC8006E3F6B /* CreateAccountView.swift in Sources */,

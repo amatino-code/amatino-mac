@@ -37,6 +37,7 @@ class LedgerInputRow {
         
         debit.opposingSide = credit
         credit.opposingSide = debit
+        
         return
     }
     
@@ -44,12 +45,12 @@ class LedgerInputRow {
         denominatingCustomUnit = ledger.customUnitId
         denominatingGlobalUnit = ledger.globalUnitId
         attachedLedger = ledger
-        account.offer(selection: accounts)
+        account.offer(selection: accounts, followedBy: debit)
         return
     }
     
     public func offer(selection accounts: AccountSelection) {
-        account.offer(selection: accounts)
+        account.offer(selection: accounts, followedBy: debit)
         return
     }
     
@@ -68,6 +69,8 @@ class LedgerInputRow {
         
         guard (debit.amount + credit.amount) != Decimal(0) else { return }
         
+        guard let opposingAccount = account.selectedAccount else { return }
+        
         guard let ledger = attachedLedger else {
             DispatchQueue.main.async {
                 let _ = GenericErrorController.init(
@@ -78,8 +81,6 @@ class LedgerInputRow {
             }
             return
         }
-
-        let opposingAccount = account.selectedAccount
 
         let anchorSide: Side
         let opposingSide: Side

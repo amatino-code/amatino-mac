@@ -45,6 +45,14 @@ class CreateAccountController: NSViewController {
         return
     }
     
+    public func prefill(tentativeName name: String) {
+        guard let createView = createView else {
+            fatalError("Create view not available")
+        }
+        createView.prefill(tentativeName: name)
+        return
+    }
+
     override func loadView() {
         let loadedView = CreateAccountView(
             entity: self.entity,

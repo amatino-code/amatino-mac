@@ -14,19 +14,23 @@ class OptionalAccountSelection: AccountSelection {
     private static let defaultNoneTitle = "-"
     private let noneTitle: String
     
-    override public var selectedNode: Node? {
+    override public var selectedAccount: AccountRepresentative? {
         get {
+            fatalError("Temp not implemented")
+            /*
             if let node = selectedItem?.representedObject as? Node {
                 return node
             }
             return nil
+            */
         }
     }
 
     init(frame frameRect: NSRect, tree: Tree, noneTitle: String) {
         self.noneTitle = noneTitle
         super.init(frame: frameRect, tree: tree)
-        self.insertItem(withTitle: noneTitle, at: 0)
+        //self.insertItem(withTitle: noneTitle, at: 0)
+        //self.addItem(withObjectValue: "-")
         return
     }
 
@@ -44,8 +48,9 @@ class OptionalAccountSelection: AccountSelection {
     }
 
     public func selectNone() {
-        selectItem(withTitle: noneTitle)
-        return
+        fatalError("Temp not implemented")
+        //selectItem(withTitle: noneTitle)
+        //return
     }
 
 }

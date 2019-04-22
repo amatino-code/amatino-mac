@@ -18,7 +18,6 @@ class LedgerDescriptionInput: NSTextField {
         isEditable = true
         placeholderString = "Description"
         drawsBackground = false
-        print("Description size: \(self.font?.pointSize)")
         return
     }
 
