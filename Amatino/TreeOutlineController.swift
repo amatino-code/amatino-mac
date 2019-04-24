@@ -140,14 +140,14 @@ class TreeOutlineController: NSViewController {
     }
     
     private func treeReadyCallback(error: Error?, tree: Tree?) {
-        guard let tree = tree else {
-            let _ = GenericErrorController(
-                displaying: error,
-                presentedBy: self
-            )
-            return
-        }
         DispatchQueue.main.async { [unowned self] in
+            guard let tree = tree else {
+                let _ = GenericErrorController(
+                    displaying: error,
+                    presentedBy: self
+                )
+                return
+            }
             self.reloadTree(tree)
         }
         return
@@ -171,17 +171,17 @@ class TreeOutlineController: NSViewController {
     }
     
     private func accountCreationCallback(error: Error?, account: Account?) {
-        if let error = error {
-            let _ = GenericErrorController(
-                displaying: error,
-                presentedBy: self
-            )
-            return
-        }
-        if let popover = self.creationPopover {
-            popover.performClose(self)
-        }
         DispatchQueue.main.async {
+            if let error = error {
+                let _ = GenericErrorController(
+                    displaying: error,
+                    presentedBy: self
+                )
+                return
+            }
+            if let popover = self.creationPopover {
+                popover.performClose(self)
+            }
             self.refreshTree()
         }
         return

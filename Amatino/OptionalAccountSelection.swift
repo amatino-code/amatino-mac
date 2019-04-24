@@ -11,35 +11,13 @@ import Cocoa
 
 class OptionalAccountSelection: AccountSelection {
 
-    private static let defaultNoneTitle = "-"
     private let noneTitle: String
-    
-    override public var selectedAccount: AccountRepresentative? {
-        get {
-            fatalError("Temp not implemented")
-            /*
-            if let node = selectedItem?.representedObject as? Node {
-                return node
-            }
-            return nil
-            */
-        }
-    }
 
     init(frame frameRect: NSRect, tree: Tree, noneTitle: String) {
         self.noneTitle = noneTitle
-        super.init(frame: frameRect, tree: tree)
+        super.init(frame: frameRect, tree: tree, optional: true)
         //self.insertItem(withTitle: noneTitle, at: 0)
         //self.addItem(withObjectValue: "-")
-        return
-    }
-
-    override convenience init (frame frameRect: NSRect, tree: Tree) {
-        self.init(
-            frame: frameRect,
-            tree: tree,
-            noneTitle: OptionalAccountSelection.defaultNoneTitle
-        )
         return
     }
 

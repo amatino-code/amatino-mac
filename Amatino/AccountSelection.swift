@@ -20,12 +20,20 @@ class AccountSelection: NSView {
     private let buttonRightOffset = CGFloat(-4)
     private let buttonMaxWidth = CGFloat(17)
     private let textLeftOffset = CGFloat(2)
+    
+    private let optional: Bool
 
     public var selectedAccount: AccountRepresentative? {
         get {
-            return button.selectedOption.targetAccount
+            if textField.stringValue == "" { return nil }
+            if textField.stringValue != button.selectedOption?.hierarchyName {
+                return nil
+            }
+            return button.selectedOption?.targetAccount
         }
     }
+    
+    public var isFocused: Bool { get { return textField.isFocused } }
 
     public var action: Selector? {
         get { return button.action }
@@ -49,8 +57,14 @@ class AccountSelection: NSView {
     }
 
     
-    init(frame: NSRect, tree: Tree) {
+    init(
+        frame: NSRect,
+        tree: Tree,
+        optional: Bool = false,
+        noneTitle: String? = nil
+    ) {
         self.tree = tree
+        self.optional = optional
         
         var items = Array<Item>()
         for topLevel in tree.accounts {
@@ -63,7 +77,9 @@ class AccountSelection: NSView {
         
         button = AccountSelectionPopUp(
             in: NSMakeRect(0, 0, buttonWidth, buttonHeight),
-            offering: items
+            offering: items,
+            optional: optional,
+            noneTitle: noneTitle
         )
 
         textField = AccountSelectionTextField(
@@ -177,21 +193,35 @@ class AccountSelection: NSView {
         textLeftConstraint.isActive = true
         textBottomConstraint.isActive = true
         textRightConstraint.isActive = true
-        
-        displayForTable()
 
         return
     }
     
-    public func displayForTable() {
+    public func configureForDisplayInTable() {
         textField.drawsBackground = false
         textField.isBordered = false
         textField.isBezeled = false
+        textField.font = LedgerTableView.font
+        button.font = LedgerTableView.font
         return
     }
     
-    private func menuItemWasSelected(_ item: AccountSelection.Item) {
-        textField.stringValue = item.hierarchyName
+    public func configureForFreeFloatingDisplay() {
+        textField.drawsBackground = true
+        textField.isBordered = true
+        textField.font? = NSFont.systemFont(
+            ofSize: NSFont.systemFontSize(for: .regular)
+        )
+        textField.textColor = NSColor.controlTextColor
+        return
+    }
+
+    private func menuItemWasSelected(_ item: AccountSelection.Item?) {
+        if let item = item {
+            textField.stringValue = item.hierarchyName
+            return
+        }
+        textField.stringValue = ""
         return
     }
     
@@ -225,6 +255,24 @@ class AccountSelection: NSView {
         popover.show(relativeTo: frame, of: self, preferredEdge: .minY)
         controller.prefill(tentativeName: name)
         return
+    }
+    
+    public func clearSelection() {
+        textField.stringValue = ""
+        if !self.optional { return }
+        button.clearSelection()
+        return
+    }
+    
+    public func selectAccount(withId id: Int) {
+        for item in self.items {
+            if item.targetAccount.accountId == id {
+                textField.stringValue = item.hierarchyName
+                button.select(item)
+                return
+            }
+        }
+        fatalError("Account not found")
     }
 
     public class Item: NSMenuItem {

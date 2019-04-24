@@ -9,16 +9,17 @@
 import Foundation
 import Cocoa
 
-class LedgerTableDescriptionView: NSTableCellView {
-    
-    let cellText: NSTextField
+class LedgerTableDescriptionView: NSTextField {
     
     init(for row: LedgerRow, frame frameRect: NSRect) {
-        cellText = NSTextField(frame: frameRect)
         super.init(frame: frameRect)
-        self.textField = cellText
-        textField?.stringValue = row.description
-        textField?.isSelectable = true
+        stringValue = row.description
+        isSelectable = true
+        isBordered = false
+        isBezeled = false
+        drawsBackground = false
+        isSelectable = true
+        font = LedgerTableView.font
         return
     }
     

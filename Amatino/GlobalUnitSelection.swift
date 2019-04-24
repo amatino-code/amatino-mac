@@ -16,7 +16,7 @@ class GlobalUnitSelection: AMPopUpButton {
     private let fallbackUnitCode = "USD"
     private var list: GlobalUnitList?
 
-    public var readyCallback: (() -> Void)?
+    public var readyCallback: ((Error?, GlobalUnitSelection?) -> Void)?
 
     init(frame frameRect: NSRect, session: Session) {
         self.session = session
@@ -28,7 +28,7 @@ class GlobalUnitSelection: AMPopUpButton {
     convenience init(
         frame frameRect: NSRect,
         session: Session,
-        readyCallback: @escaping () -> Void
+        readyCallback: @escaping (Error?, GlobalUnitSelection?) -> Void
     ) {
         self.init(frame: frameRect, session: session)
         self.readyCallback = readyCallback
@@ -44,7 +44,11 @@ class GlobalUnitSelection: AMPopUpButton {
     }
 
     private func unitListCallback(error: Error?, list: GlobalUnitList?) {
-        guard let list = list else { fatalError("Unhandled retrieval error") }
+        
+        guard let list = list else {
+            readyCallback?(error, nil)
+            return
+        }
         DispatchQueue.main.async {
             self.loadUnitList(list: list)
         }
@@ -67,7 +71,7 @@ class GlobalUnitSelection: AMPopUpButton {
         guard let callback = readyCallback else {
             return
         }
-        callback()
+        callback(nil, self)
         return
     }
     

@@ -9,16 +9,11 @@
 import Foundation
 import Cocoa
 
-class LedgerTableCreditView: NSTableCellView {
-    
-    let cellText = NSTextField()
+class LedgerTableCreditView: LedgerTableAmount {
     
     init(for row: LedgerRow, frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        cellText.frame = frameRect
-        textField = cellText
-        textField?.stringValue = row.presentationCredit
-        textField?.isSelectable = true
+        stringValue = row.presentationCredit
         return
     }
     

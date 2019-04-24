@@ -9,19 +9,23 @@
 import Foundation
 import Cocoa
 
-class LedgerTableDateView: NSTableCellView {
+class LedgerTableDateView: NSTextField {
     
-    let formatter = DateFormatter()
-    let cellText = NSTextField()
+    let dateFormatter = DateFormatter()
 
     init(for row: LedgerRow, frame frameRect: NSRect) {
         super.init(frame: frameRect)
-        self.textField = cellText
-        formatter.locale = Locale.current
-        let dateString = formatter.string(from: row.transactionTime)
-        textField?.stringValue = dateString
-        textField?.isSelectable = true
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateStyle = .short
+        let dateString = dateFormatter.string(from: row.transactionTime)
+        stringValue = dateString
+        isBezeled = false
+        isBordered = false
+        drawsBackground = false
+        isSelectable = true
+        font = LedgerTableView.monospacedFont
         return
+        
     }
     
     required init?(coder decoder: NSCoder) {

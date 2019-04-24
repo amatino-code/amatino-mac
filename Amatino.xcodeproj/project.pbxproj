@@ -108,6 +108,7 @@
 		1ECB451121A50B62000E43BC /* TreeOutlineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB451021A50B62000E43BC /* TreeOutlineTableView.swift */; };
 		1ED4562022615D990020ACED /* LedgerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4561F22615D990020ACED /* LedgerInputRow.swift */; };
 		1ED456222261952B0020ACED /* NSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED456212261952B0020ACED /* NSTextField.swift */; };
+		1ED8BC762270327600A7459B /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC752270327600A7459B /* Amount.swift */; };
 		1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF276202EA0A200E43756 /* AppDelegate.swift */; };
 		1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27A202EA0A200E43756 /* Assets.xcassets */; };
 		1EDAF27E202EA0A200E43756 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Welcome.storyboard */; };
@@ -309,6 +310,7 @@
 		1ECB451021A50B62000E43BC /* TreeOutlineTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineTableView.swift; sourceTree = "<group>"; };
 		1ED4561F22615D990020ACED /* LedgerInputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerInputRow.swift; sourceTree = "<group>"; };
 		1ED456212261952B0020ACED /* NSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextField.swift; sourceTree = "<group>"; };
+		1ED8BC752270327600A7459B /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		1EDAF273202EA0A200E43756 /* Amatino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amatino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF276202EA0A200E43756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EDAF27A202EA0A200E43756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 				1E109106219A09A6005EFF9C /* Debit.swift */,
 				1E109108219A0A62005EFF9C /* Credit.swift */,
 				1E10910A219A0AA7005EFF9C /* LedgerTableBalance.swift */,
+				1ED8BC752270327600A7459B /* Amount.swift */,
 			);
 			name = TableCells;
 			sourceTree = "<group>";
@@ -1191,6 +1194,7 @@
 				1E789E502044E7AF007FB628 /* AccountingWindowController.swift in Sources */,
 				1EBF4253218B50C50062D6ED /* CreateAccountController.swift in Sources */,
 				1E1090DE219524AB005EFF9C /* TypeSelection.swift in Sources */,
+				1ED8BC762270327600A7459B /* Amount.swift in Sources */,
 				1EEBCC9F21A204C200E5A544 /* TreeOutlineLoadingView.swift in Sources */,
 				1EFD4F812172B09B00F0AB28 /* RecursiveLedgerPage.swift in Sources */,
 				1EDB0AED219D863E006351DF /* OptionalAccountSelection.swift in Sources */,

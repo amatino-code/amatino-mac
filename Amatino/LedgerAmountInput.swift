@@ -56,6 +56,7 @@ class LedgerAmountInput: NSTextField, NSTextDelegate {
         alignment = .right
         translatesAutoresizingMaskIntoConstraints = false
         drawsBackground = false
+        font = LedgerTableView.monospacedFont
         return
     }
     
@@ -71,18 +72,23 @@ class LedgerAmountInput: NSTextField, NSTextDelegate {
     
     override func textDidEndEditing(_ notification: Notification) {
         super.textDidEndEditing(notification)
-        print("\(side) did end editing")
-        doneEditingCallback?()
-        if stringValue.isEmpty { amount = 0; return }
-        let parsedAmount = numberFormatter.number(from: stringValue)
-        guard let parsed = parsedAmount else { warnOfBadNumber(); return }
+        
+        let parsedAmount = parseAmount()
+        guard let newAmount = parsedAmount else { warnOfBadNumber(); return }
         guard let opposition = opposingSide else { return }
         let opposingAmount = opposition.add(
-            amount: parsed.decimalValue,
+            amount: newAmount,
             side: self.side
         )
-        amount = parsed.decimalValue - opposingAmount
+        amount = newAmount - opposingAmount
+        doneEditingCallback?()
         return
+    }
+    
+    private func parseAmount() -> Decimal? {
+        if stringValue.isEmpty { return Decimal(0) }
+        let parsed = numberFormatter.number(from: stringValue)?.decimalValue
+        return parsed
     }
     
     private func warnOfBadNumber () {

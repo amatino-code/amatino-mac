@@ -30,7 +30,7 @@ class CreateAccountView: NSView {
     private let nameLabelFrame = NSMakeRect(13, 254, 40, 17)
     private let nameFieldFrame = NSMakeRect(93, 251, 171, 22)
     private let parentLabelFrame = NSMakeRect(13, 220, 44, 17)
-    private let parentFieldFrame = NSMakeRect(91, 215, 176, 26)
+    private let parentFieldFrame = NSMakeRect(91, 215, 176, 22)
     private let typeLabelFrame = NSMakeRect(13, 185, 34, 17)
     private let typeFieldFrame = NSMakeRect(91, 178, 176, 26)
     private let denominationLabelFrame = NSMakeRect(13, 145, 88, 17)
@@ -68,24 +68,35 @@ class CreateAccountView: NSView {
         nameLabel = Label(frame: nameLabelFrame)
         nameLabel.stringValue = nameLabelText
         nameField = NSTextField(frame: nameFieldFrame)
+        nameField.drawsBackground = true
+        nameField.backgroundColor = NSColor.textBackgroundColor
+        nameField.appearance = NSAppearance(named: .aqua)
+
         parentLabel = Label(frame: parentLabelFrame)
         parentLabel.stringValue = parentLabelText
         parentField = ParentSelection(frame: parentFieldFrame, tree: tree)
+        parentField.configureForFreeFloatingDisplay()
+
         typeLabel = Label(frame: typeLabelFrame)
         typeLabel.stringValue = typeLabelText
         typeField = TypeSelection(frame: typeFieldFrame)
+
         denominationLabel = Label(frame: denominationLabelFrame)
         denominationLabel.stringValue = denominationLabelText
         denominationField = GlobalUnitSelection(
             frame: denominationFieldFrame,
             session: entity.session
         )
+
         descriptionLabel = Label(frame: descriptionLabelFrame)
         descriptionLabel.stringValue = descriptionLabelText
         descriptionField = NSTextField(frame: descriptionFieldFrame)
         descriptionField.placeholderString = NSLocalizedString(
             "Optional", comment: ""
         )
+        descriptionField.drawsBackground = true
+        descriptionField.backgroundColor = NSColor.textBackgroundColor
+        descriptionField.appearance = NSAppearance(named: .aqua)
 
         createButton = PushButton(frame: createButtonFrame)
         createButton.title = createButtonText
@@ -134,9 +145,20 @@ class CreateAccountView: NSView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func unitsReadyCallback() {
+    private func unitsReadyCallback(
+        error: Error?,
+        selection: GlobalUnitSelection?
+    ) {
         DispatchQueue.main.async {
+            guard selection != nil else {
+                let _ = GenericErrorController(
+                    displaying: error,
+                    displayIn: NSApplication.shared.keyWindow!
+                )
+                return
+            }
             self.createButton.isEnabled = true
+            return
         }
     }
     

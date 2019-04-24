@@ -28,10 +28,12 @@ class TreeOutlineLoadingController: NSViewController {
         TreeUnit(entity: entity).retrieve( callback: { [unowned self]
             (error, globalUnit) in
             guard let unit = globalUnit else {
-                let _ = GenericErrorController(
-                    displaying: error,
-                    presentedBy: self
-                )
+                DispatchQueue.main.async {
+                    let _ = GenericErrorController(
+                        displaying: error,
+                        presentedBy: self
+                    )
+                }
                 return
             }
             self.loadedGlobalUnit = unit
@@ -62,7 +64,13 @@ class TreeOutlineLoadingController: NSViewController {
 
     private func treeReadyCallback(error: Error?, tree: Tree?) {
         guard let tree = tree else {
-            let _ = GenericErrorController(displaying: error, presentedBy: self)
+            DispatchQueue.main.async {
+                let _ = GenericErrorController(
+                    displaying: error,
+                    presentedBy: self
+                )
+                return
+            }
             return
         }
         guard let unit = loadedGlobalUnit else { fatalError("Missing unit") }

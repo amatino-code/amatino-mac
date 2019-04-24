@@ -9,21 +9,16 @@
 import Foundation
 import Cocoa
 
-class LedgerTableDebitView: NSTableCellView {
-    
-    let cellText: NSTextField
+class LedgerTableDebitView: LedgerTableAmount {
     
     init(for row: LedgerRow, frame frameRect: NSRect) {
-        cellText = NSTextField(frame: frameRect)
         super.init(frame: frameRect)
-        textField = cellText
-        textField?.stringValue = row.presentationDebit
-        textField?.isSelectable = true
+        stringValue = row.presentationDebit
         return
     }
     
     required init?(coder decoder: NSCoder) {
-        fatalError("Not implemented")
+        super.init(coder: decoder)
+        return
     }
-    
 }

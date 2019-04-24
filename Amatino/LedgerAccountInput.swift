@@ -10,14 +10,14 @@ import Foundation
 import Cocoa
 
 class LedgerAccountInput: NSView {
-    
-    private let inputFont = NSFont.systemFont(ofSize: CGFloat(12))
 
     private var accountSelection: AccountSelection? = nil
     
     public var selectedAccount: AccountRepresentative? {
         get {
-            guard let accountSelection = accountSelection else { fatalError("Missing accountSelection") }
+            guard let accountSelection = accountSelection else {
+                fatalError("Missing accountSelection")
+            }
             return accountSelection.selectedAccount
         }
     }
@@ -27,6 +27,10 @@ class LedgerAccountInput: NSView {
         
         return
     }
+    
+    public var isFocused: Bool { get {
+        return accountSelection?.isFocused ?? false
+    } }
     
     public func offer(
         selection: AccountSelection,
@@ -90,8 +94,8 @@ class LedgerAccountInput: NSView {
         addConstraint(rightConstraint)
 
         //selection.isBordered = false
-        //selection.font = inputFont
         self.accountSelection = selection
+        self.accountSelection?.configureForDisplayInTable()
         return
     }
 

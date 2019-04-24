@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class ParentSelection: OptionalAccountSelection {
+class ParentSelection: AccountSelection {
 
     private static let noParentTitle = NSLocalizedString(
         "None (New top-level Account)",
@@ -20,6 +20,7 @@ class ParentSelection: OptionalAccountSelection {
         super.init(
             frame: frameRect,
             tree: tree,
+            optional: true,
             noneTitle: ParentSelection.noParentTitle
         )
         return

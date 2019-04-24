@@ -72,7 +72,10 @@ class AccountSelectionTextField: NSTextField, NSTextFieldDelegate {
     override func textDidEndEditing(_ notification: Notification) {
         guard let selectedItem = self.selectedItem else {
             
-            guard stringValue != "" else { return }
+            guard stringValue != "" else {
+                window?.makeFirstResponder(nextResponder)
+                return
+            }
             let tentativeName = String(
                 stringValue.split(separator: ":").last ?? ""
             )
@@ -80,7 +83,6 @@ class AccountSelectionTextField: NSTextField, NSTextFieldDelegate {
                 fatalError("Unexpected superview type")
             }
             superView.createAccount(tentativelyNamed: tentativeName)
-            //window?.makeFirstResponder(self)
             return
         }
         changeCallback?(selectedItem)

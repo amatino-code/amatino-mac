@@ -11,8 +11,18 @@ import Cocoa
 
 class LedgerTableView: NSTableView {
     
+    public static let font = NSFont.systemFont(
+        ofSize: NSFont.systemFontSize,
+        weight: .regular
+    )
+    public static let monospacedFont = NSFont.monospacedDigitSystemFont(
+        ofSize: NSFont.systemFontSize,
+        weight: .regular
+    )
+
     private var ledger: Ledger?
     private var accountSelection: AccountSelection?
+    private var inputSelection: AccountSelection?
     
     private let dateColId =  NSUserInterfaceItemIdentifier("dataCol")
     private let descrColId =  NSUserInterfaceItemIdentifier("descColId")
@@ -52,8 +62,11 @@ class LedgerTableView: NSTableView {
         descriptionColumn.headerCell.stringValue = descriptionName
         oppositionColumn.headerCell.stringValue = oppoName
         debitColumn.headerCell.stringValue = drName
+        debitColumn.headerCell.alignment = .right
         creditColumn.headerCell.stringValue = crName
+        creditColumn.headerCell.alignment = .right
         balanceColumn.headerCell.stringValue = balanceName
+        balanceColumn.headerCell.alignment = .right
 
         dateColumn.width = CGFloat(40)
         descriptionColumn.width = CGFloat(200)
@@ -96,15 +109,25 @@ class LedgerTableView: NSTableView {
     }
     
     public func load(_ ledger: Ledger, withAccountsFrom tree: Tree) {
+
         self.ledger = ledger
-        let selection = AccountSelection(
+
+        let inputSelection = AccountSelection(
             frame: NSMakeRect(0, 0, CGFloat(100), defaultRowHeight),
             tree: tree
         )
-        self.inputRow.act(for: ledger, offering: selection)
-        self.accountSelection = selection
+        self.inputRow.act(for: ledger, offering: inputSelection)
+        self.inputSelection = inputSelection
+
+        let accountSelection = AccountSelection(
+            frame: NSMakeRect(0, 0, CGFloat(100), defaultRowHeight),
+            tree: tree
+        )
+        self.accountSelection = accountSelection
+
         self.reloadData()
         self.sizeToFit()
+
         return
     }
     
@@ -131,17 +154,14 @@ extension LedgerTableView: NSTableViewDelegate {
         row: Int
     ) -> NSView? {
         
-        guard let column = tableColumn else {
-            return nil
-        }
+        guard let column = tableColumn else { return nil }
+        guard let ledger = ledger else { return nil }
         
-        guard let ledger = ledger else {
-            return nil
+        guard let selection = accountSelection else {
+            fatalError("Selection not available!")
         }
-        
-        if row >= ledger.count {
-            return inputCell(for: column)
-        }
+
+        if row >= ledger.count { return inputCell(for: column) }
         
         let ledgerRow = ledger[row]
         let cellFrame = NSMakeRect(0, 0, column.width, rowHeight)
@@ -152,7 +172,11 @@ extension LedgerTableView: NSTableViewDelegate {
         case descrColId:
             return LedgerTableDescriptionView(for: ledgerRow, frame: cellFrame)
         case oppoColId:
-            return LedgerTableAccountView(for: ledgerRow, frame: cellFrame)
+            return LedgerTableAccountView(
+                for: ledgerRow,
+                frame: cellFrame,
+                selection: selection
+            )
         case drColId:
             return LedgerTableDebitView(for: ledgerRow, frame: cellFrame)
         case crColId:
@@ -191,18 +215,31 @@ extension LedgerTableView: NSTableViewDataSource {
         return (ledger?.count ?? 0) + 1
     }
 
-    func tableView(
+    /*func tableView(
         _ tableView: NSTableView,
         objectValueFor tableColumn: NSTableColumn?,
         row: Int
     ) -> Any? {
-        guard let ledger = ledger else {
-            return nil
+        guard let ledger = ledger else { return nil }
+        if row >= ledger.count { return nil } // The input row
+        if tableColumn == nil { return ledger[row] }
+        
+        switch tableColumn?.identifier {
+        case dateColId:
+            return ledger[row].transactionTime
+        case descrColId:
+            return ledger[row].description
+        case oppoColId:
+            return ledger[row].opposingAccountName
+        case drColId:
+            return ledger[row].debit
+        case crColId:
+            return ledger[row].credit
+        case balColId:
+            return ledger[row].balance
+        default:
+            fatalError("Unknown column")
         }
-        if row >= ledger.count {
-            return nil // The input row
-        }
-        return ledger[row]
-    }
+    }*/
 
 }

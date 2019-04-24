@@ -18,6 +18,7 @@ class LedgerDescriptionInput: NSTextField {
         isEditable = true
         placeholderString = "Description"
         drawsBackground = false
+        font = LedgerTableView.font
         return
     }
 

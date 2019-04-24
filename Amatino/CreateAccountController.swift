@@ -32,9 +32,7 @@ class CreateAccountController: NSViewController {
     }
     
     private func create() {
-        guard let createView = createView else {
-            fatalError("View is absent")
-        }
+        guard let createView = createView else { fatalError("View is absent") }
         let arguments: Account.CreateArguments
         do {
             arguments = try createView.readUserInput()

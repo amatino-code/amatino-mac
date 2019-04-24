@@ -15,6 +15,8 @@ class LedgerDateInput: NSTextField, NSTextFieldDelegate {
     
     private let dateFormatter = DateFormatter()
     private let adverseColor = NSColor.systemRed
+    
+    private var doneEditingCallback: (() -> Void)? = nil
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -27,6 +29,7 @@ class LedgerDateInput: NSTextField, NSTextFieldDelegate {
         isBezeled = false
         delegate = self
         drawsBackground = false
+        font = LedgerTableView.monospacedFont
         return
     }
 
@@ -46,6 +49,11 @@ class LedgerDateInput: NSTextField, NSTextFieldDelegate {
         return
     }
     
+    public func whenDoneEditing(call callback: @escaping () -> Void) {
+        doneEditingCallback = callback
+        return
+    }
+    
     override func textDidBeginEditing(_ notification: Notification) {
         textColor = NSColor.textColor
         return
@@ -53,10 +61,16 @@ class LedgerDateInput: NSTextField, NSTextFieldDelegate {
     
     override func textDidEndEditing(_ notification: Notification) {
         super.textDidEndEditing(notification)
-        if stringValue.isEmpty { return }
+        if stringValue.isEmpty {
+            dateValue = Date()
+            stringValue = dateFormatter.string(from: dateValue)
+            doneEditingCallback?()
+            return
+        }
         let parsedDate = dateFormatter.date(from: stringValue)
         guard let date = parsedDate else { warnOfBadDate(); return }
         dateValue = date
+        doneEditingCallback?()
         return
     }
     

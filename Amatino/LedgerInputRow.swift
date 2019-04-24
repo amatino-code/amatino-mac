@@ -33,11 +33,16 @@ class LedgerInputRow {
         account = LedgerAccountInput(frame: rect)
         debit = LedgerDebitInput(frame: rect)
         credit = LedgerCreditInput(frame: rect)
-        preview = LedgerBalancePreview(frame: rect)
-        
+        preview = LedgerBalancePreview(
+            frame: rect,
+            dateInput: date,
+            debitInput: debit,
+            creditInput: credit
+        )
+
         debit.opposingSide = credit
         credit.opposingSide = debit
-        
+
         return
     }
     
@@ -57,19 +62,13 @@ class LedgerInputRow {
     public func observeCompletion() {
         debit.whenDoneEditing(call: considerCompletion)
         credit.whenDoneEditing(call: considerCompletion)
+        date.whenDoneEditing(call: considerCompletion)
         return
     }
 
     private func considerCompletion() {
-
-        guard !debit.isFocused else { return }
-        guard !credit.isFocused else { return }
-        guard !description.isFocused else { return }
-        guard !date.isFocused else { return }
         
-        guard (debit.amount + credit.amount) != Decimal(0) else { return }
-        
-        guard let opposingAccount = account.selectedAccount else { return }
+        print("Consider completion")
         
         guard let ledger = attachedLedger else {
             DispatchQueue.main.async {
@@ -81,6 +80,21 @@ class LedgerInputRow {
             }
             return
         }
+        
+        preview.calculate(for: ledger)
+
+        guard !debit.isFocused else { return }
+        guard !credit.isFocused else { return }
+        guard !description.isFocused else { return }
+        guard !date.isFocused else { return }
+        guard !account.isFocused else { return }
+        guard account.selectedAccount != nil else { return }
+        
+        guard (debit.amount + credit.amount) != Decimal(0) else { return }
+        
+        guard let opposingAccount = account.selectedAccount else { return }
+        
+
 
         let anchorSide: Side
         let opposingSide: Side

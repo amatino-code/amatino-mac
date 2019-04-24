@@ -28,7 +28,7 @@ class DeleteAccountControlView: NSView {
     private let moveChildrenLabel: Label
     private let deleteChildrenCheck: AMButton
     private let moveEntriesSelection: AccountSelection
-    private let moveChildSelection: OptionalAccountSelection
+    private let moveChildSelection: AccountSelection
     private let cancelButton: PushButton
     private let deleteButton: PushButton
     
@@ -55,9 +55,10 @@ class DeleteAccountControlView: NSView {
             frame: moveEntriesFrame,
             tree: tree
         )
-        moveChildSelection = ParentSelection(
+        moveChildSelection = AccountSelection(
             frame: moveChildrenFrame,
-            tree: tree
+            tree: tree,
+            optional: true
         )
         cancelButton = PushButton(frame: cancelFrame)
         deleteButton = PushButton(frame: deleteFrame)
@@ -94,7 +95,7 @@ class DeleteAccountControlView: NSView {
 
     @objc private func childDeleteChecked() {
         if deleteChildrenCheck.state == .on {
-            moveChildSelection.selectNone()
+            moveChildSelection.clearSelection()
             moveChildSelection.isEnabled = false
             return
         }
