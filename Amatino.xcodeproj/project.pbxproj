@@ -76,6 +76,18 @@
 		1E54522E203416870073FFBD /* BillingPlanSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54522D203416870073FFBD /* BillingPlanSet.swift */; };
 		1E545230203418F40073FFBD /* BillingPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54522F203418F40073FFBD /* BillingPlan.swift */; };
 		1E54523220341B270073FFBD /* BillingPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54523120341B270073FFBD /* BillingPrice.swift */; };
+		1E6F4BD122729BA200DA9AC3 /* TxEntryTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BD022729BA200DA9AC3 /* TxEntryTable.swift */; };
+		1E6F4BD322729D0D00DA9AC3 /* TxLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BD222729D0D00DA9AC3 /* TxLoadingIndicator.swift */; };
+		1E6F4BD52272E0E700DA9AC3 /* TxEntryInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BD42272E0E700DA9AC3 /* TxEntryInputRow.swift */; };
+		1E6F4BD82272FD9800DA9AC3 /* TabularDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BD72272FD9800DA9AC3 /* TabularDescription.swift */; };
+		1E6F4BDA2272FDFB00DA9AC3 /* TabularAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BD92272FDFB00DA9AC3 /* TabularAccount.swift */; };
+		1E6F4BDC227306CC00DA9AC3 /* TabularAmountInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BDB227306CC00DA9AC3 /* TabularAmountInput.swift */; };
+		1E6F4BDE2273072F00DA9AC3 /* TabularDebitInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BDD2273072F00DA9AC3 /* TabularDebitInput.swift */; };
+		1E6F4BE02273073D00DA9AC3 /* TabularCreditInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BDF2273073D00DA9AC3 /* TabularCreditInput.swift */; };
+		1E6F4BE222730A9700DA9AC3 /* TxEditorBalanceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BE122730A9700DA9AC3 /* TxEditorBalanceRow.swift */; };
+		1E6F4BE422730E1400DA9AC3 /* TxPlugButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BE322730E1400DA9AC3 /* TxPlugButton.swift */; };
+		1E6F4BE822730F4600DA9AC3 /* TxEditorImbalanceLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BE722730F4600DA9AC3 /* TxEditorImbalanceLabel.swift */; };
+		1E6F4BEA227311E600DA9AC3 /* TxEditorImbalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6F4BE9227311E600DA9AC3 /* TxEditorImbalance.swift */; };
 		1E750CDC20462DFF001AD8CC /* TreeOutlineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CDB20462DFF001AD8CC /* TreeOutlineController.swift */; };
 		1E750CDE20463324001AD8CC /* TreeOutlineLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CDD20463324001AD8CC /* TreeOutlineLoading.swift */; };
 		1E750CE020463489001AD8CC /* TreeOutlineContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E750CDF20463489001AD8CC /* TreeOutlineContainerController.swift */; };
@@ -109,6 +121,12 @@
 		1ED4562022615D990020ACED /* LedgerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4561F22615D990020ACED /* LedgerInputRow.swift */; };
 		1ED456222261952B0020ACED /* NSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED456212261952B0020ACED /* NSTextField.swift */; };
 		1ED8BC762270327600A7459B /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC752270327600A7459B /* Amount.swift */; };
+		1ED8BC7A2272654300A7459B /* TransactionEditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC792272654300A7459B /* TransactionEditorController.swift */; };
+		1ED8BC7C2272656C00A7459B /* TransactionEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC7B2272656C00A7459B /* TransactionEditor.swift */; };
+		1ED8BC80227266C000A7459B /* TxDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC7F227266C000A7459B /* TxDatePicker.swift */; };
+		1ED8BC82227267BA00A7459B /* TxDescriptionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC81227267BA00A7459B /* TxDescriptionField.swift */; };
+		1ED8BC842272684300A7459B /* TxSaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC832272684300A7459B /* TxSaveButton.swift */; };
+		1ED8BC862272695500A7459B /* TxCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED8BC852272695500A7459B /* TxCancelButton.swift */; };
 		1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF276202EA0A200E43756 /* AppDelegate.swift */; };
 		1EDAF27B202EA0A200E43756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27A202EA0A200E43756 /* Assets.xcassets */; };
 		1EDAF27E202EA0A200E43756 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF27C202EA0A200E43756 /* Welcome.storyboard */; };
@@ -278,6 +296,18 @@
 		1E54522D203416870073FFBD /* BillingPlanSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPlanSet.swift; sourceTree = "<group>"; };
 		1E54522F203418F40073FFBD /* BillingPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPlan.swift; sourceTree = "<group>"; };
 		1E54523120341B270073FFBD /* BillingPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingPrice.swift; sourceTree = "<group>"; };
+		1E6F4BD022729BA200DA9AC3 /* TxEntryTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxEntryTable.swift; sourceTree = "<group>"; };
+		1E6F4BD222729D0D00DA9AC3 /* TxLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxLoadingIndicator.swift; sourceTree = "<group>"; };
+		1E6F4BD42272E0E700DA9AC3 /* TxEntryInputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxEntryInputRow.swift; sourceTree = "<group>"; };
+		1E6F4BD72272FD9800DA9AC3 /* TabularDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularDescription.swift; sourceTree = "<group>"; };
+		1E6F4BD92272FDFB00DA9AC3 /* TabularAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularAccount.swift; sourceTree = "<group>"; };
+		1E6F4BDB227306CC00DA9AC3 /* TabularAmountInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularAmountInput.swift; sourceTree = "<group>"; };
+		1E6F4BDD2273072F00DA9AC3 /* TabularDebitInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularDebitInput.swift; sourceTree = "<group>"; };
+		1E6F4BDF2273073D00DA9AC3 /* TabularCreditInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabularCreditInput.swift; sourceTree = "<group>"; };
+		1E6F4BE122730A9700DA9AC3 /* TxEditorBalanceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxEditorBalanceRow.swift; sourceTree = "<group>"; };
+		1E6F4BE322730E1400DA9AC3 /* TxPlugButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxPlugButton.swift; sourceTree = "<group>"; };
+		1E6F4BE722730F4600DA9AC3 /* TxEditorImbalanceLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxEditorImbalanceLabel.swift; sourceTree = "<group>"; };
+		1E6F4BE9227311E600DA9AC3 /* TxEditorImbalance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxEditorImbalance.swift; sourceTree = "<group>"; };
 		1E750CDB20462DFF001AD8CC /* TreeOutlineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineController.swift; sourceTree = "<group>"; };
 		1E750CDD20463324001AD8CC /* TreeOutlineLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineLoading.swift; sourceTree = "<group>"; };
 		1E750CDF20463489001AD8CC /* TreeOutlineContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineContainerController.swift; sourceTree = "<group>"; };
@@ -311,6 +341,12 @@
 		1ED4561F22615D990020ACED /* LedgerInputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerInputRow.swift; sourceTree = "<group>"; };
 		1ED456212261952B0020ACED /* NSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSTextField.swift; sourceTree = "<group>"; };
 		1ED8BC752270327600A7459B /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
+		1ED8BC792272654300A7459B /* TransactionEditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditorController.swift; sourceTree = "<group>"; };
+		1ED8BC7B2272656C00A7459B /* TransactionEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEditor.swift; sourceTree = "<group>"; };
+		1ED8BC7F227266C000A7459B /* TxDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxDatePicker.swift; sourceTree = "<group>"; };
+		1ED8BC81227267BA00A7459B /* TxDescriptionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxDescriptionField.swift; sourceTree = "<group>"; };
+		1ED8BC832272684300A7459B /* TxSaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxSaveButton.swift; sourceTree = "<group>"; };
+		1ED8BC852272695500A7459B /* TxCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxCancelButton.swift; sourceTree = "<group>"; };
 		1EDAF273202EA0A200E43756 /* Amatino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amatino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EDAF276202EA0A200E43756 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EDAF27A202EA0A200E43756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -530,6 +566,8 @@
 		1E296509202FDF970065563B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E6F4BD62272FD6400DA9AC3 /* Tabulation */,
+				1ED8BC772272651200A7459B /* Transaction */,
 				1E378692218549DC000B935E /* Ancillary */,
 				1E82B0492044EE17001C342B /* Entity */,
 				1EBDF656203CF0CC00E9DACD /* Entities */,
@@ -604,6 +642,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E6F4BD62272FD6400DA9AC3 /* Tabulation */ = {
+			isa = PBXGroup;
+			children = (
+				1E6F4BD72272FD9800DA9AC3 /* TabularDescription.swift */,
+				1E6F4BD92272FDFB00DA9AC3 /* TabularAccount.swift */,
+				1E6F4BDB227306CC00DA9AC3 /* TabularAmountInput.swift */,
+				1E6F4BDD2273072F00DA9AC3 /* TabularDebitInput.swift */,
+				1E6F4BDF2273073D00DA9AC3 /* TabularCreditInput.swift */,
+			);
+			name = Tabulation;
 			sourceTree = "<group>";
 		};
 		1E750CE320464A02001AD8CC /* Segues */ = {
@@ -707,6 +757,34 @@
 				1E25F6A6219FE66B00EAF839 /* DeleteAccountController.swift */,
 			);
 			name = UserInterfaces;
+			sourceTree = "<group>";
+		};
+		1ED8BC772272651200A7459B /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8BC782272652000A7459B /* TransactionEditor */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
+		1ED8BC782272652000A7459B /* TransactionEditor */ = {
+			isa = PBXGroup;
+			children = (
+				1ED8BC792272654300A7459B /* TransactionEditorController.swift */,
+				1ED8BC7B2272656C00A7459B /* TransactionEditor.swift */,
+				1E6F4BD022729BA200DA9AC3 /* TxEntryTable.swift */,
+				1ED8BC7F227266C000A7459B /* TxDatePicker.swift */,
+				1ED8BC81227267BA00A7459B /* TxDescriptionField.swift */,
+				1ED8BC832272684300A7459B /* TxSaveButton.swift */,
+				1ED8BC852272695500A7459B /* TxCancelButton.swift */,
+				1E6F4BD222729D0D00DA9AC3 /* TxLoadingIndicator.swift */,
+				1E6F4BD42272E0E700DA9AC3 /* TxEntryInputRow.swift */,
+				1E6F4BE122730A9700DA9AC3 /* TxEditorBalanceRow.swift */,
+				1E6F4BE322730E1400DA9AC3 /* TxPlugButton.swift */,
+				1E6F4BE722730F4600DA9AC3 /* TxEditorImbalanceLabel.swift */,
+				1E6F4BE9227311E600DA9AC3 /* TxEditorImbalance.swift */,
+			);
+			name = TransactionEditor;
 			sourceTree = "<group>";
 		};
 		1EDAF26A202EA0A200E43756 = {
@@ -1041,11 +1119,14 @@
 			files = (
 				1E5452282033FBC80073FFBD /* BillingCurrency.swift in Sources */,
 				1E0C5FFB21A7C186005B3AAC /* LedgerDateInput.swift in Sources */,
+				1E6F4BDE2273072F00DA9AC3 /* TabularDebitInput.swift in Sources */,
 				1E54522A2033FDD00073FFBD /* BillingCountry.swift in Sources */,
 				1EFBF1D22187FD1B006A3EFC /* EntityListLoadingOverlay.swift in Sources */,
+				1ED8BC862272695500A7459B /* TxCancelButton.swift in Sources */,
 				1E1090ED2198CA95005EFF9C /* GenericErrorView.swift in Sources */,
 				1EE26D99203282AC00307528 /* WelcomeProgress.swift in Sources */,
 				1EFD4F702172B09B00F0AB28 /* Region.swift in Sources */,
+				1ED8BC7A2272654300A7459B /* TransactionEditorController.swift in Sources */,
 				1E1090E42195CF2C005EFF9C /* Label.swift in Sources */,
 				1EFD4F752172B09B00F0AB28 /* LedgerRow.swift in Sources */,
 				1EFD4F882172B09B00F0AB28 /* UrlParameters.swift in Sources */,
@@ -1078,6 +1159,7 @@
 				1E939E7D226C006F00E576E4 /* AccountSelectionPopUp.swift in Sources */,
 				1E939E81226C4C6F00E576E4 /* AccountSelectionCompletion.swift in Sources */,
 				1E1090E7219618CD005EFF9C /* NSView.swift in Sources */,
+				1E6F4BD52272E0E700DA9AC3 /* TxEntryInputRow.swift in Sources */,
 				1E1091012199F6B9005EFF9C /* Date.swift in Sources */,
 				1EBF4255218B75960062D6ED /* AccountTypeSelection.swift in Sources */,
 				1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */,
@@ -1098,6 +1180,7 @@
 				1E29650C202FDFBD0065563B /* WelcomeView.swift in Sources */,
 				1EABD2A22037ABB700B88C7C /* SubscriptionRequest.swift in Sources */,
 				1E1090E221953D6C005EFF9C /* ParentSelection.swift in Sources */,
+				1E6F4BE02273073D00DA9AC3 /* TabularCreditInput.swift in Sources */,
 				1EEBCC9D21A12D3800E5A544 /* EntitySplitController.swift in Sources */,
 				1E939E7F226C3A7900E576E4 /* AccountSelectionTextField.swift in Sources */,
 				1EFD4F692172B09B00F0AB28 /* Account.swift in Sources */,
@@ -1111,15 +1194,18 @@
 				1E3FBDB2203E4986006153CE /* NoEntitiesView.swift in Sources */,
 				1E04FA9920301D6900DB826A /* WelcomeSegueReverse.swift in Sources */,
 				1EF59726202EDBAB001965E0 /* Welcome.swift in Sources */,
+				1E6F4BD322729D0D00DA9AC3 /* TxLoadingIndicator.swift in Sources */,
 				1EFD4F832172B09B00F0AB28 /* Transaction.swift in Sources */,
 				1EBF424E218A95CD0062D6ED /* OutlineNoAccountsView.swift in Sources */,
 				1E378694218549F3000B935E /* InternetWarning.swift in Sources */,
 				1EFD4F762172B09B00F0AB28 /* RecursiveBalance.swift in Sources */,
 				1EFD4F8B2172B09B00F0AB28 /* AmatinoDate.swift in Sources */,
 				1EBDF659203CF0E900E9DACD /* EntitiesLoadingView.swift in Sources */,
+				1E6F4BD82272FD9800DA9AC3 /* TabularDescription.swift in Sources */,
 				1EFD4F922172B09B00F0AB28 /* TreeNode.swift in Sources */,
 				1E3287AC2032856C00884A85 /* SubscribePlans.swift in Sources */,
 				1EA9068F2260A2E2006B3E99 /* Denominated.swift in Sources */,
+				1E6F4BD122729BA200DA9AC3 /* TxEntryTable.swift in Sources */,
 				1E939E83226D684800E576E4 /* AccountSelectionFieldEditor.swift in Sources */,
 				1EFD4F6F2172B09B00F0AB28 /* Tree.swift in Sources */,
 				1EFD4F802172B09B00F0AB28 /* AmatinoRequest.swift in Sources */,
@@ -1146,11 +1232,14 @@
 				1E750CDE20463324001AD8CC /* TreeOutlineLoading.swift in Sources */,
 				1EFD4F872172B09B00F0AB28 /* UnitCode.swift in Sources */,
 				1E279B4C2042417C0002E514 /* EntityListViewConfirmDelete.swift in Sources */,
+				1ED8BC80227266C000A7459B /* TxDatePicker.swift in Sources */,
+				1ED8BC842272684300A7459B /* TxSaveButton.swift in Sources */,
 				1E25F6A921A0475E00EAF839 /* PushButton.swift in Sources */,
 				1EFD4F792172B09B00F0AB28 /* PermissionsGraph.swift in Sources */,
 				1EFD4F932172B09B00F0AB28 /* EntityListAttributes.swift in Sources */,
 				1E545230203418F40073FFBD /* BillingPlan.swift in Sources */,
 				1EFD4F712172B09B00F0AB28 /* User.swift in Sources */,
+				1E6F4BDA2272FDFB00DA9AC3 /* TabularAccount.swift in Sources */,
 				1EFD4F782172B09B00F0AB28 /* Entry.swift in Sources */,
 				1E0C5FF821A6BC25005B3AAC /* LedgerTableView.swift in Sources */,
 				1EFD4F892172B09B00F0AB28 /* AccountType.swift in Sources */,
@@ -1160,6 +1249,7 @@
 				1EFD4F772172B09B00F0AB28 /* HTTPMethod.swift in Sources */,
 				1EFD4F822172B09B00F0AB28 /* Entity.swift in Sources */,
 				1ED456222261952B0020ACED /* NSTextField.swift in Sources */,
+				1E6F4BDC227306CC00DA9AC3 /* TabularAmountInput.swift in Sources */,
 				1EFD4F952172B09B00F0AB28 /* AmatinoObject.swift in Sources */,
 				1EBF4249218940550062D6ED /* TreeUnit.swift in Sources */,
 				1E82B04F2044EE28001C342B /* EntityStatusBar.swift in Sources */,
@@ -1171,18 +1261,22 @@
 				1E04FA8C203007CA00DB826A /* WelcomePassphraseReset.swift in Sources */,
 				1E04FA9D20301FFD00DB826A /* WelcomeSegueUp.swift in Sources */,
 				1EDB0AEF219EE3AD006351DF /* DeleteAccountView.swift in Sources */,
+				1ED8BC82227267BA00A7459B /* TxDescriptionField.swift in Sources */,
 				1EFD4F842172B09B00F0AB28 /* AMCryptography.m in Sources */,
 				1E3287AE2032857C00884A85 /* SubscribeTerms.swift in Sources */,
 				1EFBF1CD2186FB35006A3EFC /* LifeStageSelection.swift in Sources */,
 				1EDB0AE9219D7390006351DF /* DeleteAccountControlView.swift in Sources */,
 				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
+				1E6F4BE822730F4600DA9AC3 /* TxEditorImbalanceLabel.swift in Sources */,
 				1E04FA9F203023AB00DB826A /* Stripe.swift in Sources */,
+				1ED8BC7C2272656C00A7459B /* TransactionEditor.swift in Sources */,
 				1E0C5FFD21A7C18F005B3AAC /* LedgerDescriptionInput.swift in Sources */,
 				1EF950D122653478005F9CFE /* Notifications.swift in Sources */,
 				1E1090E02195349A005EFF9C /* Node.swift in Sources */,
 				1EDAF277202EA0A200E43756 /* AppDelegate.swift in Sources */,
 				1EFD4F7C2172B09B00F0AB28 /* EntityList.swift in Sources */,
 				1E1DBCE021A0E8E400861DBA /* TreeOutlineView.swift in Sources */,
+				1E6F4BEA227311E600DA9AC3 /* TxEditorImbalance.swift in Sources */,
 				1E378CC12190CCC8006E3F6B /* CreateAccountView.swift in Sources */,
 				1EFD4F962172B09B00F0AB28 /* GlobalUnitList.swift in Sources */,
 				1ED4562022615D990020ACED /* LedgerInputRow.swift in Sources */,
@@ -1191,12 +1285,14 @@
 				1E109109219A0A62005EFF9C /* Credit.swift in Sources */,
 				1E750CDC20462DFF001AD8CC /* TreeOutlineController.swift in Sources */,
 				1E1090EF2198E52E005EFF9C /* GitReportButton.swift in Sources */,
+				1E6F4BE222730A9700DA9AC3 /* TxEditorBalanceRow.swift in Sources */,
 				1E789E502044E7AF007FB628 /* AccountingWindowController.swift in Sources */,
 				1EBF4253218B50C50062D6ED /* CreateAccountController.swift in Sources */,
 				1E1090DE219524AB005EFF9C /* TypeSelection.swift in Sources */,
 				1ED8BC762270327600A7459B /* Amount.swift in Sources */,
 				1EEBCC9F21A204C200E5A544 /* TreeOutlineLoadingView.swift in Sources */,
 				1EFD4F812172B09B00F0AB28 /* RecursiveLedgerPage.swift in Sources */,
+				1E6F4BE422730E1400DA9AC3 /* TxPlugButton.swift in Sources */,
 				1EDB0AED219D863E006351DF /* OptionalAccountSelection.swift in Sources */,
 				1EFD4F6D2172B09B00F0AB28 /* UserAttributes.swift in Sources */,
 			);

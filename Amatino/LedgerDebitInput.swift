@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class LedgerDebitInput: LedgerAmountInput {
+class LedgerDebitInput: TabularAmountInput {
     
     init(frame frameRect: NSRect) {
         super.init(frame: frameRect, side: .debit)

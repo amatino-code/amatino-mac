@@ -68,8 +68,6 @@ class LedgerInputRow {
 
     private func considerCompletion() {
         
-        print("Consider completion")
-        
         guard let ledger = attachedLedger else {
             DispatchQueue.main.async {
                 let _ = GenericErrorController.init(
@@ -80,7 +78,7 @@ class LedgerInputRow {
             }
             return
         }
-        
+
         preview.calculate(for: ledger)
 
         guard !debit.isFocused else { return }
@@ -89,9 +87,9 @@ class LedgerInputRow {
         guard !date.isFocused else { return }
         guard !account.isFocused else { return }
         guard account.selectedAccount != nil else { return }
-        
+
         guard (debit.amount + credit.amount) != Decimal(0) else { return }
-        
+
         guard let opposingAccount = account.selectedAccount else { return }
         
 

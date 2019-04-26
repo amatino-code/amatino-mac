@@ -274,6 +274,19 @@ class AccountSelection: NSView {
         }
         fatalError("Account not found")
     }
+    
+    public func selectAccount(withHierarchicalName name: String) {
+        for item in self.items {
+            if item.hierarchyName == name {
+                textField.stringValue = item.hierarchyName
+                button.select(item)
+                return
+            }
+        }
+        textField.stringValue = items[0].hierarchyName
+        button.select(items[0])
+        return
+    }
 
     public class Item: NSMenuItem {
 

@@ -9,22 +9,13 @@
 import Foundation
 import Cocoa
 
-class LedgerTableDescriptionView: NSTextField {
+class LedgerTableDescriptionView: TabularDescriptionView {
     
     init(for row: LedgerRow, frame frameRect: NSRect) {
-        super.init(frame: frameRect)
-        stringValue = row.description
-        isSelectable = true
-        isBordered = false
-        isBezeled = false
-        drawsBackground = false
-        isSelectable = true
-        font = LedgerTableView.font
+        super.init(description: row.description, frame: frameRect)
         return
     }
     
-    required init?(coder decoder: NSCoder) {
-        fatalError("Not implemented")
-    }
+    required init?(coder decoder: NSCoder) { fatalError("Not implemented") }
     
 }

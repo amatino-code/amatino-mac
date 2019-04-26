@@ -11,16 +11,27 @@ import Cocoa
 
 class GenericErrorController: NSViewController {
     
+    private let windowTitle = NSLocalizedString(
+        "Error",
+        comment: "Stand alone error window title"
+    )
+    
     private let error: Error
     private var errorView: GenericErrorView?
     
-    unowned let controller: NSViewController
+    weak var controller: NSViewController?
     
-    convenience init(displaying error: Error?, displayIn window: NSWindow) {
-        guard let controller = window.contentViewController else {
-            fatalError("Unable to locate a controller for error display")
+    init(displaying error: Error?, displayIn existingWindow: NSWindow?) {
+        self.error = error ?? AmatinoAppError(.internalFailure)
+        let window = existingWindow ?? NSWindow()
+        if existingWindow == nil { window.title = windowTitle }
+        super.init(nibName: nil, bundle: nil)
+        if let errorController = window.contentViewController {
+            errorController.presentAsSheet(self)
+            self.controller = errorController
+        } else {
+            window.contentViewController = self
         }
-        self.init(displaying: error, presentedBy: controller)
         return
     }
     
@@ -30,6 +41,11 @@ class GenericErrorController: NSViewController {
         super.init(nibName: nil, bundle: nil)
         controller.presentAsSheet(self)
         return
+    }
+    
+    init(displaying error: Error?) {
+        self.error = error ?? AmatinoAppError(.internalFailure)
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -47,14 +63,14 @@ class GenericErrorController: NSViewController {
     
     @objc
     func closeWithoutGit() {
-        controller.dismiss(self)
+        controller?.dismiss(self)
         return
     }
     
     @objc
     func closeWithGit() {
         self.errorView?.gitButton.openGitReporting()
-        controller.dismiss(self)
+        controller?.dismiss(self)
         return
     }
 
