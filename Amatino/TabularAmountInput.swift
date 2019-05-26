@@ -21,7 +21,7 @@ class TabularAmountInput: NSTextField, NSTextDelegate {
     
     private var doneEditingCallback: (() -> Void)? = nil
     
-    public weak var opposingSide: LedgerAmountInput?
+    public weak var opposingSide: TabularAmountInput?
     
     public private(set) var amount: Decimal {
         get {

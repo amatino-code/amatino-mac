@@ -14,7 +14,7 @@ class LedgerView: NSView {
     private let defaultFrame = NSMakeRect(0, 0, 761, 475)
     private let loadingView: LedgerLoadingView
     private let idleView: LedgerIdleView
-    private let ledgerTableView: LedgerTableView
+    private let ledgerTableController: LedgerTableController
     private let scrollView: NSScrollView
     private let views: [NSView]
     
@@ -22,12 +22,11 @@ class LedgerView: NSView {
     
     init() {
 
-        ledgerTableView = LedgerTableView(frame: defaultFrame)
+        ledgerTableController = LedgerTableController()
 
         scrollView = NSScrollView(frame: defaultFrame)
         scrollView.hasVerticalScroller = true
         scrollView.hasHorizontalScroller = false
-        scrollView.contentView.documentView = ledgerTableView
         
         loadingView = LedgerLoadingView(frame: defaultFrame)
         idleView = LedgerIdleView(frame: defaultFrame)
@@ -35,6 +34,8 @@ class LedgerView: NSView {
         views = [loadingView, idleView, scrollView]
     
         super.init(frame: defaultFrame)
+        
+        scrollView.contentView.documentView = ledgerTableController.view
         
         addSubview(loadingView)
         addSubview(idleView)
@@ -71,7 +72,7 @@ class LedgerView: NSView {
     
     public func present(_ ledger: Ledger, withAccountsFrom tree: Tree) {
         self.ledger = ledger
-        ledgerTableView.load(ledger, withAccountsFrom: tree)
+        ledgerTableController.load(ledger, withAccountsFrom: tree)
         showLedger()
         return
     }

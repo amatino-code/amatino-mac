@@ -12,9 +12,16 @@ import Cocoa
 
 class TransactionEditorController: NSViewController {
     
-    let editor = TransactionEditor()
+    let editor: TransactionEditor
     
     private var editedTransaction: Transaction? = nil
+    
+    init() {
+        editor = TransactionEditor()
+        super.init(nibName: nil, bundle: nil)
+        editor.cancelAction = { self.dismiss(self) }
+        return
+    }
     
     convenience init(editing transaction: Transaction) {
         self.init()
@@ -33,6 +40,11 @@ class TransactionEditorController: NSViewController {
         return
     }
     
+    override func loadView() {
+        self.view = editor
+        return
+    }
+
     private func loadTransaction(_ error: Error?, _ transaction: Transaction?) {
         DispatchQueue.main.async {
             guard let transaction = transaction else {
@@ -47,4 +59,7 @@ class TransactionEditorController: NSViewController {
             return
         }
     }
+
+    required init?(coder: NSCoder) { fatalError("not implemented") }
+
 }

@@ -20,4 +20,9 @@ class LedgerDebitInput: TabularAmountInput {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func rightMouseDown(with event: NSEvent) {
+        print("Right mouse down!")
+        super.rightMouseDown(with: event)
+    }
+    
 }

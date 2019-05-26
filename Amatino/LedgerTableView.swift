@@ -77,7 +77,7 @@ class LedgerTableView: NSTableView {
         
         inputRow = LedgerInputRow()
         inputRow.observeCompletion()
-    
+
         super.init(frame: frameRect)
         
         let columns = [

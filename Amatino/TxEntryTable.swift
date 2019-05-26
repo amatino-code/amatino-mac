@@ -19,7 +19,7 @@ class TxEntryTable: NSTableView, NSTableViewDataSource, NSTableViewDelegate {
     private var entries = Array<Entry>()
     
     private let inputRow = TxEntryInputRow()
-    
+
     private let descrColId =  NSUserInterfaceItemIdentifier("descColId")
     private let oppoColId = NSUserInterfaceItemIdentifier("oppoColId")
     private let drColId = NSUserInterfaceItemIdentifier("drColId")
@@ -35,7 +35,7 @@ class TxEntryTable: NSTableView, NSTableViewDataSource, NSTableViewDelegate {
     private let drName = NSLocalizedString("Debit", comment: "")
     private let crName = NSLocalizedString("Credit", comment: "")
     
-    private var inputRowIndex: Int { get { return entries.count + 1 } }
+    private var inputRowIndex: Int { get { return entries.count } }
     private var balanceRowIndex: Int { get { return inputRowIndex + 1 } }
     
     init() {
@@ -44,6 +44,22 @@ class TxEntryTable: NSTableView, NSTableViewDataSource, NSTableViewDelegate {
         oppositionColumn = NSTableColumn(identifier: oppoColId)
         debitColumn = NSTableColumn(identifier: drColId)
         creditColumn = NSTableColumn(identifier: crColId)
+        
+        descriptionColumn.title = descriptionName
+        oppositionColumn.title = oppoName
+        debitColumn.title = drName
+        creditColumn.title = crName
+
+        descriptionColumn.headerCell.alignment = .left
+        oppositionColumn.headerCell.alignment = .left
+        debitColumn.headerCell.alignment = .right
+        creditColumn.headerCell.alignment = .right
+        
+        descriptionColumn.width = CGFloat(40)
+        oppositionColumn.width = CGFloat(30)
+        debitColumn.width = CGFloat(15)
+        creditColumn.width = CGFloat(15)
+        
         
         super.init(frame: defaultFrame)
         
@@ -62,9 +78,11 @@ class TxEntryTable: NSTableView, NSTableViewDataSource, NSTableViewDelegate {
         
         delegate = self
         dataSource = self
-
+    
         usesAlternatingRowBackgroundColors = true
         columnAutoresizingStyle = .uniformColumnAutoresizingStyle
+        
+        sizeToFit()
         
         return
     }
@@ -107,12 +125,13 @@ class TxEntryTable: NSTableView, NSTableViewDataSource, NSTableViewDelegate {
     }
     
     func balanceCellFor(_ column: NSTableColumn) -> NSView {
-        fatalError("Not implemented")
-        // return a balance row cell
+        return NSTableCellView()
     }
     
     func entryCellFor(row: Int, column: NSTableColumn) -> NSView {
-        guard row < entries.count else { fatalError("\(row) exceeds bounds") }
+        guard row < entries.count else {
+            fatalError("\(row) exceeds max entry index: \(entries.count - 1)")
+        }
         guard let selection = accountSelection else {
             fatalError("Account selection missing")
         }
@@ -134,5 +153,6 @@ class TxEntryTable: NSTableView, NSTableViewDataSource, NSTableViewDelegate {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return entries.count + 2 // Input row & balance row
     }
+
 
 }

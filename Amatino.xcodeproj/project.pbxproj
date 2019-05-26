@@ -116,6 +116,10 @@
 		1EBF4253218B50C50062D6ED /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF4252218B50C50062D6ED /* CreateAccountController.swift */; };
 		1EBF4255218B75960062D6ED /* AccountTypeSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBF4254218B75960062D6ED /* AccountTypeSelection.swift */; };
 		1EBFCCE9219B9B720019F412 /* AccountRepresentative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBFCCE8219B9B720019F412 /* AccountRepresentative.swift */; };
+		1EC678B12299D0F100E9F628 /* LedgerTableMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC678B02299D0F100E9F628 /* LedgerTableMenu.swift */; };
+		1EC678B42299DB2900E9F628 /* LedgerTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC678B32299DB2900E9F628 /* LedgerTableController.swift */; };
+		1EC678BB229A39AE00E9F628 /* TxEntryTableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC678BA229A39AE00E9F628 /* TxEntryTableScrollView.swift */; };
+		1EC678BD229A410400E9F628 /* TxEditorUnitSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC678BC229A410400E9F628 /* TxEditorUnitSelection.swift */; };
 		1EC893DB2262ADB7006D995D /* AMPopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC893DA2262ADB7006D995D /* AMPopupButton.swift */; };
 		1ECB451121A50B62000E43BC /* TreeOutlineTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB451021A50B62000E43BC /* TreeOutlineTableView.swift */; };
 		1ED4562022615D990020ACED /* LedgerInputRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4561F22615D990020ACED /* LedgerInputRow.swift */; };
@@ -336,6 +340,10 @@
 		1EBF4252218B50C50062D6ED /* CreateAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		1EBF4254218B75960062D6ED /* AccountTypeSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTypeSelection.swift; sourceTree = "<group>"; };
 		1EBFCCE8219B9B720019F412 /* AccountRepresentative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountRepresentative.swift; path = "amatino-swift/Sources/Amatino/AccountRepresentative.swift"; sourceTree = "<group>"; };
+		1EC678B02299D0F100E9F628 /* LedgerTableMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerTableMenu.swift; sourceTree = "<group>"; };
+		1EC678B32299DB2900E9F628 /* LedgerTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerTableController.swift; sourceTree = "<group>"; };
+		1EC678BA229A39AE00E9F628 /* TxEntryTableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxEntryTableScrollView.swift; sourceTree = "<group>"; };
+		1EC678BC229A410400E9F628 /* TxEditorUnitSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TxEditorUnitSelection.swift; sourceTree = "<group>"; };
 		1EC893DA2262ADB7006D995D /* AMPopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMPopupButton.swift; sourceTree = "<group>"; };
 		1ECB451021A50B62000E43BC /* TreeOutlineTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeOutlineTableView.swift; sourceTree = "<group>"; };
 		1ED4561F22615D990020ACED /* LedgerInputRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerInputRow.swift; sourceTree = "<group>"; };
@@ -510,14 +518,14 @@
 		1E1090F721994608005EFF9C /* Ledger */ = {
 			isa = PBXGroup;
 			children = (
-				1E0C5FF921A7C179005B3AAC /* InputCells */,
+				1EC678B72299DD9D00E9F628 /* InlineInput */,
+				1EC678B62299DD8B00E9F628 /* LedgerIdle */,
+				1EC678B52299DD3300E9F628 /* LedgerLoading */,
+				1EC678B22299DB1C00E9F628 /* LedgerTable */,
 				1E1090FF2199F67E005EFF9C /* TableCells */,
 				1E1090F821994627005EFF9C /* LedgerController.swift */,
 				1E1090FA219947F2005EFF9C /* LedgerView.swift */,
-				1E0C5FF321A690B9005B3AAC /* LedgerLoadingView.swift */,
-				1E0C5FF521A69206005B3AAC /* LedgerIdleView.swift */,
-				1E0C5FF721A6BC25005B3AAC /* LedgerTableView.swift */,
-				1ED4561F22615D990020ACED /* LedgerInputRow.swift */,
+				1EC678B02299D0F100E9F628 /* LedgerTableMenu.swift */,
 			);
 			name = Ledger;
 			sourceTree = "<group>";
@@ -759,6 +767,40 @@
 			name = UserInterfaces;
 			sourceTree = "<group>";
 		};
+		1EC678B22299DB1C00E9F628 /* LedgerTable */ = {
+			isa = PBXGroup;
+			children = (
+				1E0C5FF721A6BC25005B3AAC /* LedgerTableView.swift */,
+				1EC678B32299DB2900E9F628 /* LedgerTableController.swift */,
+			);
+			name = LedgerTable;
+			sourceTree = "<group>";
+		};
+		1EC678B52299DD3300E9F628 /* LedgerLoading */ = {
+			isa = PBXGroup;
+			children = (
+				1E0C5FF321A690B9005B3AAC /* LedgerLoadingView.swift */,
+			);
+			name = LedgerLoading;
+			sourceTree = "<group>";
+		};
+		1EC678B62299DD8B00E9F628 /* LedgerIdle */ = {
+			isa = PBXGroup;
+			children = (
+				1E0C5FF521A69206005B3AAC /* LedgerIdleView.swift */,
+			);
+			name = LedgerIdle;
+			sourceTree = "<group>";
+		};
+		1EC678B72299DD9D00E9F628 /* InlineInput */ = {
+			isa = PBXGroup;
+			children = (
+				1ED4561F22615D990020ACED /* LedgerInputRow.swift */,
+				1E0C5FF921A7C179005B3AAC /* InputCells */,
+			);
+			name = InlineInput;
+			sourceTree = "<group>";
+		};
 		1ED8BC772272651200A7459B /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +825,8 @@
 				1E6F4BE322730E1400DA9AC3 /* TxPlugButton.swift */,
 				1E6F4BE722730F4600DA9AC3 /* TxEditorImbalanceLabel.swift */,
 				1E6F4BE9227311E600DA9AC3 /* TxEditorImbalance.swift */,
+				1EC678BA229A39AE00E9F628 /* TxEntryTableScrollView.swift */,
+				1EC678BC229A410400E9F628 /* TxEditorUnitSelection.swift */,
 			);
 			name = TransactionEditor;
 			sourceTree = "<group>";
@@ -1161,6 +1205,7 @@
 				1E1090E7219618CD005EFF9C /* NSView.swift in Sources */,
 				1E6F4BD52272E0E700DA9AC3 /* TxEntryInputRow.swift in Sources */,
 				1E1091012199F6B9005EFF9C /* Date.swift in Sources */,
+				1EC678B12299D0F100E9F628 /* LedgerTableMenu.swift in Sources */,
 				1EBF4255218B75960062D6ED /* AccountTypeSelection.swift in Sources */,
 				1EFB1C26203ED13F00C838DB /* EntityWindowController.swift in Sources */,
 				1E0C5FF621A69206005B3AAC /* LedgerIdleView.swift in Sources */,
@@ -1172,6 +1217,7 @@
 				1E0C5FFF21A7C19D005B3AAC /* LedgerAccountInput.swift in Sources */,
 				1EFD4F6C2172B09B00F0AB28 /* Ledger.swift in Sources */,
 				1EFD4F862172B09B00F0AB28 /* LedgerPage.swift in Sources */,
+				1EC678BB229A39AE00E9F628 /* TxEntryTableScrollView.swift in Sources */,
 				1E54522E203416870073FFBD /* BillingPlanSet.swift in Sources */,
 				1E1E8FA2203BD6A700CF91F2 /* Login.swift in Sources */,
 				1E0C600321A7C1B0005B3AAC /* LedgerCreditInput.swift in Sources */,
@@ -1229,6 +1275,7 @@
 				1E1090F521990D49005EFF9C /* GenericErrorController.swift in Sources */,
 				1EFD4F732172B09B00F0AB28 /* EntityObject.swift in Sources */,
 				1E0C600121A7C1A7005B3AAC /* LedgerDebitInput.swift in Sources */,
+				1EC678B42299DB2900E9F628 /* LedgerTableController.swift in Sources */,
 				1E750CDE20463324001AD8CC /* TreeOutlineLoading.swift in Sources */,
 				1EFD4F872172B09B00F0AB28 /* UnitCode.swift in Sources */,
 				1E279B4C2042417C0002E514 /* EntityListViewConfirmDelete.swift in Sources */,
@@ -1265,6 +1312,7 @@
 				1EFD4F842172B09B00F0AB28 /* AMCryptography.m in Sources */,
 				1E3287AE2032857C00884A85 /* SubscribeTerms.swift in Sources */,
 				1EFBF1CD2186FB35006A3EFC /* LifeStageSelection.swift in Sources */,
+				1EC678BD229A410400E9F628 /* TxEditorUnitSelection.swift in Sources */,
 				1EDB0AE9219D7390006351DF /* DeleteAccountControlView.swift in Sources */,
 				1E3287A42032846E00884A85 /* SubscribePassphrase.swift in Sources */,
 				1E6F4BE822730F4600DA9AC3 /* TxEditorImbalanceLabel.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 import Cocoa
 
-class GlobalUnitSelection: AMPopUpButton {
+class GlobalUnitSelection: NSPopUpButton {
     
     private let session: Session
     private let doesPullDown = false

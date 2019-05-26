@@ -11,7 +11,12 @@ import Cocoa
 
 class LedgerController: NSViewController {
     
+    // The primary encapsulating NSView of the ledger
     let ledgerView: LedgerView
+    
+    // Child view controllers providing discrete ledger GUI elements
+    private let ledgerTableController: LedgerTableController
+    
     private weak var outlineController: TreeOutlineController? = nil
     
     private static let relevantNotifications = [
@@ -20,7 +25,13 @@ class LedgerController: NSViewController {
     
     init() {
         ledgerView = LedgerView()
+        ledgerTableController = LedgerTableController()
+
         super.init(nibName: nil, bundle: nil)
+
+        addChild(ledgerTableController)
+        ledgerView.addSubview(ledgerTableController.view)
+
         let center = NotificationCenter.default
         let _ = LedgerController.relevantNotifications.map { (name) in
             center.addObserver(
@@ -38,9 +49,7 @@ class LedgerController: NSViewController {
         return
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { fatalError("not implemented") }
     
     public func register(controller: TreeOutlineController) {
         self.outlineController = controller
